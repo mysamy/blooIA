@@ -1,0 +1,4 @@
+.navbar__link--dropdown:hover + .navbar__dropdown-menu{
+    display: block;
+
+}

@@ -1,0 +1,61 @@
+.logo {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo__lien {
+    font-size: 4rem;
+}
+
+.navbar {
+    
+    width: 40%;
+    height: 100%;
+}   
+.navbar__list {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+
+}
+.navbar__dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var();
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.button__contact {
+    padding: 20px 30px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 25%;
+    cursor: pointer;
+}
+.form {
+    display: flex;
+    align-items: center;
+    
+    border : rgb(255, 255, 255) solid 2px;
+    border-radius: 25%;
+}
+.form__input {
+    background-color: transparent;
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    border: none;
+    outline: none;
+}

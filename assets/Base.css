@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: var(--backgroundColor);
+    color:var(--textColor);
+    font-family: Arial, sans-serif;
+    font-size: calc(14px + 0.5vw);
+    font-weight: normal;
+    height: 100vh; 
+}
+
+h1 {
+    
+}
+a {
+    text-decoration: none;
+}
