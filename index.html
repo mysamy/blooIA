@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,44 +11,85 @@
     <link rel="stylesheet" href="/assets/Theme.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    
+
     <title>Document</title>
 </head>
+
 <body>
-    <header class="l-header">
-        <div class="logo">
-            <img class="logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo">
-            <a class="logo__lien">HIZE</a>
-        </div>
-        <nav class="navbar">
-            <ul class="navbar__list">
-                <li><a class="navbar__link" href="">HOME</a></li>
-                <li><a class="navbar__link" href="">ABOUT US</a></li>
-                <li><a class="navbar__link navbar__link--dropdown" href="">OUR SERVICES</a>
-                        <ul class="navbar__dropdown-menu">
-                            <li><a href="" class="navbar__dropdown-link">HOME</a></li>
-                            <li><a href="" class="navbar__dropdown-link">ABOUT US</a></li>
-                            <li><a href="" class="navbar__dropdown-link">OUR SERVICES</a></li>
-                            <li><a href="" class="navbar__dropdown-link">fdsq</a></li>
-                            <li><a href="" class="navbar__dropdown-link">fsdfq</a></li>
-                        </ul> 
+    <header class="header">
+        <figure class="main-logo">
+            <a href="#" class="main-logo__lien">
+                <img class="main-logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo">
+                HIZE
+            </a>
+        </figure>
+        <nav class="main-nav">
+            <ul class="main-nav__menu">
+                <li class="main-nav__menu-item">
+                    <a class="main-nav__menu-item-link" href="#">HOME</a>
                 </li>
-                <li><a href="">WHY HZE?</a></li>
+                <li class="main-nav__menu-item">
+                    <a class="main-nav__menu-item-link" href="#">ABOUT US</a>
+                </li>
+                <li class="main-nav__menu-item--has-dropdown">
+                    <a class="main-nav__menu-item-link main-nav__menu-item-link--has-dropdown" href="#">OUR SERVICES<i
+                            class="bx bx-chevron-down" aria-label="Our services menu"></i></a>
+                    <ul class="main-nav__sub-menu">
+                        <li class="main-nav__sub-menu-item"><a href="#" class="main-nav__sub-menu-item-link">HOME</a>
+                        </li>
+                        <li class="main-nav__sub-menu-item"><a href="#" class="main-nav__sub-menu-item-link">ABOUT
+                                US</a></li>
+                        <li class="main-nav__sub-menu-item"><a href="#" class="main-nav__sub-menu-item-link">OUR
+                                SERVICES</a></li>
+                        <li class="main-nav__sub-menu-item"><a href="#" class="main-nav__sub-menu-item-link">fdsq</a>
+                        </li>
+                        <li class="main-nav__sub-menu-item"><a href="#" class="main-nav__sub-menu-item-link">fsdfq</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main-nav__menu-item"><a href="">WHY HZE?</a></li>
             </ul>
         </nav>
-        <form class="form" action="/recherche" method="get">
+        <form class="form-search" action="/recherche" method="get">
+            <label for="search" class="form-search__label form-search__label--invi">Search</label>
             <i class='bx bx-search-alt-2'></i>
             <input class="form__input" type="text" name="query" placeholder="Search">
         </form>
-        <button class="button__contact">Contact Us</button>
-        <div class="langue">
-            <button class="button__langue--en">
-                EN
-            </button>
-            <button class="button__langue--es">
+        <button type="button" class="button button--contact">Contact Us</button>
+        <div class="langue-selector">
+            <button class="langue-selector__option langue-selector__option--es">
                 ES
+            </button>
+            <button class="langue-selector__option langue-selector__option--en">
+                EN
             </button>
         </div>
     </header>
+    <section class="hero">
+
+        <h1 class="hero__h1">
+
+            <img class="hero__img-titre" src="https://picsum.photos/50/50?random=1" alt="img">
+
+            Human Resources
+
+            <img class="hero__img-titre" src="https://picsum.photos/50/50?random=1" alt="img">
+
+            <br>
+            Consulting
+
+            <img class="hero__img-titre" src="https://picsum.photos/50/50?random=1" alt="img">
+
+            Services
+        </h1>
+
+        <p class="hero__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ullam error quidem illum
+            accusamus eveniet eius optio consequatur autem in, eaque repellendus veniam, rem possimus, labore eligendi
+            totam quasi laborum!
+
+        </p>
+        <a href="#" class="button hero__button">Schedule a Free Consultation!</a>
+    </section>
 </body>
+
 </html>

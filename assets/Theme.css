@@ -1,4 +1,15 @@
+/* VARIABLES */
+
 :root {
-    --backgroundColor: #272220;
-    --textColor: white;
+    /* FONTS */
+    --FF: "Arial", sans-serif ;
+    --FF-HEADINGS: "Franklin Gothic Medium', 'Arial Narrow', Arial, cursive";
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+    /* COLORS */
+    --BG-COLOR: #272220;
+    --FONT-COLOR: white;
+    --BORDER-COLOR:black;
+    /* BORDERS */
+    ;
+   
 }

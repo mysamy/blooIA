@@ -1,25 +1,45 @@
-*{
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
-    
 }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* GENERAL STYLES */
 html {
-    font-size: 62.5%;
+    font-size: var(--FS);
+    scroll-behavior: smooth;
 }
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
 body {
-    background-color: var(--backgroundColor);
-    color:var(--textColor);
+    background-color: var(--BG-COLOR);
+    color: var(--TEXT-COLOR);
     font-family: Arial, sans-serif;
-    font-size: calc(14px + 0.5vw);
+    font-size: calc(1rem + 0.5vw);
     font-weight: normal;
-    height: 100vh; 
+    min-height: 100vh;
+    max-width: 800px;
 }
 
 h1 {
-    
+    color: var(--TEXT-COLOR);
+    font-size: calc(5rem + 0.5vw);
 }
+
 a {
     text-decoration: none;
+    color: var(--TEXT-COLOR);
 }
