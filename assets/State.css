@@ -1,4 +1,4 @@
-.main-nav__menu-item-link--has-dropdown:hover+.main-nav__sub-menu {
-    display: block;
+.main-nav__menu-item--has-dropdown:hover .main-nav__sub-menu {
+    visibility: visible;
 
 }
