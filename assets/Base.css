@@ -22,17 +22,20 @@
     --LINK-COLOR: green;
     --LINK-HOVER: hsla(76, 66%, 37%, 0.6);
     --LINK-ACTIVE: orange;
+    --GREY-COLOR: rgb(248,248,248);
+    --GREY-BG:rgb(66,66,66);
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
 
     /* STANDARD PADDING */
-    --PADDING: 0.25em 0.3em;
-    --PADDING-TB: 0.25em 0;
-    --PADDING-SIDE: 0 0.3em ;
+    --PADDING: 0.25rem 0.3rem;
+    --PADDING-TB: 0.25rem 0;
+    --PADDING-SIDE: 0 0.3rem ;
 
     /* STANDARD MARGIN */
-    --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+    --MARGIN-TB: clamp(1rem, calc(1rem + 2vw), 1.5rem) 0;
+    --MARGIN: clamp(1rem, calc(1rem + 2vw), 1.5rem);
 
 
 }
@@ -73,12 +76,13 @@ h2,
 h3 {
     font-family: var(--HEADINGs);
     letter-spacing: 0.1em;
+    margin-bottom: 0.2em;
+    color: var(--FONT-COLOR);
 }
 
 h2,
 h3 {
-    margin-bottom: 1em;
-    color: var(--HIGHLIGHT-COLOR);
+    
 }
 
 p {

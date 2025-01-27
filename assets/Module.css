@@ -1,8 +1,8 @@
 /* HEADER */
 .header {
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 1; */
     /* RESTE COLLE EN HAUT LORSQUE JE DEFILE */
     font-size: var(--FS);
     padding: 20px;
@@ -80,10 +80,10 @@
 .form__input {
     background-color: transparent;
     font-size: 0.5em;
-    border: none;
+    
     height: 50%;
     margin: 10px;
-    outline: none;
+    border:none;
     padding: 10px;
     width: 70%;
 }
@@ -102,20 +102,25 @@
 
 /* BLOCKS/Components */
 .button {
-
     white-space: nowrap;
     padding: var(--PADDING);
     cursor: pointer;
     border-radius: 3rem;
-    height: 2.5rem;
+    height: 1.9rem;
+    border: none;
+    border-color: none;
+    font-size: 0.5em;
 }
 
 .button--contact {
-    font-size: 0.4em;
+    font-size: 0.3em;
     color: var(--BG-COLOR);
     width: 5rem;
 }
-
+.hero__button--grey {
+    color: var(--GREY-COLOR);
+    background-color: var(--GREY-BG);
+}
 /* MODIFIERS */
 
 
@@ -124,15 +129,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: var(--PADDING);
+    
+    height: 80vh;
+    justify-content: center;
 }
-
-.hero__h2 {
-    display: flex;
-
+.hero__para{
+    margin: var(--MARGIN-TB);
+    text-align: center;
+    font-size: 0.4em;
 }
-
-hero__img-titre
+.hero__img-titre {
+    border-radius: 50%;
+}
 /* VARIABLES */
 
 
 /* FONTS */
+.hero__h2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 2.4em;
+    
+}
