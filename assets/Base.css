@@ -18,18 +18,19 @@
     --BG-COLOR: #292423;
     --FONT-COLOR: white;
     --BORDER-COLOR: rgb(255, 255, 255);
-    --HIGHLIGHT-COLOR: #D8B2A7;
+    --HIGHLIGHT-COLOR1: rgb(201,147,131);
+    --HIGHLIGHT-COLOR2: rgb(0,128,128);
     --LINK-COLOR: green;
     --LINK-HOVER: hsla(76, 66%, 37%, 0.6);
     --LINK-ACTIVE: orange;
     --GREY-COLOR: rgb(248,248,248);
-    --GREY-BG:rgb(66,66,66);
+    --GREY-BG:rgb(65,65,65);
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
 
     /* STANDARD PADDING */
-    --PADDING: 0.25rem 0.3rem;
+    --PADDING: clamp(0.1rem, calc(0.1rem + 2vh), 2rem) clamp(1rem, calc(0.1rem + 2vw), 1.5rem);
     --PADDING-TB: 0.25rem 0;
     --PADDING-SIDE: 0 0.3rem ;
 
@@ -48,7 +49,9 @@ img {
     max-width: 100%;
     height: auto;
 }
-
+span {
+    margin: var(--MARGIN-SIDE);
+}
 /* GENERAL STYLES */
 html {
     font-size: var(--FS);
@@ -77,14 +80,17 @@ h1,
 h2,
 h3 {
     font-family: var(--HEADINGs);
-    margin-bottom: 0.2em;
+    
     color: var(--FONT-COLOR);
 }
 
 h2,
-h3 {
-    
+h3 {font-family: var(--HEADINGs);
+    margin-bottom: 0.2em;
+    color: var(--FONT-COLOR);
 }
+    
+
 
 p {
     line-height: 1.5;
