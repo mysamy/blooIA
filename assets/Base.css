@@ -6,52 +6,13 @@
     box-sizing: border-box;
     
 }
-/* VARIABLES */
-
-:root {
-    /* FONTS */
-    --FF: "Arial", sans-serif;
-    --FF-HEADINGS: "Franklin Gothic Medium', 'Arial Narrow', Arial, cursive";
-    --FS: clamp(1rem, calc(1rem + 2vw), 2rem);
-
-    /* COLORS */
-    --BG-COLOR: #292423;
-    --FONT-COLOR: white;
-    --BORDER-COLOR: rgb(255, 255, 255);
-    --HIGHLIGHT-COLOR1: rgb(201,147,131);
-    --HIGHLIGHT-COLOR2: rgb(0,128,128);
-    --LINK-COLOR: green;
-    --LINK-HOVER: hsla(76, 66%, 37%, 0.6);
-    --LINK-ACTIVE: orange;
-    --GREY-COLOR: rgb(248,248,248);
-    --GREY-BG:rgb(65,65,65);
-
-    /* BORDERS */
-    --BORDERS: 1px solid var(--BORDER-COLOR);
-
-    /* STANDARD PADDING */
-    --PADDING: clamp(0.1rem, calc(0.1rem + 2vh), 2rem) clamp(1rem, calc(0.1rem + 2vw), 1.5rem);
-    --PADDING-TB: 0.25rem 0;
-    --PADDING-SIDE: 0 0.3rem ;
-
-    /* STANDARD MARGIN */
-    --MARGIN: clamp(1rem, calc(1rem + 2vw), 1.5rem);
-    --MARGIN-SIDE:0 clamp(1rem, calc(1.5rem + 2vw), 1.5rem);
-    --MARGIN-TB: clamp(1rem, calc(1rem + 2vh), 1.5rem) 0;
-    
-
-
-}
-
-
 img {
     display: block;
     max-width: 100%;
     height: auto;
-}
-span {
     margin: var(--MARGIN-SIDE);
 }
+
 /* GENERAL STYLES */
 html {
     font-size: var(--FS);
@@ -72,15 +33,12 @@ body {
     font-weight: normal;
     max-width: 100vw;
     min-height: 100vh;
-
-
 }
 
 h1,
 h2,
 h3 {
     font-family: var(--HEADINGs);
-    
     color: var(--FONT-COLOR);
 }
 
@@ -90,8 +48,6 @@ h3 {font-family: var(--HEADINGs);
     color: var(--FONT-COLOR);
 }
     
-
-
 p {
     line-height: 1.5;
 }
@@ -103,7 +59,6 @@ a {
     color: var(--FONT-COLOR);
 }
 
-
 a:hover,
 a:focus-visible {
     color: var(--LINK-HOVER);
@@ -114,8 +69,3 @@ a:active {
 }
 
 
-
-/* border-left:var(--BORDERS);
-margin: 0 auto;
-    border-right:var(--BORDERS);
-    /* box-shadow: 0 0 10px var(--BORDER-COLOR);  */

@@ -1,0 +1,34 @@
+/* VARIABLES */
+:root {
+    /* FONTS */
+    --FF: "Arial", sans-serif;
+    --FF-HEADINGS: "Franklin Gothic Medium', 'Arial Narrow', Arial, cursive";
+    --FS: clamp(1rem, calc(1rem + 2vw), 2rem);
+
+    /* COLORS */
+    --BG-COLOR: #292423;
+    --FONT-COLOR: white;
+    --BORDER-COLOR: rgb(255, 255, 255);
+    --HIGHLIGHT-COLOR1: rgb(201, 147, 131);
+    --HIGHLIGHT-COLOR2: rgb(0, 128, 128);
+    --LINK-COLOR: green;
+    --LINK-HOVER: rgb(201, 147, 131);
+    --LINK-ACTIVE: orange;
+    --GREY-COLOR: rgb(248, 248, 248);
+    --GREY-BG: rgb(65, 65, 65);
+
+    /* BORDERS */
+    --BORDERS: 1px solid var(--BORDER-COLOR);
+
+    /* STANDARD PADDING */
+    --PADDING: clamp(0.1rem, calc(0.1rem + 2vh), 2rem) clamp(1rem, calc(0.1rem + 2vw), 1.5rem);
+    --PADDING-TB: 0.25rem 0;
+    --PADDING-SIDE: 0 0.3rem;
+
+    /* STANDARD MARGIN */
+    --MARGIN: clamp(1rem, calc(1rem + 2vw), 1.5rem);
+    --MARGIN-SIDE: 0 clamp(1rem, calc(1.5rem + 2vw), 1.5rem);
+    --MARGIN-TB: clamp(1rem, calc(1rem + 2vh), 1.5rem) 0;
+
+
+}

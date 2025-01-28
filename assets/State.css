@@ -1,4 +1,16 @@
-.main-nav__menu-item--has-dropdown:hover .main-nav__sub-menu {
+.nav__menu-item--has-dropdown:hover .nav__sub-menu {
     visibility: visible;
 
+}
+
+.nav__sub-menu {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    visibility: hidden;
+    min-width: 160px;
+    position: absolute;
+    z-index: 1;
+}
+
+.form-search__label--invi {
+    display: none;
 }

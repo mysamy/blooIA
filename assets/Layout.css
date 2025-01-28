@@ -1,0 +1,90 @@
+/* HEADER */
+
+.header {
+    font-size: var(--FS);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+}
+
+
+/* NAVBAR */
+
+.nav {
+    color: var(--FONT-COLOR);
+    height: 100%;
+    width: 40%;
+}
+
+.nav__menu {
+    font-size: 0.5rem;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+}
+.nav__menu {
+    font-size: 0.5rem;
+}
+
+.main-logo__link {
+    display: flex;
+    align-items: center;
+}
+
+.main-logo__img {
+    height: 50px;
+    object-fit: contain;
+    width: 50px;
+}
+.nav__sub-menu {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    visibility: hidden;
+    min-width: 160px;
+    position: absolute;
+    z-index: 1;
+}
+/* SECTION 1 HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--PADDING);
+    height: 80vh;
+    justify-content: center;
+}
+
+
+
+/* SECTION 2 PRESENTATION */
+.presentation {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+}
+
+
+
+/* SECTION 3 ADVANTAGES */
+.advantages {
+    background-color: var(--FONT-COLOR);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    gap: 2em;
+}
+
+/* SECTION 4 OUR SOLUTIONS*/
+
+.solutions {
+    display: flex;
+    height: 80vh;
+    background-color: var(--FONT-COLOR);
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+}

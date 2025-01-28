@@ -1,0 +1,41 @@
+/* TEXTE COLOR */
+.span--black {
+    color: var(--BG-COLOR);
+}
+
+.span--light-blue {
+    color: var(--HIGHLIGHT-COLOR2);
+}
+
+.span--coffee--cream {
+    color: var(--HIGHLIGHT-COLOR1);
+}
+.span--grey {
+    color: var(--HIGHLIGHT-COLOR1);
+}
+
+/* TEXTE GRAS */
+.para--bold {
+    font-weight: bold;
+}
+
+/* IMAGE */
+.img--circle {
+    border-radius: 50%;
+}
+/* BUTTON  */
+.button--contact {
+    font-size: 0.3em;
+    color: var(--BG-COLOR);
+    width: 5rem;
+}
+
+.button--grey {
+    color: var(--GREY-COLOR);
+    background-color: var(--GREY-BG);
+}
+
+
+.button--grey-mid {
+    margin: var(--MARGIN-TB);
+}
