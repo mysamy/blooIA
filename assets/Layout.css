@@ -83,8 +83,25 @@
 .solutions {
     display: flex;
     height: 80vh;
-    background-color: var(--FONT-COLOR);
+    background-color: var(--BG-COLOR2);
     gap: 2em;
     align-items: center;
     justify-content: center;
+}
+
+/* SECTION 5 CAROUSEL */
+.services {
+    height: 100vh;
+    display: flex;
+    background-color: var(--BG-COLOR2);
+    
+    justify-content: center;
+    align-items: center;
+}
+/* Container section */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    width: 80%;
 }

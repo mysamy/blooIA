@@ -34,8 +34,6 @@
     color: var(--GREY-COLOR);
     background-color: var(--GREY-BG);
 }
-
-
 .button--grey-mid {
     margin: var(--MARGIN-TB);
 }

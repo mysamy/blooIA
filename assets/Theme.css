@@ -7,12 +7,13 @@
 
     /* COLORS */
     --BG-COLOR: #292423;
+    --BG-COLOR2: rgb(230,230,230);
     --FONT-COLOR: white;
     --BORDER-COLOR: rgb(255, 255, 255);
     --HIGHLIGHT-COLOR1: rgb(201, 147, 131);
     --HIGHLIGHT-COLOR2: rgb(0, 128, 128);
     --LINK-COLOR: green;
-    --LINK-HOVER: rgb(201, 147, 131);
+    --LINK-HOVER: rgb(236, 174, 156);
     --LINK-ACTIVE: orange;
     --GREY-COLOR: rgb(248, 248, 248);
     --GREY-BG: rgb(65, 65, 65);

@@ -4,7 +4,8 @@
 }
 
 .nav__sub-menu {
-    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    transition: opacity 0.3s ease-in-out;
+    visibility: 0,3;
     visibility: hidden;
     min-width: 160px;
     position: absolute;
@@ -13,4 +14,34 @@
 
 .form-search__label--invi {
     display: none;
+}
+
+/* BUTTON HOVER */
+.button--hovered::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--LINK-HOVER);
+    clip-path: circle(0%);
+    transition: 0.5s;
+    z-index: 0;
+}
+
+.button:hover::after,
+.button:focus-visible::after {
+    /*focus-visible quand on navigue avec le vlavier par ex tab (accesibilite,navigation clavier*/
+    clip-path: circle(100%);
+}
+
+.button:hover,
+.button:focus-visible {
+    color: var(--FONT-COLOR);
+}
+
+.button--white:hover,
+.button--white:focus-visible {
+    color: var(--FONT-COLOR);
 }
