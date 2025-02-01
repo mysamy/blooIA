@@ -25,6 +25,7 @@
     height: 100%;
     justify-content: space-around;
 }
+
 .nav__menu {
     font-size: 0.5rem;
 }
@@ -39,6 +40,7 @@
     object-fit: contain;
     width: 50px;
 }
+
 .nav__sub-menu {
     transition: opacity 0.3s ease-in-out, visibility 0.3s;
     visibility: hidden;
@@ -46,6 +48,7 @@
     position: absolute;
     z-index: 1;
 }
+
 /* SECTION 1 HERO */
 .hero {
     display: flex;
@@ -58,8 +61,8 @@
 
 
 
-/* SECTION 2 PRESENTATION */
-.presentation {
+/* SECTION 2 businesses */
+.businesses {
     display: flex;
     justify-content: center;
     height: 70vh;
@@ -75,7 +78,7 @@
     align-items: center;
     height: 100vh;
     justify-content: center;
-    gap: 2em;
+    
 }
 
 /* SECTION 4 OUR SOLUTIONS*/
@@ -94,10 +97,11 @@
     height: 100vh;
     display: flex;
     background-color: var(--BG-COLOR2);
-    
+
     justify-content: center;
     align-items: center;
 }
+
 /* Container section */
 .container {
     display: flex;
