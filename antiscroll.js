@@ -1,12 +1,12 @@
-window.addEventListener("load", () => {
-  const savedPosition = localStorage.getItem("scrollPosition");
-  if (savedPosition) {
-    // Vérifier si la page a été complètement rendue
-    const documentHeight = document.documentElement.scrollHeight;
-    const viewportHeight = window.innerHeight;
+// Sauvegarder la position de défilement avant que la page ne soit fermée ou actualisée
+window.onbeforeunload = function () {
+  sessionStorage.setItem('scrollPosition', window.scrollY);
+};
 
-    if (documentHeight > viewportHeight) {
-      window.scrollTo(0, parseInt(savedPosition, 10));
-    }
+// Restaurer la position de défilement lors du chargement de la page
+window.onload = function () {
+  const scrollPosition = sessionStorage.getItem('scrollPosition');
+  if (scrollPosition) {
+    window.scrollTo(0, scrollPosition);
   }
-});
+};

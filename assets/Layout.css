@@ -97,7 +97,7 @@
     height: 100vh;
     display: flex;
     background-color: var(--BG-COLOR2);
-
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -105,7 +105,9 @@
 /* Container section */
 .container {
     display: flex;
-    flex-wrap: wrap;
-    height: 90%;
-    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
 }

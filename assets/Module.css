@@ -59,6 +59,7 @@
 /* BUTTONS */
 
 .button {
+    display: flex;
     align-items: center;
     border-radius: 3rem;
     border: none;
@@ -71,12 +72,21 @@
     padding: var(--PADDING);
     position: relative;
     white-space: nowrap;
-    
+    justify-content: center;
     /* Ne prend que la largeur de son contenu */
 }
 
 .button__text {
     z-index: 1;
+    position: relative;
+}
+
+.button__arrow {
+    padding: 0;
+    border: 2px solid black;
+    width: 1.9rem;
+
+
 }
 
 /* INFO BOX */
@@ -183,10 +193,11 @@
 /* BLOCK ARROWS */
 .arrows-btn {
     display: flex;
-    width: 50%;
+    width: 20%;
     height: 20%;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
+    gap: 0.5em;
 }
 
 .title-services {
@@ -195,4 +206,41 @@
     align-items: center;
     width: 50%;
     height: 20%;
+}
+
+/* CAROUSEL */
+.carousel {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    background-color: blanchedalmond;
+    gap: 3em;
+    overflow-x: hidden;
+
+}
+
+.carousel__card {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    height: 90%;
+    width: 1200px;
+    border-radius: 10%;
+    gap: 0.5em;
+
+}
+
+.carousel__img {
+    height: 70%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.carousel__title {
+    font-size: 0.8em;
+    margin: 0 20px;
+}
+
+.button--margin {
+    margin: 0 20px;
 }
