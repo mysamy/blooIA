@@ -7,9 +7,10 @@
     color: var(--HIGHLIGHT-COLOR2);
 }
 
-.span--coffee--cream {
+.span--coffee-cream {
     color: var(--HIGHLIGHT-COLOR1);
 }
+
 .span--grey {
     color: var(--HIGHLIGHT-COLOR1);
 }
@@ -23,6 +24,7 @@
 .img--circle {
     border-radius: 50%;
 }
+
 /* BUTTON  */
 .button--contact {
     font-size: 0.3em;
@@ -34,6 +36,7 @@
     color: var(--GREY-COLOR);
     background-color: var(--GREY-BG);
 }
+
 .button--grey-mid {
     margin: var(--MARGIN-TB);
 }

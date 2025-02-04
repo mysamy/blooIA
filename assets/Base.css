@@ -4,13 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
+
 img {
     display: block;
     max-width: 100%;
     height: auto;
-    
+
 }
 
 /* GENERAL STYLES */
@@ -44,17 +45,20 @@ h3 {
 }
 
 h2,
-h3 {font-family: var(--HEADINGs);
+h3 {
+    font-family: var(--HEADINGs);
     margin-bottom: 0.2em;
     color: var(--FONT-COLOR);
 }
-    
+
 p {
     line-height: 1.5;
 }
-li{
+
+li {
     list-style: none;
 }
+
 a {
     text-decoration: none;
     color: var(--FONT-COLOR);
@@ -68,5 +72,3 @@ a:focus-visible {
 a:active {
     color: var(--LINK-ACTIVE);
 }
-
-

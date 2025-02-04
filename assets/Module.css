@@ -226,7 +226,7 @@
     display: flex;
     flex-direction: column;
     background-color: blue;
-    height: 90%;
+    height: 80%;
     width: 30%;
     border-radius: 10%;
     gap: 0.5em;
@@ -246,7 +246,14 @@
 .carousel__container {
     display: flex;
     width: 80%;
-    height: 1000px;
+    height:70%;
+    background-color: aquamarine;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scrollbar-width: none; /* Cache la scrollbar sur Firefox */
+    -ms-overflow-style: none; 
+    scroll-snap-align: center;
 }
 
 .button--margin {
