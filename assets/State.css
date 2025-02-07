@@ -5,7 +5,7 @@
 
 .nav__sub-menu {
     transition: opacity 0.3s ease-in-out;
-    visibility: 0,3;
+    visibility: 0, 3;
     visibility: hidden;
     min-width: 160px;
     position: absolute;
@@ -36,12 +36,12 @@
     clip-path: circle(100%);
 }
 
-.button:hover,
+/* .button:hover,
 .button:focus-visible {
     color: var(--FONT-COLOR);
-}
+} */
 
-.button--white:hover,
-.button--white:focus-visible {
+.button__text--white:hover,
+.button__text--white:focus-visible {
     color: var(--FONT-COLOR);
 }

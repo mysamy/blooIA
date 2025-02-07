@@ -2,12 +2,11 @@
 .main-logo {
     align-items: center;
     display: flex;
-    height: 100%;
     justify-content: center;
     width: 300px;
 }
 
-.main-logo__h1 {
+.main-logo__title {
     font-size: 0.9em;
 }
 
@@ -34,7 +33,7 @@
     padding: var(--PADDING-SIDE);
 }
 
-.form__input {
+.form-search__input {
     background-color: transparent;
     font-size: 0.5em;
     height: 50%;
@@ -65,9 +64,7 @@
     border: none;
     cursor: pointer;
     width: max-content;
-    font-size: 0.5em;
-    height: 1.9rem;
-    margin: var(--MARGIN-TB);
+    font-size: 0.5rem;
     overflow: hidden;
     padding: var(--PADDING);
     position: relative;
@@ -97,13 +94,9 @@
     font-size: 0.5em;
 }
 
-/* BLOCKS/Components */
-
-
-
 
 /* TITRE AVEC PHOTO */
-.title-img {
+.title-icon {
     display: flex;
     align-items: center;
     text-align: center;
@@ -181,12 +174,6 @@
     color: var(--BG-COLOR);
 }
 
-/* BLOCK TEXTE EN LIGNE */
-.span__row {
-    display: flex;
-    white-space: nowrap;
-    align-items: center;
-}
 
 
 /* services */
@@ -199,6 +186,7 @@
     justify-content: space-around;
     gap: 0.5em;
 }
+
 
 .title-services {
     font-size: 3em;
@@ -246,16 +234,73 @@
 .carousel__container {
     display: flex;
     width: 80%;
-    height:70%;
+    height: 70%;
     background-color: aquamarine;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    overflow-x: auto;
-    scrollbar-width: none; /* Cache la scrollbar sur Firefox */
-    -ms-overflow-style: none; 
-    scroll-snap-align: center;
+    
 }
 
 .button--margin {
     margin: 0 20px;
+}
+
+/* SLIDER */
+.slider {
+    width: 90%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: tomato;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 100vw));
+    }
+}
+/* .slider__container {
+    
+    width: 100vw;
+    
+    display: flex;
+}
+
+.slider__item {
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    margin: var(--MARGIN);
+}
+
+.slider__item--left {
+    border-right: var(--BORDERS);
+}
+
+
+
+.slider__trait {
+    border-bottom: 2px solid black;
+    width: 80%;
+}
+
+.title {
+    font-size: 0.3em;
+} */
+
+/* Container section */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+.container__text{
+    font-size: 0.3em;
 }
