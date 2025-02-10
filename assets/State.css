@@ -28,6 +28,7 @@
     clip-path: circle(0%);
     transition: 0.5s;
     z-index: 0;
+    
 }
 
 .button:hover::after,

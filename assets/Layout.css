@@ -100,16 +100,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* overflow-x: hidden; */
 }
 
-/* SECTION 6 SLIDER */
+/* SECTION 6 why-hize__slider */
 .why-hize {
     display: flex;
     height: 100vh;
-    
+   
     background-color: aquamarine;
-    overflow: hidden;
-    
+    /* overflow: hidden; */
+
 }
 
 /* SECTION 7 CONTACT */
@@ -160,13 +161,12 @@
 }
 
 .footer__group {
-    margin: var(--MARGIN-TB);
-    width: 100%;
+    margin: var(--MARGIN);
+    width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
+    
+    gap: 1.5em;
 }
 
 .footer__form-input {
