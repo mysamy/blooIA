@@ -28,19 +28,16 @@
     clip-path: circle(0%);
     transition: 0.5s;
     z-index: 0;
-    
+    color: var(--FONT-COLOR);
 }
 
 .button:hover::after,
 .button:focus-visible::after {
     /*focus-visible quand on navigue avec le vlavier par ex tab (accesibilite,navigation clavier*/
     clip-path: circle(100%);
+    color: var(--FONT-COLOR);
 }
 
-/* .button:hover,
-.button:focus-visible {
-    color: var(--FONT-COLOR);
-} */
 
 .button__text--white:hover,
 .button__text--white:focus-visible {

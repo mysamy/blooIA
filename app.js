@@ -11,37 +11,29 @@ window.onload = function () {
   }
 };
 
-gsap.registerPlugin(ScrollTrigger);
 
-// Créer la timeline
-const timeline = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".slider__container",
-    start: "top top", // Début de l'animation quand la section est visible
-    end: "bottom top", // Fin de l'animation quand la section est entièrement visible
-    pin: true, // Pinne la section pour stopper le scroll
-    scrub: true, // L'animation suit le défilement
-    onEnter: () => disableScroll(),
-    onLeave: () => enableScroll(),
-    onEnterBack: () => disableScroll(),
-    onLeaveBack: () => enableScroll(),
-    markers: true, // Afficher les marqueurs pour déboguer
-  }
+
+
+const buttonArrow = document.querySelector(".arrows-btn");
+const slides = document.querySelectorAll(".carousel__wrapper");
+
+let currentPosition = 0;
+const step = 33.333333; 
+
+buttonArrow.addEventListener("click", e => {
+    if (e.target.nodeName === "BUTTON") {
+        if (e.target.classList.contains("button__arrow--left")) {
+            currentPosition -= step; 
+            slides.forEach((slide) => {
+                slide.style.transform = `translateX(${currentPosition}%)`;
+            })
+            
+        }
+        else if (e.target.classList.contains("button__arrow--right")){
+            currentPosition += step;
+            slides.forEach((slide) => {
+                slide.style.transform = `translateX(${currentPosition}%)`;
+            })
+        }
+    }
 });
-
-// Animation
-timeline.from(".section", {
-  opacity: 0,
-  y: 50,
-  duration: 1.5,
-});
-
-// Fonction pour désactiver le scroll
-function disableScroll() {
-  document.body.style.overflow = 'hidden'; // Désactive le scroll
-}
-
-// Fonction pour réactiver le scroll
-function enableScroll() {
-  document.body.style.overflow = ''; // Réactive le scroll
-}

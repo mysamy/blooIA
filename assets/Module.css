@@ -229,45 +229,36 @@
 }
 
 .carousel__wrapper {
-
     flex-shrink: 0;
     display: flex;
     width: 100%;
     height: 90%;
-
-    justify-content: space-around;
-    animation: slide-animation 10s linear infinite;
+    gap: 1em;
+    
+    
 }
 
 .carousel__container {
     justify-content: space-around;
     display: flex;
     overflow-x: hidden;
-    width: 80%;
+    width: 50%;
     height: 70%;
+    background-color: chartreuse;
 
 
 
 }
 
-@keyframes slide-animation {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 
 .carousel__card {
-    flex-shrink: 0;
+    
     display: flex;
     flex-direction: column;
     background-color: blue;
     height: 100%;
-    width: 25%;
+    width: 30%;
     border-radius: 10%;
     gap: 0.5em;
 }
