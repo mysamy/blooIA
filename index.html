@@ -16,7 +16,7 @@
       </head>
 
       <body>
-            <header class="header">
+            <header class="header header--slide-in">
                   <figure class="main-logo">
                         <a href="#" class="main-logo__link">
                               <img class="main-logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
@@ -63,38 +63,124 @@
                         <i class="bx bx-search-alt-2"></i>
                         <input class="form-search__input" type="text" name="query" placeholder="Search" />
                   </form>
+
                   <button type="button" class="button button--hovered button--contact">
                         <span class="button__text button__text--white">Contact us</span>
                   </button>
+
+
+
+
+<!-- MODULE -->
+
+                  <button class="open-button">Ouvrir le module</button>
+                  <dialog  class="modal" id="modal">
+                              <button id="closeConnexionBtn" class="close-button">
+                                    X
+                              </button>
+                              <figure class="main-logo">
+                                    <a href="#" class="main-logo__link">
+                                          <img class="main-logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
+                                          <h1 class="main-logo__title">HIZE</h1>
+                                    </a>
+                              </figure>
+                              <nav class="modal-nav">
+                                    <ul class="modal-nav__menu">
+                                          <li class="nav__menu-item modal-nav">
+                                                <a class="nav__link" href="#">HOME</a>
+                                          </li>
+                                          <li class="nav__menu-item modal-nav">
+                                                <a class="nav__link" href="#">ABOUT US</a>
+                                          </li>
+                                          <li class="nav__menu-item  nav__menu-item--has-dropdown modal-nav">
+                                                <a class="nav__link nav__link--has-dropdown" href="#"
+                                                      >OUR SERVICES<i class="bx bx-chevron-down" aria-label="Our services menu"></i
+                                                ></a>
+                                                <ul class="nav__sub-menu">
+                                                      <li class="nav__sub-menu-item">
+                                                            <a href="#" class="nav__sub-menu-link">HOME</a>
+                                                      </li>
+                                                      <li class="nav__sub-menu-item">
+                                                            <a href="#" class="nav__sub-menu-link">ABOUT US</a>
+                                                      </li>
+                                                      <li class="nav__sub-menu-item">
+                                                            <a href="#" class="nav__sub-menu-link">OUR SERVICES</a>
+                                                      </li>
+                                                      <li class="nav__sub-menu-item">
+                                                            <a href="#" class="nav__sub-menu-link">fdsq</a>
+                                                      </li>
+                                                      <li class="nav__sub-menu-item">
+                                                            <a href="#" class="nav__sub-menu-link">fsdfq</a>
+                                                      </li>
+                                                </ul>
+                                          </li>
+                                          <li class="nav__menu-item modal-nav">
+                                                <a href="nav__link">WHY HIZE?</a>
+                                          </li>
+                                    </ul>
+                              </nav>
+                             
+            
+                              <button type="button" class="button button--hovered button--contact">
+                                    <span class="button__text button__text--white">Contact us</span>
+                              </button>
+                              <div class="langue-selector">
+                                    <button class="langue-selector__option langue-selector__option--es">ES</button>
+                                    <button class="langue-selector__option langue-selector__option--en">EN</button>
+                              </div> 
+                              <form class="form-search" action="/recherche" method="get">
+                                    <label for="search" class="form-search__label form-search__label--invi">Search</label>
+                                    <i class="bx bx-search-alt-2"></i>
+                                    <input class="form-search__input" type="text" name="query" placeholder="Search" />
+                              </form>
+            
+                        
+                        
+                  </dialog>
+
+
+
+
+
+
+
+
+
+
+
+
                   <div class="langue-selector">
                         <button class="langue-selector__option langue-selector__option--es">ES</button>
                         <button class="langue-selector__option langue-selector__option--en">EN</button>
                   </div>
+
+
+
+
             </header>
 
             <main>
                   <section class="hero">
                         <h2 class="title-icon">
-                              <span class="text--row">
+                              <span class="text--row text--fade-in">
                                     <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
                                     <span class="title-icon__text">Human Ressource</span>
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
+
+                                    <img class="title-icon__img img--circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
                               </span>
                               <span class="text--row">
-                                    <span class="title-icon__text">Consulting</span>
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" /><span
-                                          class="title-icon__text"
-                                          >Services
-                                    </span>
+                                    <span class="title-icon__text text--fade-in">Consulting</span>
+                                    <img class="title-icon__img img--circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
+                                    <span class="title-icon__text text--fade-in">Services </span>
                               </span>
                         </h2>
-                        <p class="hero__para">
+                        <p class="hero__para text--fade-in">
                               Hize is a diverse team of consultants and specialists who power<br />
                               the people side of your business growth and guide you through <br />
                               the most challenging points of your bussiness journey.
                         </p>
                         <button type="button" class="button button--hovered button--grey button__text--white">
-                              <span class="button__text ">Schedule a Free Consultation!</span>
+                              <span class="button__text">Schedule a Free Consultation!</span>
                         </button>
                   </section>
 
@@ -115,7 +201,7 @@
                                     or biggest barrier to growth?
                               </p>
                               <button class="button button--hovered button--grey button__text--white">
-                                    <span class="button__text ">Our solutions</span>
+                                    <span class="button__text">Our solutions</span>
                               </button>
                         </div>
                         <div class="card">
@@ -179,12 +265,10 @@
                         <div class="services__container">
                               <h2 class="services__title">Our services</h2>
                               <div class="arrows-btn">
-                                    <button onclick="moveSlide('prev')" class="button button__arrow ">
+                                    <button onclick="prev()" class="button button__arrow">
                                           <i class="icon bx bx-chevron-left"></i>
                                     </button>
-                                    <button onclick="moveSlide('next')" class="button button__arrow "><i class="bx bx-chevron-right"></i></button>
-                                          
-                                    
+                                    <button onclick="next()" class="button button__arrow"><i class="bx bx-chevron-right"></i></button>
                               </div>
                         </div>
                         <div class="carousel">
@@ -213,92 +297,89 @@
                                           <div class="carousel__card">
                                                 <img class="carousel__img" src="https://picsum.photos/500/600?random=4" alt="" />
                                                 <h3 class="carousel__title">
-                                                    3 <br />
+                                                      3 <br />
                                                       engagement
                                                 </h3>
                                                 <button class="button button__arrow button--margin">
                                                       <i class="bx bx-chevron-right"></i>
                                                 </button>
                                           </div>
-                                    
-                                          
-                                                <div class="carousel__card">
-                                                      <img class="carousel__img" src="https://picsum.photos/500/600?random=5" alt="" />
-                                                      <h3 class="carousel__title">
-                                                            4 <br />
-                                                            engagement
-                                                      </h3>
-                                                      <button class="button button__arrow button--margin">
-                                                            <i class="bx bx-chevron-right"></i>
-                                                      </button>
-                                                </div>
-                                                <div class="carousel__card">
-                                                      <img class="carousel__img" src="https://picsum.photos/500/600?random=6" alt="" />
-                                                      <h3 class="carousel__title">
-                                                            5<br />
-                                                            engagement
-                                                      </h3>
-                                                      <button class="button button__arrow button--margin">
-                                                            <i class="bx bx-chevron-right"></i>
-                                                      </button>
-                                                </div>
-                                                <div class="carousel__card">
-                                                      <img class="carousel__img" src="https://picsum.photos/500/600?random=7" alt="" />
-                                                      <h3 class="carousel__title">
-                                                            6 <br />
-                                                            engagement
-                                                      </h3>
-                                                      <button class="button button__arrow button--margin">
-                                                            <i class="bx bx-chevron-right"></i>
-                                                      </button>
-                                                </div>
-                                          
-                                    
-                                          
-                                                <div class="carousel__card">
-                                                      <img class="carousel__img" src="https://picsum.photos/500/600?random=8" alt="" />
-                                                      <h3 class="carousel__title">
-                                                            7 <br />
-                                                            engagement
-                                                      </h3>
-                                                      <button class="button button__arrow button--margin">
-                                                            <i class="bx bx-chevron-right"></i>
-                                                      </button>
-                                                </div>
-                                                <div class="carousel__card">
-                                                      <img class="carousel__img" src="https://picsum.photos/500/600?random=9" alt="" />
-                                                      <h3 class="carousel__title">
-                                                            8<br />
-                                                            engagement
-                                                      </h3>
-                                                      <button class="button button__arrow button--margin">
-                                                            <i class="bx bx-chevron-right"></i>
-                                                      </button>
-                                                </div>
-                                                <div class="carousel__card">
-                                                      <img class="carousel__img" src="https://picsum.photos/500/600?random=10" alt="" />
-                                                      <h3 class="carousel__title">
-                                                           9 <br />
-                                                            engagement
-                                                      </h3>
-                                                      <button class="button button__arrow button--margin">
-                                                            <i class="bx bx-chevron-right"></i>
-                                                      </button>
-                                                </div>    
+
+                                          <div class="carousel__card">
+                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=5" alt="" />
+                                                <h3 class="carousel__title">
+                                                      4 <br />
+                                                      engagement
+                                                </h3>
+                                                <button class="button button__arrow button--margin">
+                                                      <i class="bx bx-chevron-right"></i>
+                                                </button>
                                           </div>
+                                          <div class="carousel__card">
+                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=6" alt="" />
+                                                <h3 class="carousel__title">
+                                                      5<br />
+                                                      engagement
+                                                </h3>
+                                                <button class="button button__arrow button--margin">
+                                                      <i class="bx bx-chevron-right"></i>
+                                                </button>
+                                          </div>
+                                          <div class="carousel__card">
+                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=7" alt="" />
+                                                <h3 class="carousel__title">
+                                                      6 <br />
+                                                      engagement
+                                                </h3>
+                                                <button class="button button__arrow button--margin">
+                                                      <i class="bx bx-chevron-right"></i>
+                                                </button>
+                                          </div>
+
+                                          <div class="carousel__card">
+                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=8" alt="" />
+                                                <h3 class="carousel__title">
+                                                      7 <br />
+                                                      engagement
+                                                </h3>
+                                                <button class="button button__arrow button--margin">
+                                                      <i class="bx bx-chevron-right"></i>
+                                                </button>
+                                          </div>
+                                          <div class="carousel__card">
+                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=9" alt="" />
+                                                <h3 class="carousel__title">
+                                                      8<br />
+                                                      engagement
+                                                </h3>
+                                                <button class="button button__arrow button--margin">
+                                                      <i class="bx bx-chevron-right"></i>
+                                                </button>
+                                          </div>
+                                          <div class="carousel__card">
+                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=10" alt="" />
+                                                <h3 class="carousel__title">
+                                                      9 <br />
+                                                      engagement
+                                                </h3>
+                                                <button class="button button__arrow button--margin">
+                                                      <i class="bx bx-chevron-right"></i>
+                                                </button>
+                                          </div>
+                                    </div>
                               </div>
                         </div>
                   </section>
 
-                  <section class="why-hize">
-                        <div class="why-hize__slider">
-                              <div class="slider__container">
-                                    <div class="slider__item slider__item--left">
-                                          <div class="slider__container-title">
-                                                <div class="slider__trait"></div>
+                  <section class="hize">
+                        <div class="hize__slider">
+                              <div class="hize__container">
+                                    <div class="hize__item hize__item--left">
+                                          <div class="hize__container-title">
+                                                <div class="hize_trait"></div>
                                                 <h2>/Hize</h2>
                                           </div>
-                                          <div class="slider__container-text">
+                                          <div class="hize__container-text">
                                                 <h3><span class="text--light-blue">Why</span> <span class="span--coffee--cream">Hize?</span></h3>
                                                 <h4>Greater Success</h4>
                                                 <p class="info-box__para">
@@ -308,17 +389,17 @@
                                                 </p>
                                           </div>
                                     </div>
-                                    <div class="slider__item">
-                                          <div class="slider__container-text">
-                                                <div class="slider__trait"></div>
+                                    <div class="hize__item">
+                                          <div class="hize__container-text">
+                                                <div class="hize_trait"></div>
                                                 <h2 class="title">Human and Organizational Development Consulting Services</h2>
                                           </div>
                                           <div class="schema"><img src="https://picsum.photos/300/300?random=1" alt="" /></div>
                                     </div>
                               </div>
-                              <div class="slider__container">
-                                    <div class="slider__item">
-                                          <div class="slider__trait"></div>
+                              <div class="hize__container">
+                                    <div class="hize__item">
+                                          <div class="hize_trait"></div>
                                           <h2>/Why Hize?</h2>
                                           <h2>/Advantage</h2>
                                           <div class="container__text">
@@ -371,8 +452,8 @@
                                     </figure>
 
                                     <div class="social">
-                                          <a href="#" class="social__link"><i class="bx bxl-linkedin"></i> 
-                                          <a href="#" class="social__link "><i class="bx bxl-instagram"></i></a>
+                                          <a href="#" class="social__link"><i class="bx bxl-linkedin"></i> </a>
+                                          <a href="#" class="social__link"><i class="bx bxl-instagram"></i></a>
                                     </div>
                                     <div class="legal">
                                           <a href="#" class="legal__link"><i class="bx bxl-linkedin"></i> Legal Hub</a>
