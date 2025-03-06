@@ -114,7 +114,7 @@ console.log(lastClone);
 wrapper.appendChild(firstClone); // Clone de la première carte ajouté à la fin
 wrapper.insertBefore(lastClone, wrapper.firstElementChild);
 
-let index = 0;
+let index = 1;
 const cardWidth = 350;
 
 function moveSlide(direction) {
@@ -123,8 +123,6 @@ function moveSlide(direction) {
       } else {
             index--;
       }
-      wrapper.appendChild(firstClone); // Ajoute un clone de la première carte à la fin
-      wrapper.insertBefore(lastClone, wrapper.firstElementChild);
       wrapper.style.transition = "transform 0.5s ease-in-out";
       wrapper.style.transform = `translateX(${-cardWidth * index}px)`;
       console.log(-cardWidth * index);
