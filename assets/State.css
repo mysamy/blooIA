@@ -60,7 +60,7 @@
 
 
 @media (max-width: 1024px) { 
-     .nav, .form-search, .langue-selector{
+     .nav,.header > .form-search,.header > .langue-selector{
         display: none;
      }
      .burger-button{

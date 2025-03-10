@@ -262,8 +262,11 @@
     padding: var(--PADDING-TB);
     border-radius: 5%;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
-
+.zoom {
+    transform: scale(1.2); /* Zoom sur la card */
+  }
 .carousel__img {
     height: 70%;
     width: 100%;
@@ -348,7 +351,7 @@
 .modal {
     
     
-    height: 60vh;
+    height: 70vh;
     width: 100vw;
      background-color: green;
      flex-direction: column;
