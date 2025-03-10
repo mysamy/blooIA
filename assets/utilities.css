@@ -44,6 +44,21 @@
 /* BLOCK TEXTE EN LIGNE */
 .text--row {
     display: flex;
-    white-space: nowrap;
+    
     align-items: center;
 }
+
+
+
+/* ANIMATION */
+.header--slide-in {
+    animation:slide-in-top 1s cubic-bezier(.25,.46,.45,.94) both;
+}
+
+
+@keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+
+
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+@keyframes fade-in{0%{opacity:0}100%{opacity:1}}

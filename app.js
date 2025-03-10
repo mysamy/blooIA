@@ -1,148 +1,118 @@
-// Sauvegarder la position de défilement avant que la page ne soit fermée ou actualisée
-// window.onbeforeunload = function () {
-//       sessionStorage.setItem("scrollPosition", window.scrollY);
-// };
-
-// // Restaurer la position de défilement lors du chargement de la page
-// window.onload = function () {
-//       const scrollPosition = sessionStorage.getItem("scrollPosition");
-//       if (scrollPosition) {
-//             window.scrollTo(0, scrollPosition);
-//       }
-// };
-// ajouter au local storage
-
-// buttonArrow.addEventListener("click", e => {
-//     if (e.target.nodeName === "BUTTON" ) {
-//         if (e.target.classList.contains("button__arrow--left")) {
-//             index -= step;
-//             slides.forEach((slide) => {
-//                 slide.style.transform = `translateX(${index}%)`;
-//             })
-
-//         }
-//         else if (e.target.classList.contains("button__arrow--right")){
-//             index += step;
-//             slides.forEach((slide) => {
-//                 slide.style.transform = `translateX(${index}%)`;
-//             })
-//         }
-//     }
-// });
-
-// const buttonArrow = document.querySelector(".arrows-btn");
-// const slides = document.querySelectorAll(".carousel__wrapper");
-
-// let index = 0;
-// const step = 350;
-// // slide.style.animation = "left 3s linear infinite"
-// function moveLeft() {
-//       index -= step;
-//       slides.forEach((slide) => {
-
-//             slide.style.transform = `translateX(${index}px)`;
-//       });
-//       console.log(index);
-//       console.log(-4 * step);
-//       if (index <= -4 * step) {
-//             slides.forEach((slide) => {
-//                         slide.style.transition = "none";
-//                   });
-
-//             index = 0;
-
-//             slides.forEach((slide) => {
-//                   slide.style.transform = `translateX(${index})`;
-//             });
-
-//             setTimeout(() => {
-//               slides.forEach((slide) => {
-//                   slide.style.transition = "transform 0.5s ease"; // ✅ Correction ici
-//                   console.log("transition appliquée");
-//               });
-
-//               moveLeft(); // 🔥 Déclencher moveLeft après avoir réactivé la transition
-//           }, 0.500); // Petit délai pour assurer la réinitialisation avant l'animation
-//       }
-// }
-// function moveRight() {
-
-//   if (index <= 10 * step)  {console.log(step)
-//       setTimeout(() => {
-//           slides.forEach((slide) => {
-//               slide.style.transition = "none";
-//               console.log("transition appliquée");
-//           });
-
-//       }, 0.500);
-//         slides.forEach((slide) => {
-//                     slide.style.transition = "none";
-//               });
-
-//         index = 0;
-
-//         slides.forEach((slide) => {
-//               slide.style.transform = `translateX(${index}%)`;
-//         });
-
-//         index += step;
-
-//   }
-//   slides.forEach((slide) => {
-
-//         slide.style.transform = `translateX(${index}%)`;
-//   });
-//   console.log(index);
-//   console.log(10 * step);
-
-// }
 const wrapper = document.querySelector(".carousel__wrapper");
-console.log(wrapper);
+const cards = Array.from(wrapper.children);
+const width = 350;
+let index = 0;
+console.log(cards.length);
+wrapper.innerHTML += wrapper.innerHTML;
 
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+const cardsDouble = Array.from(wrapper.children);
 
-const cards = Array.from(document.querySelectorAll(".carousel__card"));
 
-console.log(cards);
-// Cloner les cartes pour l'effet infini
-const firstClone = cards[0].cloneNode(true);
-console.log(firstClone);
-const lastClone = cards[cards.length - 1].cloneNode(true);
-console.log(lastClone);
-// Ajoute un clone de la dernière carte au début
-wrapper.appendChild(firstClone); // Clone de la première carte ajouté à la fin
-wrapper.insertBefore(lastClone, wrapper.firstElementChild);
 
-let index = 1;
-const cardWidth = 350;
 
-function moveSlide(direction) {
-      if (direction === "next") {
-            index++;
-      } else {
-            index--;
-      }
+
+function next() {
+      index++; 
+      console.log(index);
       wrapper.style.transition = "transform 0.5s ease-in-out";
-      wrapper.style.transform = `translateX(${-cardWidth * index}px)`;
-      console.log(-cardWidth * index);
-      console.log(wrapper);
+      wrapper.style.transform = `translateX(-${index * width}px)`;
+      if (index >= cards.length) {
+            console.log(index);
+            setTimeout(() => {
+                  wrapper.style.transition = "none";
+                  index = 0;
+                  wrapper.style.transform = "translateX(0)";
+            }, 500);
+      }
+}
+function prev() {
+      
+      if (index <= 0) {
+            console.log(index);
+            index = cards.length ;
+            wrapper.style.transition = "none";
+            wrapper.style.transform = `translateX(-${index * width}px)`;
+            
+      }
+
+      setTimeout(() => {
+            index--;
+            console.log(index);
+            wrapper.style.transition = "transform 0.5s ease-in-out";
+            wrapper.style.transform = `translateX(-${index * width}px)`;
+      }, 20);
 }
 
-nextBtn.addEventListener("click", () => moveSlide("next"));
-prevBtn.addEventListener("click", () => moveSlide("prev"));
 
-// Défilement automatique
-// setInterval(() => moveSlide("next"), 3000);
+// scroll down to right
+const sectionScroll = document.querySelector(".hize")
+const  scroll = document.querySelector(".hize__slider")
 
-// setTimeout(() => {
-//       if (index >= cards.length + 1) {
-//             index = 1;
-//             wrapper.style.transition = "none";
-//             wrapper.style.transform = `translateX(${-cardWidth * index}px)`;
-//       } else if (index <= 0) {
-//             index = cards.length;
-//             wrapper.style.transition = "none";
-//             wrapper.style.transform = `translateX(${-cardWidth * index}px)`;
-//       }
-// }, 500);
+window.addEventListener("scroll", () => {
+
+})
+
+// animation delay texte
+// document.querySelectorAll('.text--fade-in').forEach((el, index) => {
+//       el.style.animation = `fade-in 3s cubic-bezier(.39,.575,.565,1.000) both ${index * 0.2}s`;
+//   });
+
+
+
+
+// modal
+const modal = document.querySelector('#modal');
+const openModal = document.querySelector('.burger-button');
+const closeModal = document.querySelector('.close-button');
+
+openModal.addEventListener('click', ()=> {
+      modal.showModal();
+      modal.style.display = "flex";
+});
+
+closeModal.addEventListener('click', ()=> {
+      modal.close();
+      modal.style.display = "none";
+});
+
+
+function move() {
+      index++;
+      wrapper.style.transition = "transform 1s ease-in-out";
+      wrapper.style.transform = `translateX(-${index * width}px)`;
+      console.log(index);
+      if (index >= cards.length) {
+            console.log(index);
+
+            setTimeout(() => {
+                  wrapper.style.transition = "none";
+                  index = 0;
+                  wrapper.style.transform = "translateX(0)";
+            }, 1000);
+      }
+}
+// setInterval(move, 2000);
+
+
+
+
+// HYBRIDE SCROLL
+
+const sticky = document.querySelector('.sticky')
+console.log(sticky);
+
+window.addEventListener('scroll', () => transform(sticky));
+
+function transform(section){
+      const offsetTop = section.parentElement.offsetTop ;
+      console.log(offsetTop);
+      const hizeSlider = section.querySelector('.hize__slider');
+      console.log(hizeSlider);
+      let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
+	console.log(percentage);
+      percentage = percentage < 0 ? 0 : percentage > 100 ? 200 : percentage;
+	hizeSlider.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`
+      console.log(hizeSlider);
+}
+
+
