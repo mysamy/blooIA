@@ -29,7 +29,8 @@
 .button--contact {
     font-size: 0.3em;
     color: var(--BG-COLOR);
-    width: 5rem;
+    
+    
 }
 
 .button--grey {
@@ -44,7 +45,6 @@
 /* BLOCK TEXTE EN LIGNE */
 .text--row {
     display: flex;
-    
     align-items: center;
 }
 .zoom {
@@ -52,7 +52,10 @@
     transition:  transform 0.3s ease-in-out;
 }
 
-
+.no-wrap {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
 /* ANIMATION */
 .header--slide-in {
     animation:slide-in-top 1s cubic-bezier(.25,.46,.45,.94) both;

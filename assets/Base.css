@@ -24,6 +24,9 @@ input,
 button,
 textarea {
     font: inherit;
+    caret-color: var(--FONT-COLOR);
+    color: var(--FONT-COLOR);
+    outline: none;
 }
 
 body {
@@ -50,9 +53,15 @@ h3 {
     margin-bottom: 0.2em;
     color: var(--FONT-COLOR);
 }
-hr {
-   border-top :var(--HIGHLIGHT-COLOR2);
+
+span {
+    display: inline;
 }
+
+hr {
+    border-top: var(--HIGHLIGHT-COLOR2);
+}
+
 p {
     line-height: 1.5;
 }
@@ -64,13 +73,17 @@ li {
 a {
     text-decoration: none;
     color: var(--FONT-COLOR);
+    transition: transform 0.3s ease;
 }
 
 a:hover,
 a:focus-visible {
-    color: var(--LINK-HOVER);
+    /* color: var(--LINK-HOVER); */
+
+    display: inline-block;
+    transform: scale(1.2);
 }
 
 a:active {
-    color: var(--LINK-ACTIVE);
+    /* color: var(--LINK-ACTIVE); */
 }

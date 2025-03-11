@@ -3,33 +3,47 @@ const cards = Array.from(wrapper.children);
 const width = 350;
 let index = 0;
 console.log(cards);
-
-
-
+const buttonPrev = document.querySelector(".button__prev");
+const buttonNext = document.querySelector(".button__next");
 
 wrapper.innerHTML += wrapper.innerHTML;
 
 const cardsDouble = Array.from(wrapper.children);
 
+// function next() {
+//       index++;
+
+//       wrapper.style.transition = "transform 0.5s ease-in-out";
+//       wrapper.style.transform = `translateX(-${index * width}px)`;
+//       if (index >= cards.length) {
+//             setTimeout(() => {
+//                   wrapper.style.transition = "none";
+//                   index = 0;
+//                   wrapper.style.transform = "translateX(0)";
+
+//             }, 500);
+//       }
+//       zoomNext();
+// }
+
 function next() {
-      index++;
-      console.log(index);
-      wrapper.style.transition = "transform 0.5s ease-in-out";
-      wrapper.style.transform = `translateX(-${index * width}px)`;
       if (index >= cards.length) {
-            console.log(index);
-            setTimeout(() => {
-                  wrapper.style.transition = "none";
-                  index = 0;
-                  wrapper.style.transform = "translateX(0)";
-            }, 500);
+            index = 0;
+            wrapper.style.transition = "none";
+            wrapper.style.transform = `translateX(0px)`;
       }
-      zoom();
+
+      setTimeout(() => {
+            index++;
+            wrapper.style.transition = "transform 0.5s ease-in-out";
+            wrapper.style.transform = `translateX(-${index * width}px)`;
+      }, 20);
+
+      zoomNext();
 }
+
 function prev() {
-      
       if (index <= 0) {
-            console.log(index);
             index = cards.length;
             wrapper.style.transition = "none";
             wrapper.style.transform = `translateX(-${index * width}px)`;
@@ -37,11 +51,10 @@ function prev() {
 
       setTimeout(() => {
             index--;
-            console.log(index);
             wrapper.style.transition = "transform 0.5s ease-in-out";
             wrapper.style.transform = `translateX(-${index * width}px)`;
       }, 20);
-      
+      zoomPrev();
 }
 
 // scroll down to right
@@ -50,10 +63,9 @@ const scroll = document.querySelector(".hize__slider");
 
 window.addEventListener("scroll", () => {});
 
-// animation delay texte
-// document.querySelectorAll('.text--fade-in').forEach((el, index) => {
-//       el.style.animation = `fade-in 3s cubic-bezier(.39,.575,.565,1.000) both ${index * 0.2}s`;
-//   });
+document.querySelectorAll(".text--fade-in").forEach((el, index) => {
+      el.style.animation = `fade-in 3s cubic-bezier(.39,.575,.565,1.000) both ${index * 0.2}s`;
+});
 
 // modal
 const modal = document.querySelector("#modal");
@@ -69,7 +81,6 @@ closeModal.addEventListener("click", () => {
       modal.close();
       modal.style.display = "none";
 });
-
 
 // setInterval(move, 2000);
 
@@ -90,54 +101,65 @@ function transform(section) {
       hizeSlider.style.transform = `translate3d(${-percentage}vw, 0, 0)`;
 }
 
-const outerDiv = document.querySelector('.carousel__container'); // La div externe
-const innerDiv = document.querySelectorAll('.carousel__card');
-console.log(outerDiv);
+const carouselContainer = document.querySelector(".carousel__container"); // La div externe
+const cardContainer = document.querySelectorAll(".carousel__card");
+console.log(carouselContainer);
 
+function isElementInFirst(cardContainer, carouselContainer) {
+      let containerRect = carouselContainer.getBoundingClientRect();
 
+      let cardRect = cardContainer.getBoundingClientRect();
 
-   // Toutes les cartes
-  function zoom() {
-      function isElementInCenter(innerDiv, outerDiv) {
-      const innerRect = innerDiv.getBoundingClientRect();
-      console.log(innerRect);
-      const outerRect = outerDiv.getBoundingClientRect();
-  
-      const innerCenterX = innerRect.left + innerRect.width / 2;
-      const innerCenterY = innerRect.top + innerRect.height / 2;
-  
-      const outerCenterX = outerRect.left + outerRect.width / 2;
-      const outerCenterY = outerRect.top + outerRect.height / 2;
-  
-     
-     
-      const tolerance = 50; // Ajustez cette valeur selon vos besoins
-  
-      return Math.abs(innerCenterX - outerCenterX) <= tolerance && 
-             Math.abs(innerCenterY - outerCenterY) <= tolerance;
-  }
+      let cardRelativeLeft = cardRect.left - containerRect.left;
+      let cardCenterX = cardRelativeLeft + cardRect.width / 2;
 
-     innerDiv.forEach(card => {
-      if (isElementInCenter(card, outerDiv)) {
-           
-             card.classList.add('zoom');     
-          
-          console.log("card zoomedDDDDDDDDDDDD");
-          
-      } else {
-          
-      }
-      
-  });
- 
-  }
-  
-  function move() {
+      let containerTwoThirdX = (1 / 6) * containerRect.width;
+
+      const tolerance = 60;
+      return Math.abs(containerTwoThirdX - cardCenterX) <= tolerance;
+}
+function isElementInThird(cardContainer, carouselContainer) {
+      let containerRect = carouselContainer.getBoundingClientRect();
+
+      let cardRect = cardContainer.getBoundingClientRect();
+
+      let cardRelativeLeft = cardRect.left - containerRect.left;
+      let cardCenterX = cardRelativeLeft + cardRect.width / 2;
+
+      let containerTwoThirdX = (5 / 6) * containerRect.width;
+
+      const tolerance = 60;
+      return Math.abs(containerTwoThirdX - cardCenterX) <= tolerance;
+}
+// Toutes les cartes
+function zoomNext() {
+      cardContainer.forEach((card) => {
+            if (isElementInThird(card, carouselContainer)) {
+                  card.classList.add("zoom");
+
+                  console.log("card zoomedDDDDDDDDDDDD");
+            } else {
+                  card.classList.remove("zoom");
+            }
+      });
+}
+function zoomPrev() {
+      cardContainer.forEach((card) => {
+            if (isElementInFirst(card, carouselContainer)) {
+                  card.classList.add("zoom");
+
+                  console.log("card zoomedDDDDDDDDDDDD");
+            } else {
+                  card.classList.remove("zoom");
+            }
+      });
+}
+function move() {
       index++;
-      
+
       wrapper.style.transition = "transform 1s ease-in-out";
       wrapper.style.transform = `translateX(-${index * width}px)`;
-      
+
       if (index >= cards.length) {
             console.log(index);
 
@@ -147,9 +169,14 @@ console.log(outerDiv);
                   wrapper.style.transform = "translateX(0)";
             }, 1000);
       }
-      wrapper.addEventListener('transitionend', () => {
-            zoom(); // Appel de la fonction zoom quand la transition est terminée
-          });
-      
 }
-zoom();
+
+buttonPrev.addEventListener("click", (e) => {
+      e.preventDefault();
+      prev();
+});
+
+buttonNext.addEventListener("click", (e) => {
+      e.preventDefault();
+      next();
+});

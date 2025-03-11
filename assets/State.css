@@ -65,6 +65,11 @@
      }
      .burger-button{
         display: flex;
+        all: unset;
+        cursor: pointer;
+     }
+     .button--contact{
+        margin-left: auto;
      }
      
 }
