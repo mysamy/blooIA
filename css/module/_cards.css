@@ -1,0 +1,31 @@
+ /* CARD */
+ .card {
+ 
+	height: 90%;
+	width: 30%;
+	position: relative;
+ }
+ 
+ .card__photo {
+	height: 100%;
+	width: 100%;
+	object-fit: fill;
+	border-radius: 10%;
+ 
+ }
+ 
+ .card__logo {
+	position: absolute;
+	z-index: 1;
+	top: 20px;
+	right: -120px;
+ }
+ 
+ .card__logo2 {
+	position: absolute;
+	z-index: 1;
+	top: 20px;
+	right: -140px;
+ }
+ 
+ 

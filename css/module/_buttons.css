@@ -1,0 +1,28 @@
+
+  /* BUTTONS */
+ 
+  .button {
+	display: flex;
+	align-items: center;
+	border-radius: 3rem;
+	border: none;
+	cursor: pointer;
+	width: max-content;
+	font-size: 0.5rem;
+	overflow: hidden;
+	padding: var(--PADDING);
+	position: relative;
+	white-space: nowrap;
+	justify-content: center;
+	transition: color 0.3s ease, background-color 0.3s ease;
+ 
+ }
+
+ .button__arrow {
+	padding: 0;
+	border: 2px solid black;
+	width: 2rem;
+	height: 2rem;
+ 
+ 
+ }

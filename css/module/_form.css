@@ -1,0 +1,7 @@
+.form__icon{
+	font-size: 2em;
+	color: var(--FONT-COLOR);
+}
+.form-search__input::placeholder {
+	font-size: 2em;
+}

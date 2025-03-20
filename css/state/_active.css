@@ -1,0 +1,55 @@
+.nav__menu-item--has-dropdown:hover>.nav__sub-menu {
+	visibility: visible;
+
+}
+.nav__sub-menu {
+	z-index: 2;
+	min-width: 160px;
+	position: absolute;
+	background-color: var(--GREY-BG2);
+	width: 300px;
+	height: 300px;
+	border-radius: 10%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: var(--PADDING);
+}
+
+.form-search__label--invi {
+	display: none;
+}
+
+/* BUTTON HOVER CERCLE*/
+.button--hovered::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--LINK-HOVER);
+	clip-path: circle(0%);
+	transition: 0.5s;
+	z-index: 0;
+	color: var(--FONT-COLOR);
+}
+
+.button:hover::after,
+.button:focus-visible::after {
+	/*focus-visible quand on navigue avec le vlavier par ex tab (accesibilite,navigation clavier*/
+	clip-path: circle(100%);
+	color: var(--FONT-COLOR);
+}
+
+
+.button__text--white:hover,
+.button__text--white:focus-visible {
+	color: var(--FONT-COLOR);
+}
+
+.modal-nav__sub-menu--visible {
+	display: flex;
+	opacity: 1;
+
+}

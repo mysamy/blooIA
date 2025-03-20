@@ -1,0 +1,22 @@
+.main-logo__link {
+	display: flex;
+	align-items: center;
+ }
+ 
+ .main-logo__img {
+	height: 50px;
+	object-fit: contain;
+	width: 50px;
+ }
+
+
+ .image-container {
+	width: 100%; 
+	max-width: 100%;
+	height: auto;
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	overflow: hidden; 
+	position: relative; 
+   }

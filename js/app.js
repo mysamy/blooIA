@@ -10,37 +10,39 @@ wrapper.innerHTML += wrapper.innerHTML;
 
 const cardsDouble = Array.from(wrapper.children);
 
-// function next() {
-//       index++;
-
-//       wrapper.style.transition = "transform 0.5s ease-in-out";
-//       wrapper.style.transform = `translateX(-${index * width}px)`;
-//       if (index >= cards.length) {
-//             setTimeout(() => {
-//                   wrapper.style.transition = "none";
-//                   index = 0;
-//                   wrapper.style.transform = "translateX(0)";
-
-//             }, 500);
-//       }
-//       zoomNext();
-// }
-
 function next() {
-      if (index >= cards.length) {
-            index = 0;
-            wrapper.style.transition = "none";
-            wrapper.style.transform = `translateX(0px)`;
+      index++;
+      console.log(index);
+      console.log(cards.length);
+      
+      wrapper.style.transition = "transform 0.5s ease-in-out";
+      wrapper.style.transform = `translateX(-${index * width}px)`;
+      if (index >= 9) {
+            setTimeout(() => {
+                  wrapper.style.transition = "none";
+                  index = 0;
+                  wrapper.style.transform = "translateX(0)";
+
+            }, 500);
       }
-
-      setTimeout(() => {
-            index++;
-            wrapper.style.transition = "transform 0.5s ease-in-out";
-            wrapper.style.transform = `translateX(-${index * width}px)`;
-      }, 20);
-
       zoomNext();
 }
+
+// function next() {
+//       if (index >= cards.length) {
+//             index = 0;
+//             wrapper.style.transition = "none";
+//             wrapper.style.transform = `translateX(0px)`;
+//       }
+
+//       setTimeout(() => {
+//             index++;
+//             wrapper.style.transition = "transform 0.5s ease-in-out";
+//             wrapper.style.transform = `translateX(-${index * width}px)`;
+//       }, 20);
+
+//       zoomNext();
+// }
 
 function prev() {
       if (index <= 0) {
@@ -137,7 +139,7 @@ function zoomNext() {
             if (isElementInThird(card, carouselContainer)) {
                   card.classList.add("zoom");
 
-                  console.log("card zoomedDDDDDDDDDDDD");
+                 
             } else {
                   card.classList.remove("zoom");
             }
@@ -180,3 +182,22 @@ buttonNext.addEventListener("click", (e) => {
       e.preventDefault();
       next();
 });
+
+// MENU DEROULANT
+
+const menuLien = document.querySelector(".modal-nav__link--has-dropdown");
+menuLien.addEventListener("click", () => {
+      
+      
+      let menuDeroulant = document.querySelector(".modal-nav__sub-menu"); 
+      console.log(getComputedStyle(menuDeroulant).maxHeight);
+      console.log(menuDeroulant.scrollHeight);
+      if (getComputedStyle(menuDeroulant).maxHeight === "0px"){
+      
+            menuDeroulant.style.maxHeight = `${menuDeroulant.scrollHeight}px` ; 
+      }
+      else {menuDeroulant.style.maxHeight = "0px" ; }
+}
+)
+      
+

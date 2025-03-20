@@ -3,13 +3,8 @@
       <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="css/app.css" />
 
-            <link rel="stylesheet" href="./assets/Base.css" />
-            <link rel="stylesheet" href="./assets/Layout.css" />
-            <link rel="stylesheet" href="./assets/Module.css" />
-            <link rel="stylesheet" href="./assets/State.css" />
-            <link rel="stylesheet" href="./assets/Theme.css" />
-            <link rel="stylesheet" href="assets/Utilities.css" />
             <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
             <title>Document</title>
@@ -37,19 +32,19 @@
                                     ></a>
                                     <ul class="nav__sub-menu">
                                           <li class="nav__sub-menu-item">
-                                                <a href="#" class="nav__sub-menu-link">HOME</a>
+                                                <a href="#" class="nav__sub-menu-link">Talent Management</a>
                                           </li>
                                           <li class="nav__sub-menu-item">
-                                                <a href="#" class="nav__sub-menu-link">ABOUT US</a>
+                                                <a href="#" class="nav__sub-menu-link">Training</a>
                                           </li>
                                           <li class="nav__sub-menu-item">
-                                                <a href="#" class="nav__sub-menu-link">OUR SERVICES</a>
+                                                <a href="#" class="nav__sub-menu-link">Culture Management</a>
                                           </li>
                                           <li class="nav__sub-menu-item">
-                                                <a href="#" class="nav__sub-menu-link">fdsq</a>
+                                                <a href="#" class="nav__sub-menu-link">Employment Brand and Experience</a>
                                           </li>
                                           <li class="nav__sub-menu-item">
-                                                <a href="#" class="nav__sub-menu-link">fsdfq</a>
+                                                <a href="#" class="nav__sub-menu-link">relations and Engament</a>
                                           </li>
                                     </ul>
                               </li>
@@ -64,8 +59,8 @@
                         <input class="form-search__input" type="text" name="query" placeholder="Search" />
                   </form>
 
-                  <button type="button" class="button button--hovered button--contact button__text--white">
-                        <span class="text--over text--bold">Contact us</span>
+                  <button type="button" class="button button--hovered button__text--white button--contact">
+                        <span class="text--over text--bold">Contact Us</span>
                   </button>
 
                   <!-- MODULE -->
@@ -81,17 +76,17 @@
                         </figure>
                         <nav class="modal-nav">
                               <ul class="modal-nav__menu">
-                                    <li class="nav__menu-item modal-nav">
-                                          <a class="nav__link" href="#">HOME</a>
+                                    <li class="nav__menu-item">
+                                          <a class="modal-nav__link" href="#">HOME</a>
                                     </li>
-                                    <li class="nav__menu-item modal-nav">
-                                          <a class="nav__link" href="#">ABOUT US</a>
+                                    <li class="nav__menu-item">
+                                          <a class="modal-nav__link" href="#">ABOUT US</a>
                                     </li>
-                                    <li class="nav__menu-item nav__menu-item--has-dropdown modal-nav">
-                                          <a class="nav__link nav__link--has-dropdown" href="#"
+                                    <li class="nav__menu-item modal-nav__menu-item--has-dropdown">
+                                          <a class="modal-nav__link modal-nav__link--has-dropdown" href="#"
                                                 >OUR SERVICES<i class="bx bx-chevron-down" aria-label="Our services menu"></i
                                           ></a>
-                                          <ul class="nav__sub-menu">
+                                          <ul class="modal-nav__sub-menu">
                                                 <li class="nav__sub-menu-item">
                                                       <a href="#" class="nav__sub-menu-link">HOME</a>
                                                 </li>
@@ -109,23 +104,23 @@
                                                 </li>
                                           </ul>
                                     </li>
-                                    <li class="nav__menu-item modal-nav">
-                                          <a href="nav__link">WHY HIZE?</a>
+                                    <li class="nav__menu-item">
+                                          <a href="modal-nav__link">WHY HIZE?</a>
                                     </li>
                               </ul>
                         </nav>
 
-                        <button type="button" class="button button--hovered button--contact">
-                              <span class="text--over button__text--white">Contact us</span>
+                        <button type="button" class="button button--hovered modal-button--contact">
+                              <span class="text--over button__text--white text--bold">Contact us</span>
                         </button>
                         <div class="langue-selector">
                               <button class="langue-selector__option langue-selector__option--es">ES</button>
                               <button class="langue-selector__option langue-selector__option--en">EN</button>
                         </div>
-                        <form class="form-search" action="/recherche" method="get">
+                        <form class="form-search form-search--modal" action="/recherche" method="get">
                               <label for="search" class="form-search__label form-search__label--invi">Search</label>
-                              <i class="bx bx-search-alt-2"></i>
-                              <input class="form-search__input" type="text" name="query" placeholder="Search" />
+                              <i class="form__icon bx bx-search-alt-2 margin-right"></i>
+                              <input class="form-search__input" type="text" name="query" placeholder="Search..." />
                         </form>
                   </dialog>
 
@@ -139,16 +134,26 @@
                   <section class="hero">
                         <div class="title-icon__wrapper">
                               <div class="title-icon__container no-wrap">
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
+                                    <div class="container__img">
+                                          <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
                                     <h2 class="title-icon__text text--row">Human Ressource</h2>
                               </div>
                               <div class="title-icon__container">
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
+                                    <div class="container__img">
+                                          <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
                               </div>
                               <div class="title-icon__container no-wrap">
                                     <h2 class="title-icon__text text--row">Consulting</h2>
                                     <div class="title-icon__container">
-                                          <img class="title-icon__img img--circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
+                                          <div class="container__img">
+                                                <img
+                                                      class="title-icon__img img--circle text--fade-in"
+                                                      src="https://picsum.photos/90/90?random=1"
+                                                      alt=""
+                                                />
+                                          </div>
                                     </div>
                               </div>
                               <h2 class="title-icon__text text--row">Services</h2>
@@ -165,8 +170,8 @@
                   </section>
 
                   <section class="businesses">
-                        <div class="info-box">
-                              <img src="assets/icon/arrow.png" alt="" class="info-box__arrow-down" />
+                        <div class="businesses__container">
+                              <div class="container__img"><img src="assets/icon/arrow.png" alt="" class="info-box__arrow-down" /></div>
                               Hize helps businesses<br />
                               accelerate their growth<br />
                               <span class="text-grey"
@@ -184,9 +189,11 @@
                                     <span class="text--over">Our solutions</span>
                               </button>
                         </div>
-                        <div class="card">
-                              <img src="https://picsum.photos/400/800?random=1" alt="" class="card__photo" />
-                              <img class="card__logo" src="https://picsum.photos/50/50?random=1" alt="Logo" />
+                        <div class="businesses__container">
+                              <div class="business__img">
+                                    <img src="https://picsum.photos/400/800?random=1" alt="" class="card__photo" />
+                                    <div class="container__img"><img class="card__logo" src="https://picsum.photos/50/50?random=1" alt="Logo" /></div>
+                              </div>
                         </div>
                   </section>
 
@@ -222,7 +229,7 @@
                   </section>
 
                   <section class="solutions">
-                        <div class="info-box">
+                        <div class="businesses__container">
                               <h3 class="info-box__text">
                                     <span class="text--black">Organizational</span>
                                     <span class="text--light-blue">Development</span>
@@ -253,7 +260,7 @@
                         </div>
                         <div class="carousel">
                               <div class="carousel__container">
-                                    <div class="carousel__wrapper slide">
+                                    <div class="carousel__wrapper">
                                           <div class="carousel__card">
                                                 <img class="carousel__img" src="https://picsum.photos/500/600?random=2" alt="" />
                                                 <h3 class="carousel__title">
@@ -488,6 +495,7 @@
                         </div>
                   </footer>
             </main>
-            <script src="app.js"></script>
+
+            <script src="js/app.js"></script>
       </body>
 </html>

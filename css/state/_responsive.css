@@ -1,0 +1,17 @@
+ 
+ @media (max-width: 1024px) { 
+	.nav,.header > .form-search,.header > .langue-selector{
+	   display: none;
+	}
+	.burger-button{
+	   display: flex;
+	   all: unset;
+	   cursor: pointer;
+	}
+	.button--contact{
+	   margin-left: auto;
+	   background-color: var(--GREY-BG);
+	   color: white;
+	}
+	
+}
