@@ -12,10 +12,10 @@
 
       <body>
             <header class="header header--slide-in">
-                  <figure class="main-logo">
-                        <a href="#" class="main-logo__link">
-                              <img class="main-logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
-                              <h1 class="main-logo__title">HIZE</h1>
+                  <figure class="logo">
+                        <a href="#" class="logo__link">
+                              <img class="logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
+                              <h1 class="logo__title">HIZE</h1>
                         </a>
                   </figure>
                   <nav class="nav">
@@ -59,8 +59,8 @@
                         <input class="form-search__input" type="text" name="query" placeholder="Search" />
                   </form>
 
-                  <button type="button" class="button button--hovered button__text--white button--contact">
-                        <span class="text--over text--bold">Contact Us</span>
+                  <button type="button" class="button button--hovered button-contact">
+                        <span class="text--hover text-bold">Contact Us</span>
                   </button>
 
                   <!-- MODULE -->
@@ -68,10 +68,12 @@
                   <button class="burger-button"><i class="bx bx-dots-vertical-rounded"></i></button>
                   <dialog class="modal" id="modal">
                         <button id="closeConnexionBtn" class="close-button">X</button>
-                        <figure class="main-logo">
-                              <a href="#" class="main-logo__link">
-                                    <img class="main-logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
-                                    <h1 class="main-logo__title">HIZE</h1>
+                        <figure class="logo">
+                              <a href="#" class="logo__link">
+                                    <div class="image-container">
+                                          <img class="logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
+                                    </div>
+                                    <h1 class="logo__title">HIZE</h1>
                               </a>
                         </figure>
                         <nav class="modal-nav">
@@ -110,8 +112,8 @@
                               </ul>
                         </nav>
 
-                        <button type="button" class="button button--hovered modal-button--contact">
-                              <span class="text--over button__text--white text--bold">Contact us</span>
+                        <button type="button" class="button button--hovered modal-button-contact">
+                              <span class="text--hover button__text--white text-bold">Contact us</span>
                         </button>
                         <div class="langue-selector">
                               <button class="langue-selector__option langue-selector__option--es">ES</button>
@@ -132,119 +134,133 @@
 
             <main>
                   <section class="hero">
-                        <div class="title-icon__wrapper">
-                              <div class="title-icon__container no-wrap">
-                                    <div class="container__img">
-                                          <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
+                        <div class="hero__container">
+                              <div class="title-icon__wrapper">
+                                    <div class="container-text">
+                                          <h2 class="title-icon__text title-icon__text--state text-row child">Explore</h2>
                                     </div>
-                                    <h2 class="title-icon__text text--row">Human Ressource</h2>
-                              </div>
-                              <div class="title-icon__container">
-                                    <div class="container__img">
-                                          <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
+                                    <div class="title-icon__img container-img img-circle child">
+                                          <img src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
+                                    <div class="container-text">
+                                          <h2 class="title-icon__text text-row child">Human Ressource</h2>
+                                    </div>
+                                    <div class="container-img img-circle child">
+                                          <img src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
+                                    <div class="container-text">
+                                          <h2 class="title-icon__text text-row child">Consulting</h2>
+                                    </div>
+                                    <div class="title-icon__img container-img img-circle text--fade-in child">
+                                          <img src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
+                                    <div class="container-text">
+                                          <h2 class="title-icon__text text-row">Services</h2>
                                     </div>
                               </div>
-                              <div class="title-icon__container no-wrap">
-                                    <h2 class="title-icon__text text--row">Consulting</h2>
-                                    <div class="title-icon__container">
-                                          <div class="container__img">
-                                                <img
-                                                      class="title-icon__img img--circle text--fade-in"
-                                                      src="https://picsum.photos/90/90?random=1"
-                                                      alt=""
-                                                />
-                                          </div>
-                                    </div>
-                              </div>
-                              <h2 class="title-icon__text text--row">Services</h2>
+                              <p class="hero__para text--fade-in">
+                                    Hize is a diverse team of consultants and specialists who power the people side of your business growth<span class="hero__span--state"> and guide you through the most challenging points of your bussiness journey.</span><span class="hero__span--state--mobile">and help navigate its toughest challenges.</span>
+                              </p>
+                              <button type="button" class="button button--hovered button-grey button__text--white">
+                                    <span class="text--hover">Schedule a Free Consultation!</span>
+                              </button>
                         </div>
-
-                        <p class="hero__para text--fade-in">
-                              Hize is a diverse team of consultants and specialists who power<br />
-                              the people side of your business growth and guide you through <br />
-                              the most challenging points of your bussiness journey.
-                        </p>
-                        <button type="button" class="button button--hovered button--grey button__text--white">
-                              <span class="text--over">Schedule a Free Consultation!</span>
-                        </button>
                   </section>
 
-                  <section class="businesses">
-                        <div class="businesses__container">
-                              <div class="container__img"><img src="assets/icon/arrow.png" alt="" class="info-box__arrow-down" /></div>
-                              Hize helps businesses<br />
-                              accelerate their growth<br />
+                  <section class="business">
+                        <div class="business__container">
+                              <div class="business__arrow container-img"><img src="assets/icon/arrow.png" alt="" /></div>
+                              <h3 class="business__title">
+                                    Hize helps business<br />
+                                    accelerate their growth<br />
+                              </h3>
                               <span class="text-grey"
                                     >by aligning their people to
                                     <br />
                                     their business strategy.</span
                               >
 
-                              <p class="info-box__para">
+                              <p class="business__para">
                                     Are your people your company’
-                                    <span class="text--bold">greatest asset</span>
+                                    <span class="text-bold">greatest asset</span>
                                     or biggest barrier to growth?
                               </p>
-                              <button class="button button--hovered button--grey button__text--white">
-                                    <span class="text--over">Our solutions</span>
+                              <button class="button button--hovered button-grey button__text--white">
+                                    <span class="text--hover">Our solutions</span>
                               </button>
                         </div>
-                        <div class="businesses__container">
-                              <div class="business__img">
-                                    <img src="https://picsum.photos/400/800?random=1" alt="" class="card__photo" />
-                                    <div class="container__img"><img class="card__logo" src="https://picsum.photos/50/50?random=1" alt="Logo" /></div>
+                        <div class="business__container">
+                              <div class="card-logo">
+                                    <div class="card-logo__img container-img img-circle">
+                                          <img src="https://picsum.photos/400/800?random=1" alt="" />
+                                          <div class="card-logo__logo container-img">
+                                                <img src="https://picsum.photos/50/50?random=1" alt="Logo" />
+                                          </div>
+                                    </div>
                               </div>
                         </div>
                   </section>
 
                   <section class="advantages">
-                        <div class="logo-title">
-                              <img src="https://picsum.photos/150/150?random=1" alt="" class="logo-title__img" />
-                              <h1 class="logo-title__h1">Hize</h1>
+                        <div class="logo">
+                              <img src="https://picsum.photos/150/150?random=1" alt="" class="logo__img" />
+                              <h1 class="logo__title">Hize</h1>
                         </div>
-                        <h2 class="title-icon">
-                              <span class="text--row">
-                                    <span class="text--black">Growth,</span>
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                              </span>
-                              <span class="text--row">
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                                    <span class="text--light-blue">Talent,</span>
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" /><span
-                                          class="span--coffee-cream"
-                                    >
-                                          Culture
-                                    </span>
-                              </span>
-                              <span class="text--row">
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" /><span
-                                          class="text--black"
-                                          >Wellness</span
-                                    >
-                              </span>
-                        </h2>
-                        <button class="button button--hovered">
-                              <span class="text--over button__text--white">Explore Hize Advantages</span>
+                        <div class="title-icon__wrapper">
+                              <div class="title-icon__container no-wrap text--fade-in margin-side">
+                                    <h2 class="title-icon__text text-black text-row">Growth,</h2>
+                                    <div class="container-img">
+                                          <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
+                              </div>
+
+                              <div class="title-icon__container no-wrap text--fade-in margin-side">
+                                    <div class="container__img">
+                                          <img class="img-circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
+                                    <h2 class="title-icon__text text-row text-light-blue">Talent,</h2>
+                                    <div class="container__img">
+                                          <img class="img-circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
+                                    <h2 class="title-icon__text text-row text-coffee-cream">Culture</h2>
+                              </div>
+                              <div class="title-icon__container no-wrap text--fade-in margin-side">
+                                    <div class="container__img">
+                                          <img class="img-circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
+                                    <h2 class="title-icon__text text-row text-black">Wellness</h2>
+                              </div>
+                        </div>
+                        <button class="button button--hovered margin-top">
+                              <span class="text--hover button__text--white">Explore Hize Advantages</span>
                         </button>
                   </section>
 
                   <section class="solutions">
-                        <div class="businesses__container">
-                              <h3 class="info-box__text">
-                                    <span class="text--black">Organizational</span>
-                                    <span class="text--light-blue">Development</span>
-                              </h3>
-                              <p class="info-box__text text--black">
-                                    Consulting for organizations from an organizational development expert in creating and implementing programs and
-                                    initiatives that support employee growth, development, and well-being.
-                              </p>
-                              <button class="button button--hovered">
-                                    <span class="text--over button__text--white button--hovered button--flex-start">Our solutions</span>
-                              </button>
+                        <div class="solution__container">
+                              <div class="solutions__wrapper">
+                                    <h3>
+                                          <span class="text-black">Organizational</span><br />
+                                          <span class="text-light-blue">Development</span>
+                                    </h3>
+                                    <p class="solutions__para text-black">
+                                          Consulting for organizations from an organizational development expert in creating and implementing programs
+                                          and initiatives that support employee growth, development, and well-being.
+                                    </p>
+                                    <button class="button button--hovered">
+                                          <span class="text--hover button__text--white button--hovered button--flex-start">Our solutions</span>
+                                    </button>
+                              </div>
                         </div>
-                        <div class="card">
-                              <img class="card__photo" src="https://picsum.photos/400/800?random=1" alt="" />
-                              <img class="card__logo2" src="https://picsum.photos/100/100?random=1" alt="Logo" />
+                        <div class="solution__container">
+                              <div class="card-logo card-logo--solutions">
+                                    <div class="card-logo__img container-img">
+                                          <img src="https://picsum.photos/400/800?random=1" alt="" />
+                                          <div class="card-logo__logo container-img">
+                                                <img src="https://picsum.photos/50/50?random=1" alt="Logo" />
+                                          </div>
+                                    </div>
+                              </div>
                         </div>
                   </section>
 
@@ -360,37 +376,41 @@
 
                   <section class="hize">
                         <div class="sticky">
-                              <div class="hize__slider scroll_section">
-                                    <div class="hize__container image">
-                                          <div class="hize__item hize__item--left">
-                                                <div class="hize__container-title">
-                                                      <hr />
+                              <div class="hize__slider">
+                                    <div class="hize__panel">
+                                          <div class="hize__sucess hize__sucess-border-right">
+                                                <div class="hize__sucess-title">
+                                                      <hr class="hize__trait" />
                                                       <h2 class="hize__title">/Hize</h2>
                                                 </div>
-                                                <div class="hize__container-text">
-                                                      <h3><span class="text--light-blue">Why</span> <span class="span--coffee-cream">Hize?</span></h3>
+                                                <div class="hize__text">
+                                                      <h3 class="hize__title-why">
+                                                            <span class="text-light-blue">Why</span> <span class="text-coffee-cream">Hize?</span>
+                                                      </h3>
                                                       <h4>Greater Success</h4>
-                                                      <p class="info-box__para">
+                                                      <p class="hize__para">
                                                             We address your unique needs and challenges, ensuring that your teams are equipped with
-                                                            the skills and mindset required to achieve organizational goals. <br />
+                                                            the skills and mindset required to achieve organizational goals. <br /><br />
                                                             Empower your teams, enhance their skills, and foster a culture of growth and excellence.
                                                       </p>
                                                 </div>
                                           </div>
-                                          <div class="separator"></div>
-                                          <div class="hize__item">
-                                                <hr />
-                                                <div class="hize__container-text">
-                                                      <h2 class="title">Human and Organizational Development Consulting Services</h2>
+
+                                          <div class="hize__sucess">
+                                                <div class="hize__sucess-ttitle">
+                                                      <hr class="hize__trait" />
+                                                      <h2 class="hize__title">Human and Organizational Development Consulting Services</h2>
                                                 </div>
-                                                <div class="schema"><img src="https://picsum.photos/300/300?random=1" alt="" /></div>
+                                                <div class="hize__img container-img"><img src="https://picsum.photos/300/300?random=1" alt="" /></div>
                                           </div>
                                     </div>
-                                    <div class="hize__container">
-                                          <div class="hize__item">
-                                                <div class="hize_trait"></div>
-                                                <h2>/Why Hize?</h2>
-                                                <h2>/Advantage</h2>
+                                    <div class="hize__panel hize__panel--right">
+                                          <div class="hize__why-title">
+                                                <hr class="hize__trait" />
+                                                <h2 class="hize__title">/Why Hize?</h2>
+                                                <h2 class="hize__title">/Advantage</h2>
+                                          </div>
+                                          <div class="hize__why">
                                                 <div class="container__text">
                                                       <h3>
                                                             Empower your teams, enhance their skills, and foster a culture of growth and excellence.
@@ -404,7 +424,11 @@
                                                             <li>Strengthen brand reputation</li>
                                                       </ol>
                                                 </div>
-                                                <img src="" alt="" />
+                                                <div class="card-logo">
+                                                      <div class="card-logo__img container-img">
+                                                            <img src="https://picsum.photos/400/800?random=1" alt="" />
+                                                      </div>
+                                                </div>
                                           </div>
                                     </div>
                               </div>
@@ -412,32 +436,40 @@
                   </section>
 
                   <section class="contact">
-                        <h2>Contact Hize</h2>
-                        <h2 class="title-icon">
-                              <span class="text--row">
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                                    <span class="text--black">Talk to us</span>
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                              </span>
-                              <span class="text--row">
-                                    <span class="text--light-blue">& transform</span>
-                                    <img class="title-icon__img img--circle" src="https://picsum.photos/90/90?random=1" alt="" /><span
-                                          class="span--coffee-cream"
-                                    >
-                                          your journey
-                                    </span>
-                              </span>
-                        </h2>
-                        <button class="button button--hovered"><span class="text--over button__text--white">Contact Us</span></button>
+                        <h2 class="text-black contact__title">Contact Hize</h2>
+                        <div class="title-icon__wrapper">
+                              <div class="title-icon__container no-wrap text--fade-in margin-side">
+                                    <div class="title-icon__img container-img img-circle">
+                                          <img src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
+                                    <h2 class="title-icon__text text-row text-black">Talk to us</h2>
+                                    <div class="title-icon__img container-img img-circle">
+                                          <img src="https://picsum.photos/90/90?random=1" alt="" />
+                                    </div>
+                              </div>
+
+                              <div class="title-icon__container no-wrap text--fade-in">
+                                    <h2 class="title-icon__text text-row text-light-blue">& transform</h2>
+                                    <div class="title-icon__container">
+                                          <div class="container__img">
+                                                <img class="img-circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="title-icon__container no-wrap text--fade-in">
+                                    <h2 class="title-icon__text text-row text-coffee-cream">your journey</h2>
+                              </div>
+                        </div>
+                        <button class="button button--hovered margin-top"><span class="text--hover button__text--white">Contact Us</span></button>
                   </section>
 
                   <footer class="footer">
                         <div class="footer__container">
                               <div class="footer__group">
-                                    <figure class="main-logo">
-                                          <a href="#" class="main-logo__link">
-                                                <img class="main-logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
-                                                <h1 class="main-logo__title">HIZE</h1>
+                                    <figure class="logo">
+                                          <a href="#" class="logo__link">
+                                                <img class="logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
+                                                <h1 class="logo__title">HIZE</h1>
                                           </a>
                                     </figure>
 

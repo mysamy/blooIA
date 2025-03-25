@@ -1,0 +1,11 @@
+.text-hidden {
+	display: none;
+}
+
+.title-icon__text--state {
+	display: none;
+}
+
+.hero__span--state--mobile {
+	display: hidden;
+}

@@ -1,14 +1,14 @@
 /* FOOTER */
  
 .footer {
-	display: flex;
+	display: none;
 	height: 75vh;
 	background-color: var(--BG-COLOR);
 	font-size: 0.6em;
 	align-items: center;
 	justify-content: center;
  }
- 
+  
  .footer__container {
 	width: 50%;
 	display: flex;
@@ -30,7 +30,7 @@
  
  .footer__form-title {
 	text-align: center;
-	font-size: 2em;
+	font-size: var(--FS);
  }
  
  .footer__group {

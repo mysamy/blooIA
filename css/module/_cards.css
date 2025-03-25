@@ -1,31 +1,36 @@
  /* CARD */
  .card {
- 
-	height: 90%;
-	width: 30%;
-	position: relative;
+
+ 	height: 90%;
+ 	width: 30%;
+ 	position: relative;
  }
- 
+
  .card__photo {
-	height: 100%;
-	width: 100%;
-	object-fit: fill;
+ 	height: 100%;
+ 	width: 100%;
+ 	object-fit: fill;
+ 	border-radius: 10%;
+
+ }
+
+ .card-logo {
+	
+	height: 70%;
+	width: 90%;
+}
+.card-logo__img {
 	border-radius: 10%;
- 
- }
- 
- .card__logo {
+	position: relative;
+	height: 100%;
+	width: 80%;
+	
+}
+
+.card-logo__logo {
+	height: 50px;
+	width: 50px;
 	position: absolute;
-	z-index: 1;
-	top: 20px;
-	right: -120px;
- }
- 
- .card__logo2 {
-	position: absolute;
-	z-index: 1;
-	top: 20px;
-	right: -140px;
- }
- 
- 
+	top: 10%;
+	left: 90%;
+}

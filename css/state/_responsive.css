@@ -1,17 +1,107 @@
- 
- @media (max-width: 1024px) { 
-	.nav,.header > .form-search,.header > .langue-selector{
-	   display: none;
-	}
-	.burger-button{
-	   display: flex;
-	   all: unset;
-	   cursor: pointer;
-	}
-	.button--contact{
-	   margin-left: auto;
-	   background-color: var(--GREY-BG);
-	   color: white;
+ @media (max-width: 1024px) {
+
+ 	.nav,
+ 	.header>.form-search,
+ 	.header>.langue-selector {
+ 		display: none;
+ 	}
+
+ 	.burger-button {
+ 		display: flex;
+ 		all: unset;
+ 		cursor: pointer;
+ 	}
+
+ 	.button-contact {
+ 		margin-left: auto;
+ 		background-color: var(--GREY-BG);
+ 		color: white;
+ 	}
+	
+	
+ }
+ @media (max-width:768px) {
+
+	.hero__para{
+		width: 50%;
 	}
 	
+ }
+@media (max-width:426px) {
+	.text-visible {
+		display: visible;
+	}
+	
+	.title-icon__text {
+		font-size: var(--FS-SMALL);
+	}
+	
+	.container-img {
+		height: 15%;
+	}
+	.title-icon__wrapper {
+		width: 90%;
+		align-items: flex-start;
+	}
+	.hero {
+		
+		height: 85vh;
+		justify-content: start;
+		gap:1em;
+		padding: var(--PADDING);
+	}
+	.hero__para {
+		width: 65%;
+		margin: 0;
+		
+	}
+	.title-icon__text--state {
+		display: block;
+	}
+	.hero__span--state {
+		display: none;
+	}
+	.hero__span--state--mobile {
+		display: inline;
+	}
+	.child:nth-last-child(2) {
+	order: 2; /* Avant-dernier devient dernier */
+   }
+   
+   .child:last-child {
+	order: 1; /* Dernier devient avant-dernier */
+   }
+
+
+/* BUSINESS */
+   .business {
+	display: flex;
+	align-items: center;
+	flex-direction: column-reverse;
+	height: 110vh;
+   }
+   .business__title {
+	font-size: 0.7em;
+   }
+   .business__container {
+	width: 100%;
+	height: 50%;
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+   }
+   .card-logo__img {
+	height: 100%;
+	
+
+   }
+   .card-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 50%;
+   }
 }
+

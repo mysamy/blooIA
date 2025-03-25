@@ -1,22 +1,29 @@
-.main-logo__link {
+
+
+.container-img {
+	overflow: hidden;
+	border-radius: 10px;
+	position: relative;
+
+	display: block;
+	
+	
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	
+	display: block;
+	object-fit: contain;
+}
+.logo__link {
 	display: flex;
 	align-items: center;
- }
- 
- .main-logo__img {
+}
+
+.logo__img {
 	height: 50px;
 	object-fit: contain;
 	width: 50px;
- }
-
-
- .image-container {
-	width: 100%; 
-	max-width: 100%;
-	height: auto;
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
-	overflow: hidden; 
-	position: relative; 
-   }
+}
