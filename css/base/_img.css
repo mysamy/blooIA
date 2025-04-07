@@ -1,10 +1,9 @@
 
 
 .container-img {
-	overflow: hidden;
-	border-radius: 10px;
+	overflow : visible;
+	
 	position: relative;
-
 	display: block;
 	
 	
@@ -13,9 +12,9 @@
 img {
 	height: 100%;
 	width: 100%;
-	
+	border-radius: 10px;
 	display: block;
-	object-fit: contain;
+	object-fit: fill;
 }
 .logo__link {
 	display: flex;
@@ -23,7 +22,7 @@ img {
 }
 
 .logo__img {
-	height: 50px;
+	height: 60%;
 	object-fit: contain;
-	width: 50px;
+	width: 70%;
 }

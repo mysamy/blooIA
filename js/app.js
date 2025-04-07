@@ -3,8 +3,8 @@ const cards = Array.from(wrapper.children);
 const width = 350;
 let index = 0;
 console.log(cards);
-const buttonPrev = document.querySelector(".button__prev");
-const buttonNext = document.querySelector(".button__next");
+const buttonPrev = document.querySelector(".button--prev");
+const buttonNext = document.querySelector(".button--next");
 
 wrapper.innerHTML += wrapper.innerHTML;
 
@@ -14,7 +14,7 @@ function next() {
       index++;
       console.log(index);
       console.log(cards.length);
-      
+
       wrapper.style.transition = "transform 0.5s ease-in-out";
       wrapper.style.transform = `translateX(-${index * width}px)`;
       if (index >= 9) {
@@ -22,7 +22,6 @@ function next() {
                   wrapper.style.transition = "none";
                   index = 0;
                   wrapper.style.transform = "translateX(0)";
-
             }, 500);
       }
       zoomNext();
@@ -138,8 +137,6 @@ function zoomNext() {
       cardContainer.forEach((card) => {
             if (isElementInThird(card, carouselContainer)) {
                   card.classList.add("zoom");
-
-                 
             } else {
                   card.classList.remove("zoom");
             }
@@ -187,17 +184,12 @@ buttonNext.addEventListener("click", (e) => {
 
 const menuLien = document.querySelector(".modal-nav__link--has-dropdown");
 menuLien.addEventListener("click", () => {
-      
-      
-      let menuDeroulant = document.querySelector(".modal-nav__sub-menu"); 
+      let menuDeroulant = document.querySelector(".modal-nav__sub-menu");
       console.log(getComputedStyle(menuDeroulant).maxHeight);
       console.log(menuDeroulant.scrollHeight);
-      if (getComputedStyle(menuDeroulant).maxHeight === "0px"){
-      
-            menuDeroulant.style.maxHeight = `${menuDeroulant.scrollHeight}px` ; 
+      if (getComputedStyle(menuDeroulant).maxHeight === "0px") {
+            menuDeroulant.style.maxHeight = `${menuDeroulant.scrollHeight}px`;
+      } else {
+            menuDeroulant.style.maxHeight = "0px";
       }
-      else {menuDeroulant.style.maxHeight = "0px" ; }
-}
-)
-      
-
+});

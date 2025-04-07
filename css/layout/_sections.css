@@ -4,18 +4,26 @@
  	flex-direction: column;
  	align-items: center;
 
- 	height: 100vh;
+ 	height: 90vh;
  	justify-content: center;
  }
 
- .hero__container{
-	height: 60%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	
+ .hero__container {
+ 	height: 60%;
+ 	width: 100%;
+ 	display: flex;
+	justify-content: center;
+ 	flex-direction: column;
+ 	align-items: center;
+	gap: 1rem
+
  }
+ .hero__para {
+
+	text-align: center;
+	font-size: 0.4em;
+	width: 33%;
+}
 
  /* SECTION 2  BUSINESS */
  .business {
@@ -31,12 +39,25 @@
  	width: 150px;
  }
 
-
+ .business__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 90%;
+	width: 40%;
+	gap: 10px;
+}
+.business__title {
+	font-size: 1rem;
+}
+.business__para {
+	font-size: 0.4rem;
+}
 
  /* SECTION 3 ADVANTAGES */
  .advantages {
  	background-color: var(--FONT-COLOR);
- 	display: none;
+ 	display: flex;
  	flex-direction: column;
  	align-items: center;
  	height: 100vh;
@@ -45,10 +66,10 @@
 
  }
 
- /* SECTION 4 OUR SOLUTIONS*/
+ /* SECTION 4 OUR solution*/
 
- .solutions {
- 	display: none;
+ .solution {
+ 	display: flex;
  	height: 80vh;
  	background-color: var(--BG-COLOR2);
 
@@ -63,17 +84,16 @@
 
  	justify-content: center;
  }
+.solution__title{
+	display: flex;
+	flex-direction: column;
+}
 
- .card-logo--solutions {
- 	height: 50%;
- 	width: 100%;
- }
-
- .solutions__para {
+ .solution__para {
  	font-size: 0.4em;
  }
 
- .solutions__wrapper {
+ .solution__wrapper {
  	display: flex;
  	flex-direction: column;
  	justify-content: center;
@@ -82,158 +102,56 @@
  	width: 90%;
  }
 
- /* SECTION 5 CAROUSEL */
+ /* SECTION 5 SERVICES-CAROUSEL */
  .services {
  	height: 100vh;
- 	display: none;
+ 	display: flex;
  	background-color: var(--BG-COLOR2);
  	flex-direction: column;
  	justify-content: center;
  	align-items: center;
  }
+
+ .services__title {
+	display: flex;
+	align-items: center;
+	width: 50%;
+	height: 20%;
+	color: var(--BG-COLOR);
+}
+
+.services__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 20%;
+	width: 100%;
+}
 
  /* SECTION 6 hize__slider */
  .hize {
  	height: 200vh;
  	background-color: var(--BG-COLOR2);
-	display: none;
+ 	display: none;
  }
 
-
- /* HIZE HYBRID SCROLL  */
-
- .sticky {
- 	position: sticky;
- 	top: 0;
- 	height: 100vh;
- 	overflow-x: hidden;
-
- }
-
- .hize__slider {
-
- 	position: absolute;
- 	top: 0;
- 	height: 100%;
- 	width: 200vw;
- 	will-change: transform;
- 	display: flex;
- 	transition: transform 0, 5s ease-out;
- 	align-items: center;
-
- }
-
- .hize__panel {
-
- 	width: 50%;
- 	height: 100%;
- 	display: flex;
- }
-
- .hize__sucess{
- 	width: 50%;
- 	display: flex;
- 	flex-direction: column;
- 	gap: 30%;
- 	padding: 1.3em;
- 	color: var(--BG-COLOR)
- }
-
- .hize__sucess-border-right {
- 	border-right: 1px solid rgba(0, 0, 0, 0.315);
- }
-
- .hize__trait {
- 	width: 200px;
- 	font-size: 2px;
- 	display: block;
- 	height: 2px;
- 	margin: 0.5em 0;
- 	width: 100%;
- 	background-color: var(--HIGHLIGHT-COLOR2);
- }
-
- .hize__title {
- 	font-size: 0.5em;
- 	color: var(--HIGHLIGHT-COLOR2);
- }
- .hize__title-why {
- 	font-size: 2em;
-	
- }
-
-
- .hize__para {
- 	font-size: 0.4em;
- }
-
-.hize__panel--right {
-	flex-direction: column;
-}
-.hize__why-title {
- 	display: flex;
- 	justify-content: space-between;
- 	flex-wrap: wrap;
-	padding: 1.3em;
-	
- }
-
-
-
-
-
-
-
- .hize__why {
- 	display: flex;
-	
-	height:100%;
-
- }
-
-
-
-
-
-
- .hize__container-right {
- 	display: flex;
- 	gap: 6em;
- 	flex-direction: column;
- 	width: 49%;
- 	height: 100%;
- 	padding: 2em;
- }
-
- .container__text {
- 	font-size: 0.3em;
- }
-
- .icon {
- 	z-index: 0;
- }
-
- 
-
- .hize__advantage {
- 	display: flex;
- }
 
  /* SECTION 7 CONTACT */
 
  .contact {
- 	display: none;
+ 	display: flex;
  	flex-direction: column;
  	align-items: center;
  	padding: var(--PADDING);
- 	height: 70vh;
+ 	height: 87vh;
  	justify-content: center;
  	background-color: var(--BG-COLOR2);
+	font-size: 2rem;
  }
 
  .contact__title {
  	font-size: 0.9em;
  	font-weight: 100;
  }
-
+ 
  /* TODO: REgrouper les memes proprites comme le flex */

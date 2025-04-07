@@ -2,15 +2,50 @@
 
 .header {
 	font-size: var(--FS);
-	padding: 20px;
+	padding: var(--PADDING-SIDE);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 12vh;
-	
-    
+	height: 8vh;
  }
  
+ /* NAVBAR */
+
+.nav {
+	color: var(--FONT-COLOR);
+	height: 50%;
+	width: 40%;
+	
+ }
  
+ .nav__menu {
+	font-size: 0.5rem;
+	align-items: center;
+	display: flex;
+	height: 100%;
+	gap: 1.3em;
+ }
  
+.nav__sub-menu {
+	transition: opacity 0.3s ease-in-out, visibility 0.3s;
+	visibility: hidden;
+	min-width: 160px;
+	position: absolute;
+	z-index: 1;
+ }
  
+
+
+
+.modal-nav__sub-menu {
+	max-height: 0;
+	flex-direction: column;
+	gap: 0.7em;
+	transition: max-height 0.3s linear;
+	overflow: hidden;
+
+}
+
+.nav__menu-item {
+	text-align: center;
+}

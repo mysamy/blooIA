@@ -9,3 +9,7 @@
 .hero__span--state--mobile {
 	display: hidden;
 }
+
+.burger-button {
+	display: none;
+}

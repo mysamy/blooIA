@@ -1,7 +1,6 @@
+/* BUTTONS */
 
-  /* BUTTONS */
- 
-  .button {
+.button {
 	display: flex;
 	align-items: center;
 	border-radius: 3rem;
@@ -10,19 +9,35 @@
 	width: max-content;
 	font-size: 0.5rem;
 	overflow: hidden;
-	padding: var(--PADDING);
+	padding: 0.5rem;
 	position: relative;
 	white-space: nowrap;
 	justify-content: center;
-	transition: color 0.3s ease, background-color 0.3s ease;
- 
- }
+	transition: color 0.3s ease,;
 
- .button__arrow {
-	padding: 0;
-	border: 2px solid black;
-	width: 2rem;
-	height: 2rem;
- 
- 
- }
+}
+
+
+
+
+
+.close-button {
+	padding: 2px 2px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color: var(--HIGHLIGHT-COLOR2);
+
+	cursor: pointer;
+	background: transparent;
+	border: none;
+}
+
+/* BLOCK ARROWS */
+.buttons-container {
+	display: flex;
+
+	align-items: center;
+	justify-content: space-around;
+	gap: 0.5em;
+}

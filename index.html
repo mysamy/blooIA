@@ -12,9 +12,9 @@
 
       <body>
             <header class="header header--slide-in">
-                  <figure class="logo">
+                  <figure class="logo logo--header">
                         <a href="#" class="logo__link">
-                              <img class="logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
+                              <div class="container-img"><img class="img-corner" src="https://picsum.photos/50/50?random=1" alt="Logo" /></div>
                               <h1 class="logo__title">HIZE</h1>
                         </a>
                   </figure>
@@ -56,11 +56,11 @@
                   <form class="form-search" action="/recherche" method="get">
                         <label for="search" class="form-search__label form-search__label--invi">Search</label>
                         <i class="bx bx-search-alt-2"></i>
-                        <input class="form-search__input" type="text" name="query" placeholder="Search" />
+                        <input class="form-search__input" type="text" name="query" placeholder="Search..." />
                   </form>
 
-                  <button type="button" class="button button--hovered button-contact">
-                        <span class="text--hover text-bold">Contact Us</span>
+                  <button type="button" class="button button--hovered button--contact">
+                        <span class="text-hover text-bold">Contact <span class="text--visible-lg">Us</span></span>
                   </button>
 
                   <!-- MODULE -->
@@ -112,8 +112,8 @@
                               </ul>
                         </nav>
 
-                        <button type="button" class="button button--hovered modal-button-contact">
-                              <span class="text--hover button__text--white text-bold">Contact us</span>
+                        <button type="button" class="button button--hovered modal-button--contact">
+                              <span class="text-hover button__text--white text-bold">Contact us</span>
                         </button>
                         <div class="langue-selector">
                               <button class="langue-selector__option langue-selector__option--es">ES</button>
@@ -135,50 +135,56 @@
             <main>
                   <section class="hero">
                         <div class="hero__container">
-                              <div class="title-icon__wrapper">
+                              <div class="title-icon">
                                     <div class="container-text">
                                           <h2 class="title-icon__text title-icon__text--state text-row child">Explore</h2>
                                     </div>
                                     <div class="title-icon__img container-img img-circle child">
-                                          <img src="https://picsum.photos/90/90?random=1" alt="" />
+                                          <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
                                     </div>
-                                    <div class="container-text">
-                                          <h2 class="title-icon__text text-row child">Human Ressource</h2>
+                                    <div class="text-position">
+                                          <div class="container-text">
+                                                <h2 class="title-icon__text text-row child">Human</h2>
+                                          </div>
+                                          <div class="container-text">
+                                                <h2 class="title-icon__text text-row child">Ressource</h2>
+                                          </div>
                                     </div>
-                                    <div class="container-img img-circle child">
-                                          <img src="https://picsum.photos/90/90?random=1" alt="" />
+                                    <div class="title-icon__img container-img img-circle child">
+                                          <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
                                     </div>
                                     <div class="container-text">
                                           <h2 class="title-icon__text text-row child">Consulting</h2>
                                     </div>
                                     <div class="title-icon__img container-img img-circle text--fade-in child">
-                                          <img src="https://picsum.photos/90/90?random=1" alt="" />
+                                          <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
                                     </div>
                                     <div class="container-text">
                                           <h2 class="title-icon__text text-row">Services</h2>
                                     </div>
                               </div>
                               <p class="hero__para text--fade-in">
-                                    Hize is a diverse team of consultants and specialists who power the people side of your business growth<span class="hero__span--state"> and guide you through the most challenging points of your bussiness journey.</span><span class="hero__span--state--mobile">and help navigate its toughest challenges.</span>
+                                    Hize is a diverse team of consultants and specialists who power the people side of your business growth<span
+                                          class="hero__span--state"
+                                    >
+                                          and guide you through the most challenging points of your bussiness journey.</span
+                                    ><span class="hero__span--state--mobile">and help navigate its toughest challenges.</span>
                               </p>
                               <button type="button" class="button button--hovered button-grey button__text--white">
-                                    <span class="text--hover">Schedule a Free Consultation!</span>
+                                    <span class="text-hover text--visible-md">Schedule a Free Consultation!</span><span class="text-hover text--visible-sm">Explore Hize Advantages</span>
                               </button>
                         </div>
                   </section>
 
                   <section class="business">
-                        <div class="business__container">
+                        <div class="business__container business__container--logo">
                               <div class="business__arrow container-img"><img src="assets/icon/arrow.png" alt="" /></div>
                               <h3 class="business__title">
                                     Hize helps business<br />
                                     accelerate their growth<br />
+
+                                    <span class="text-grey">by aligning their people to their business strategy.</span>
                               </h3>
-                              <span class="text-grey"
-                                    >by aligning their people to
-                                    <br />
-                                    their business strategy.</span
-                              >
 
                               <p class="business__para">
                                     Are your people your company’
@@ -186,15 +192,15 @@
                                     or biggest barrier to growth?
                               </p>
                               <button class="button button--hovered button-grey button__text--white">
-                                    <span class="text--hover">Our solutions</span>
+                                    <span class="text-hover">Our solution</span>
                               </button>
                         </div>
-                        <div class="business__container">
+                        <div class="business__container business__cotainer--logo">
                               <div class="card-logo">
-                                    <div class="card-logo__img container-img img-circle">
-                                          <img src="https://picsum.photos/400/800?random=1" alt="" />
+                                    <div class="card-logo__img container-img">
+                                          <img class="img-corner" src="https://picsum.photos/400/400?random=1" alt="" />
                                           <div class="card-logo__logo container-img">
-                                                <img src="https://picsum.photos/50/50?random=1" alt="Logo" />
+                                                <img class="img-corner" src="https://picsum.photos/50/50?random=1" alt="Logo" />
                                           </div>
                                     </div>
                               </div>
@@ -203,18 +209,46 @@
 
                   <section class="advantages">
                         <div class="logo">
-                              <img src="https://picsum.photos/150/150?random=1" alt="" class="logo__img" />
-                              <h1 class="logo__title">Hize</h1>
+                              <img class="logo__img logo__img--visible-lg" src="https://picsum.photos/150/150?random=1" alt="" />
+                              <h1 class="logo__title logo--title--advantages">Hize</h1>
                         </div>
-                        <div class="title-icon__wrapper">
-                              <div class="title-icon__container no-wrap text--fade-in margin-side">
+                        <div class="title-icon title-icon--advantages title-icon--hidden-lg">
+                              <div class="container-text">
+                                    <h2 class="title-icon__text text-row text-black">Empowerment</h2>
+                              </div>
+                              <div class="title-icon__img container-img">
+                                    <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
+                              </div>
+                              <div class="container-text text-black">
+                                    <h2 class="title-icon__text text-row text-black">of all,</h2>
+                              </div>
+                              <div class="title-icon__img container-img">
+                                    <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
+                              </div>
+
+                              <div class="container-text">
+                                    <h2 class="title-icon__text text-row text-light-blue">Collaboration,</h2>
+                              </div>
+                              <div class="title-icon__img container-img text--fade-in">
+                                    <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
+                              </div>
+                              <div class="container-text">
+                                    <h2 class="title-icon__text text-row text-coffee-cream">Innovation,</h2>
+                              </div>
+                              <div class="container-text">
+                                    <h2 class="title-icon__text text-row text-black">Inclusiveness.</h2>
+                              </div>
+                        </div>
+
+                        <div class="title-icon title-icon--advantages title-icon--visible-lg">
+                              <div class="title-icon__container">
                                     <h2 class="title-icon__text text-black text-row">Growth,</h2>
                                     <div class="container-img">
                                           <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
                                     </div>
                               </div>
 
-                              <div class="title-icon__container no-wrap text--fade-in margin-side">
+                              <div class="title-icon__container">
                                     <div class="container__img">
                                           <img class="img-circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
                                     </div>
@@ -224,38 +258,40 @@
                                     </div>
                                     <h2 class="title-icon__text text-row text-coffee-cream">Culture</h2>
                               </div>
-                              <div class="title-icon__container no-wrap text--fade-in margin-side">
+
+                              <div class="title-icon__container">
                                     <div class="container__img">
                                           <img class="img-circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
                                     </div>
                                     <h2 class="title-icon__text text-row text-black">Wellness</h2>
                               </div>
                         </div>
+
                         <button class="button button--hovered margin-top">
-                              <span class="text--hover button__text--white">Explore Hize Advantages</span>
+                              <span class="text-hover button__text--white">Explore Hize Advantages</span>
                         </button>
                   </section>
 
-                  <section class="solutions">
+                  <section class="solution">
                         <div class="solution__container">
-                              <div class="solutions__wrapper">
-                                    <h3>
-                                          <span class="text-black">Organizational</span><br />
+                              <div class="solution__wrapper">
+                                    <h3 class="solution__title">
+                                          <span class="text-black">Organizational</span>
                                           <span class="text-light-blue">Development</span>
                                     </h3>
-                                    <p class="solutions__para text-black">
+                                    <p class="solution__para text-black">
                                           Consulting for organizations from an organizational development expert in creating and implementing programs
                                           and initiatives that support employee growth, development, and well-being.
                                     </p>
                                     <button class="button button--hovered">
-                                          <span class="text--hover button__text--white button--hovered button--flex-start">Our solutions</span>
+                                          <span class="text-hover button__text--white button--hovered button--flex-start">Our solution</span>
                                     </button>
                               </div>
                         </div>
                         <div class="solution__container">
-                              <div class="card-logo card-logo--solutions">
-                                    <div class="card-logo__img container-img">
-                                          <img src="https://picsum.photos/400/800?random=1" alt="" />
+                              <div class="card-logo card-logo--solution">
+                                    <div class="card-logo__img card-logo__img--solution container-img">
+                                          <img class="img-corner" src="https://picsum.photos/400/400?random=1" alt="" />
                                           <div class="card-logo__logo container-img">
                                                 <img src="https://picsum.photos/50/50?random=1" alt="Logo" />
                                           </div>
@@ -267,11 +303,11 @@
                   <section class="services">
                         <div class="services__container">
                               <h2 class="services__title">Our services</h2>
-                              <div class="arrows-btn">
-                                    <button class="button button__arrow button__prev">
+                              <div class="buttons-container">
+                                    <button class="button button--arrow button--prev">
                                           <i class="icon bx bx-chevron-left"></i>
                                     </button>
-                                    <button class="button button__arrow button__next"><i class="bx bx-chevron-right"></i></button>
+                                    <button class="button button--arrow button--next"><i class="bx bx-chevron-right"></i></button>
                               </div>
                         </div>
                         <div class="carousel">
@@ -283,7 +319,7 @@
                                                       1 <br />
                                                       engagement
                                                 </h3>
-                                                <button class="button button__arrow button--margin">
+                                                <button class="button button--arrow button--card">
                                                       <i class="bx bx-chevron-right"></i>
                                                 </button>
                                           </div>
@@ -293,7 +329,7 @@
                                                       2 <br />
                                                       engagement
                                                 </h3>
-                                                <button class="button button__arrow button--margin">
+                                                <button class="button button--arrow button--card">
                                                       <i class="bx bx-chevron-right"></i>
                                                 </button>
                                           </div>
@@ -303,7 +339,7 @@
                                                       3 <br />
                                                       engagement
                                                 </h3>
-                                                <button class="button button__arrow button--margin">
+                                                <button class="button button--arrow button--card">
                                                       <i class="bx bx-chevron-right"></i>
                                                 </button>
                                           </div>
@@ -314,7 +350,7 @@
                                                       4 <br />
                                                       engagement
                                                 </h3>
-                                                <button class="button button__arrow button--margin">
+                                                <button class="button button--arrow button--card">
                                                       <i class="bx bx-chevron-right"></i>
                                                 </button>
                                           </div>
@@ -324,7 +360,7 @@
                                                       5<br />
                                                       engagement
                                                 </h3>
-                                                <button class="button button__arrow button--margin">
+                                                <button class="button button--arrow button--card">
                                                       <i class="bx bx-chevron-right"></i>
                                                 </button>
                                           </div>
@@ -334,7 +370,7 @@
                                                       6 <br />
                                                       engagement
                                                 </h3>
-                                                <button class="button button__arrow button--margin">
+                                                <button class="button button--arrow button--card">
                                                       <i class="bx bx-chevron-right"></i>
                                                 </button>
                                           </div>
@@ -345,7 +381,7 @@
                                                       7 <br />
                                                       engagement
                                                 </h3>
-                                                <button class="button button__arrow button--margin">
+                                                <button class="button button--arrow button--card">
                                                       <i class="bx bx-chevron-right"></i>
                                                 </button>
                                           </div>
@@ -355,7 +391,7 @@
                                                       8<br />
                                                       engagement
                                                 </h3>
-                                                <button class="button button__arrow button--margin">
+                                                <button class="button button--arrow button--card">
                                                       <i class="bx bx-chevron-right"></i>
                                                 </button>
                                           </div>
@@ -365,7 +401,7 @@
                                                       9 <br />
                                                       engagement
                                                 </h3>
-                                                <button class="button button__arrow button--margin">
+                                                <button class="button button--arrow button--card">
                                                       <i class="bx bx-chevron-right"></i>
                                                 </button>
                                           </div>
@@ -437,14 +473,14 @@
 
                   <section class="contact">
                         <h2 class="text-black contact__title">Contact Hize</h2>
-                        <div class="title-icon__wrapper">
+                        <div class="title-icon title-icon--contact ">
                               <div class="title-icon__container no-wrap text--fade-in margin-side">
                                     <div class="title-icon__img container-img img-circle">
-                                          <img src="https://picsum.photos/90/90?random=1" alt="" />
+                                          <img class="img-circle" src="https://picsum.photos/50/50?random=1" alt="" />
                                     </div>
                                     <h2 class="title-icon__text text-row text-black">Talk to us</h2>
-                                    <div class="title-icon__img container-img img-circle">
-                                          <img src="https://picsum.photos/90/90?random=1" alt="" />
+                                    <div class="title-icon__img container-img img-circle element-visible">
+                                          <img class="img-circle" src="https://picsum.photos/50/50?random=1" alt="" />
                                     </div>
                               </div>
 
@@ -452,30 +488,33 @@
                                     <h2 class="title-icon__text text-row text-light-blue">& transform</h2>
                                     <div class="title-icon__container">
                                           <div class="container__img">
-                                                <img class="img-circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
+                                                <img class="img-circle" src="https://picsum.photos/50/50?random=1" alt="" />
                                           </div>
                                     </div>
                               </div>
                               <div class="title-icon__container no-wrap text--fade-in">
+                                    <div class="title-icon__img container-img img-circle element-hidden">
+                                          <img class="img-circle" src="https://picsum.photos/50/50?random=1" alt="" />
+                                    </div>
                                     <h2 class="title-icon__text text-row text-coffee-cream">your journey</h2>
                               </div>
                         </div>
-                        <button class="button button--hovered margin-top"><span class="text--hover button__text--white">Contact Us</span></button>
+                        <button class="button button--hovered margin-top"><span class="text-hover button__text--white">Contact Us</span></button>
                   </section>
 
                   <footer class="footer">
                         <div class="footer__container">
                               <div class="footer__group">
-                                    <figure class="logo">
+                                    <figure class="logo logo--footer">
                                           <a href="#" class="logo__link">
                                                 <img class="logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
-                                                <h1 class="logo__title">HIZE</h1>
+                                                <h1 class="logo__title logo__title--footer">HIZE</h1>
                                           </a>
                                     </figure>
 
-                                    <div class="social">
-                                          <a href="#" class="social__link"><i class="bx bxl-linkedin"></i> </a>
-                                          <a href="#" class="social__link"><i class="bx bxl-instagram"></i></a>
+                                    <div class="footer__social">
+                                          <a href="#" class="footer__link"><i class="bx bxl-linkedin"></i> </a>
+                                          <a href="#" class="footer__link"><i class="bx bxl-instagram"></i></a>
                                     </div>
                                     <div class="legal">
                                           <a href="#" class="legal__link"><i class="bx bxl-linkedin"></i> Legal Hub</a>
@@ -489,37 +528,37 @@
 
                         <div class="footer__container">
                               <div class="footer__group">
-                                    <h2 class="footer__form-title">
-                                          Request more<br />
-                                          information
+                                    <h2 class="footer-title">
+                                          <span>Request more</span>
+                                          <span>information</span>
                                     </h2>
-                                    <form class="footer__form" action="">
-                                          <label class="footer__form-label" for="full-name">Full Name</label>
-                                          <input class="footer__form-input" type="text" id="full-name" />
+                                    <form class="form" action="">
+                                          <label class="form__label" for="full-name">Full Name</label>
+                                          <input class="form__input" type="text" id="full-name" />
 
-                                          <div class="footer__form-container">
-                                                <div class="footer__form-group">
-                                                      <label class="footer__form-label">Your Email</label>
-                                                      <input class="footer__form-input" type="text" />
+                                          <div class="form-container">
+                                                <div class="form-group">
+                                                      <label class="form__label">Your Email</label>
+                                                      <input class="form__input" type="text" />
                                                 </div>
-                                                <div class="footer__form-group">
-                                                      <label class="footer__form-label">Phone</label>
-                                                      <input class="footer__form-input" type="text" />
+                                                <div class="form-group">
+                                                      <label class="form__label">Phone</label>
+                                                      <input class="form__input" type="text" />
                                                 </div>
                                           </div>
 
-                                          <label class="footer__form-label">Subject</label>
-                                          <input type="text" class="footer__form-input" />
+                                          <label class="form__label">Subject</label>
+                                          <input type="text" class="form__input" />
 
-                                          <label class="footer__form-label">Your Message</label>
-                                          <input type="text" class="footer__form-input" />
+                                          <label class="form__label">Your Message</label>
+                                          <input type="text" class="form__input" />
 
-                                          <div class="footer__form-checkbox-group">
-                                                <input class="footer__form-checkbox" type="checkbox" id="agree" />
-                                                <label for="agree" class="footer__form-label">Accept the privacy policy</label>
+                                          <div class="form-checkbox-group">
+                                                <input class="form-checkbox" type="checkbox" id="agree" />
+                                                <label for="agree" class="form__label">Accept the privacy policy</label>
                                           </div>
 
-                                          <button type="submit" class="button footer__form-button">
+                                          <button type="submit" class="button form__button">
                                                 Send my request <i class="bx bx-right-arrow-alt"></i>
                                           </button>
                                     </form>

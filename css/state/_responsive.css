@@ -1,107 +1,451 @@
- @media (max-width: 1024px) {
+/* 
+sm : < 768px
+md : ≥ 768px
+lg : ≥ 1024px
+xl : ≥ 1400px
+*/
 
- 	.nav,
- 	.header>.form-search,
- 	.header>.langue-selector {
- 		display: none;
- 	}
 
- 	.burger-button {
- 		display: flex;
- 		all: unset;
- 		cursor: pointer;
- 	}
+@media (max-width: 1024px) {
 
- 	.button-contact {
- 		margin-left: auto;
- 		background-color: var(--GREY-BG);
- 		color: white;
- 	}
+	.nav,
+	.header>.form-search,
+	.header>.langue-selector {
+		display: none;
+	}
+
+	.burger-button {
+		display: flex;
+		all: unset;
+		cursor: pointer;
+	}
+
+	.button--contact {
+		margin-left: auto;
+		background-color: var(--GREY-BG);
+		color: white;
+	}
+
+	.advantages {
+		height: 90vh;
+		font-size: 4rem;
+		gap:0;
+	}
+
+	.title-icon--visible-lg {
+		display: none;
+	}
+
+	.title-icon--hidden-lg {
+		display: flex;
+		width: 500px;
+	}
+
+	.logo__img--visible-lg {
+		display: none;
+	}
+
+	.solution {
+		flex-direction: column;
+		padding: 2rem;
+		height: 120vh;
+	}
+
+	.solution__container {
+		width: 100%;
+		height: auto;
+	}
+
+	.solution__title {
+		flex-direction: row;
+		gap: 0.5rem;
+	}
+
+	.services {
+		height: 100vh;
+		padding: 1rem;
+	}
 	
-	
- }
- @media (max-width:768px) {
+	.contact {
+		height: 80vh;
+	}
 
-	.hero__para{
+	.footer {
+		height: 100vh;
+		flex-direction: column-reverse;
+		margin-top: 15%;
+	}
+	.title-icon--contact {
+		width: 600px;
+		font-size: 2rem;
+	}
+	.footer__container {
+		width: 100%;
+	}
+
+	.title-icon--advantages {
+		font-size: 1.2rem;
+	}
+	.footer__group {
+		align-items: center;
+		height: 100%;
+	}
+
+	.form__input {
+		width: 70%;
+	}
+	.footer-title {
+		flex-direction: row;
+		gap: 10px;
+	}
+	.legal {
+
+		align-items: center;
+	}
+
+	.logo__title--footer {
+		font-size: 2em;
+	}
+	.text--visible-lg {
+		display: none;
+	}
+}
+
+@media (max-width:768px) {
+
+	.hero__para {
+		width: 60%;
+	}
+
+	.title-icon {
+		width: 90%;
+	}
+
+	.hero__container {
+		gap: 2em;
+	}
+
+	.business {
+		height: 60vh;
+		padding: 1rem;
+	}
+
+	.business__container {
 		width: 50%;
 	}
-	
- }
-@media (max-width:426px) {
-	.text-visible {
-		display: visible;
+
+	.business__title {
+		font-size: 0.8rem;
 	}
-	
+
+	.logo__img--inv {
+		display: none;
+	}
+	.text--visible-md{
+		display: none;
+	}
+	.text--visible-sm {
+		display: inline-block;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:426px) {
+	.text-position {
+		display: flex;
+	}
+
 	.title-icon__text {
 		font-size: var(--FS-SMALL);
 	}
-	
-	.container-img {
-		height: 15%;
-	}
-	.title-icon__wrapper {
+
+	.title-icon {
 		width: 90%;
 		align-items: flex-start;
 	}
+
+	.title-icon__img {
+		height: 15%;
+	}
+
+
 	.hero {
-		
 		height: 85vh;
 		justify-content: start;
-		gap:1em;
+		gap: 1em;
 		padding: var(--PADDING);
 	}
+
 	.hero__para {
 		width: 65%;
 		margin: 0;
-		
+
 	}
+
+	.hero__container {
+		height: 100%;
+	}
+
 	.title-icon__text--state {
 		display: block;
 	}
+
 	.hero__span--state {
 		display: none;
 	}
+
 	.hero__span--state--mobile {
 		display: inline;
 	}
+
 	.child:nth-last-child(2) {
-	order: 2; /* Avant-dernier devient dernier */
-   }
-   
-   .child:last-child {
-	order: 1; /* Dernier devient avant-dernier */
-   }
+		order: 2;
+		/* Avant-dernier devient dernier */
+	}
+
+	.child:last-child {
+		order: 1;
+		/* Dernier devient avant-dernier */
+	}
 
 
-/* BUSINESS */
-   .business {
-	display: flex;
-	align-items: center;
-	flex-direction: column-reverse;
-	height: 110vh;
-   }
-   .business__title {
-	font-size: 0.7em;
-   }
-   .business__container {
-	width: 100%;
-	height: 50%;
-	padding: 1em;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-   }
-   .card-logo__img {
-	height: 100%;
-	
+	/* BUSINESS */
+	.business {
+		display: flex;
+		align-items: center;
+		flex-direction: column-reverse;
+		height: 130vh;
+		padding: 1em;
+	}
 
-   }
-   .card-logo {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	width: 50%;
-   }
+	.business__title {
+		font-size: 0.7em;
+	}
+
+	.business__container {
+		width: 100%;
+		height: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+
+
+	.card-logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 70%;
+		height: 100%;
+	}
+
+	.card-logo__img {
+		height: 300px;
+		width: 300px;
+	}
+
+	.business__container--logo {
+		align-items: start;
+	}
+
+	/* ADVANTAGES */
+	.advantages {
+		gap: 0;
+	}
+
+	.element-hidden {
+		display: flex;
+	}
+
+	.element-visible {
+		display: none;
+	}
+
+	.title-icon--advantages {
+		height: 40%;
+		width: 60%;
+	}
+
+	/* solution */
+	.solution {
+		flex-direction: column;
+		padding: 1em;
+		height: 100vh;
+	}
+
+	.solution__container {
+		width: 100%;
+		height: 50%;
+	}
+
+	.solution__title {
+		flex-direction: column;
+		gap: 0;
+	}
+
+
+	.solution__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* SERVICES */
+	.services {
+		padding: 1em;
+	}
+
+	.services__container {
+		flex-direction: column;
+		justify-content: space-between;
+
+		height: 30%;
+
+	}
+
+	.services__title {
+		align-self: start;
+	}
+
+	.buttons-container {
+		align-self: flex-end;
+	}
+
+	.carousel__container {
+		height: 100%;
+
+	}
+
+	.carousel__wrapper {
+		height: 80%;
+		transform: translateX(-310px);
+	}
+
+	.carousel__card {
+		width: 290px;
+		height: 350px;
+	}
+
+	/* contact */
+	.contact {
+		height: 60vh;
+	}
+
+	/* FOOTER */
+	.footer {
+		height: 150vh;
+		flex-direction: column-reverse;
+		margin-top: 15%;
+		padding: 0;
+	}
+
+	.footer__container {
+		width: 100%;
+	}
+
+	.form-container {
+		flex-direction: column;
+	}
+
+	.footer__group {
+		align-items: center;
+		height: 100%;
+	}
+
+	.legal {
+
+		align-items: center;
+	}
+
+	.logo__title--footer {
+		font-size: 2em;
+	}
 }
 
+
+
+@media (max-width: 376px) {
+	.title-icon {
+		height: 40%;
+		width: 100%;
+
+	}
+
+	.text-position {
+		display: flex;
+	}
+}
+
+
+
+
+@media (max-width: 320px) {
+	.header {
+		height: 15vh;
+		padding: 0;
+	}
+	.hero__container {
+		gap:0;
+	}
+	.logo--header {
+		width: 150px;
+	}
+	.button--contact {
+		
+		width: 100px;
+	}
+	.title-icon {
+		height: 50%;
+		width: 85%;
+	}
+
+	.hero__para {
+		font-size: 0.5rem;
+		width: 80%;
+		margin: 1.5em;
+
+	}
+	.form__input {
+		width: 100%;
+	}
+	.margin-top {
+		margin-top: 0 ;
+	}
+	
+
+	.advantages {
+		height: 75vh;
+		font-size: 0.8rem;
+	}
+	.services {
+		height: 100vh;
+	}
+	.services__title {
+		font-size: 1.2rem;
+		width: 100%;
+	}
+
+	.logo__title {
+		font-size: 1rem;
+	}
+
+	.text-position {
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+	}
+}
