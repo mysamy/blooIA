@@ -3,570 +3,198 @@
       <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <link rel="stylesheet" href="css/app.css" />
-
-            <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-
+            <link rel="stylesheet" href="assets/css/app.css" />
             <title>Document</title>
       </head>
-
       <body>
-            <header class="header header--slide-in">
-                  <figure class="logo logo--header">
-                        <a href="#" class="logo__link">
-                              <div class="container-img"><img class="img-corner" src="https://picsum.photos/50/50?random=1" alt="Logo" /></div>
-                              <h1 class="logo__title">HIZE</h1>
-                        </a>
-                  </figure>
-                  <nav class="nav">
-                        <ul class="nav__menu">
-                              <li class="nav__menu-item">
-                                    <a class="nav__link" href="#">HOME</a>
-                              </li>
-                              <li class="nav__menu-item">
-                                    <a class="nav__link" href="#">ABOUT US</a>
-                              </li>
-                              <li class="nav__menu-item nav__menu-item--has-dropdown">
-                                    <a class="nav__link nav__link--has-dropdown" href="#"
-                                          >OUR SERVICES<i class="bx bx-chevron-down" aria-label="Our services menu"></i
-                                    ></a>
-                                    <ul class="nav__sub-menu">
-                                          <li class="nav__sub-menu-item">
-                                                <a href="#" class="nav__sub-menu-link">Talent Management</a>
-                                          </li>
-                                          <li class="nav__sub-menu-item">
-                                                <a href="#" class="nav__sub-menu-link">Training</a>
-                                          </li>
-                                          <li class="nav__sub-menu-item">
-                                                <a href="#" class="nav__sub-menu-link">Culture Management</a>
-                                          </li>
-                                          <li class="nav__sub-menu-item">
-                                                <a href="#" class="nav__sub-menu-link">Employment Brand and Experience</a>
-                                          </li>
-                                          <li class="nav__sub-menu-item">
-                                                <a href="#" class="nav__sub-menu-link">relations and Engament</a>
-                                          </li>
-                                    </ul>
-                              </li>
-                              <li class="nav__menu-item">
-                                    <a href="nav__link">WHY HIZE?</a>
-                              </li>
+            <header class="header">
+                  <div class="header__logo"><img src="assets/image/LOGOBLOODAI.png" alt="" /></div>
+                  <nav>
+                        <ul class="nav__list">
+                              <li class="nav__item"><a class="nav__link" href="">Fonctionnalités</a></li>
+                              <li class="nav__item"><a class="nav__link" href="">Contacts</a></li>
+                              <li class="nav__item"><a class="nav__link" href="">Conformité</a></li>
+                              <li class="nav__item"><a class="nav__link" href="">Tarifs</a></li>
+                              <li class="nav__item"><a class="nav__link link-audit" href="">Audit</a></li>
                         </ul>
                   </nav>
-                  <form class="form-search" action="/recherche" method="get">
-                        <label for="search" class="form-search__label form-search__label--invi">Search</label>
-                        <i class="bx bx-search-alt-2"></i>
-                        <input class="form-search__input" type="text" name="query" placeholder="Search..." />
-                  </form>
-
-                  <button type="button" class="button button--hovered button--contact">
-                        <span class="text-hover text-bold">Contact <span class="text--visible-lg">Us</span></span>
-                  </button>
-
-                  <!-- MODULE -->
-
-                  <button class="burger-button"><i class="bx bx-dots-vertical-rounded"></i></button>
-                  <dialog class="modal" id="modal">
-                        <button id="closeConnexionBtn" class="close-button">X</button>
-                        <figure class="logo">
-                              <a href="#" class="logo__link">
-                                    <div class="image-container">
-                                          <img class="logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
-                                    </div>
-                                    <h1 class="logo__title">HIZE</h1>
-                              </a>
-                        </figure>
-                        <nav class="modal-nav">
-                              <ul class="modal-nav__menu">
-                                    <li class="nav__menu-item">
-                                          <a class="modal-nav__link" href="#">HOME</a>
-                                    </li>
-                                    <li class="nav__menu-item">
-                                          <a class="modal-nav__link" href="#">ABOUT US</a>
-                                    </li>
-                                    <li class="nav__menu-item modal-nav__menu-item--has-dropdown">
-                                          <a class="modal-nav__link modal-nav__link--has-dropdown" href="#"
-                                                >OUR SERVICES<i class="bx bx-chevron-down" aria-label="Our services menu"></i
-                                          ></a>
-                                          <ul class="modal-nav__sub-menu">
-                                                <li class="nav__sub-menu-item">
-                                                      <a href="#" class="nav__sub-menu-link">HOME</a>
-                                                </li>
-                                                <li class="nav__sub-menu-item">
-                                                      <a href="#" class="nav__sub-menu-link">ABOUT US</a>
-                                                </li>
-                                                <li class="nav__sub-menu-item">
-                                                      <a href="#" class="nav__sub-menu-link">OUR SERVICES</a>
-                                                </li>
-                                                <li class="nav__sub-menu-item">
-                                                      <a href="#" class="nav__sub-menu-link">fdsq</a>
-                                                </li>
-                                                <li class="nav__sub-menu-item">
-                                                      <a href="#" class="nav__sub-menu-link">fsdfq</a>
-                                                </li>
-                                          </ul>
-                                    </li>
-                                    <li class="nav__menu-item">
-                                          <a href="modal-nav__link">WHY HIZE?</a>
-                                    </li>
-                              </ul>
-                        </nav>
-
-                        <button type="button" class="button button--hovered modal-button--contact">
-                              <span class="text-hover button__text--white text-bold">Contact us</span>
-                        </button>
-                        <div class="langue-selector">
-                              <button class="langue-selector__option langue-selector__option--es">ES</button>
-                              <button class="langue-selector__option langue-selector__option--en">EN</button>
-                        </div>
-                        <form class="form-search form-search--modal" action="/recherche" method="get">
-                              <label for="search" class="form-search__label form-search__label--invi">Search</label>
-                              <i class="form__icon bx bx-search-alt-2 margin-right"></i>
-                              <input class="form-search__input" type="text" name="query" placeholder="Search..." />
-                        </form>
-                  </dialog>
-
-                  <div class="langue-selector">
-                        <button class="langue-selector__option langue-selector__option--es">ES</button>
-                        <button class="langue-selector__option langue-selector__option--en">EN</button>
-                  </div>
             </header>
 
-            <main>
-                  <section class="hero">
-                        <div class="hero__container">
-                              <div class="title-icon">
-                                    <div class="container-text">
-                                          <h2 class="title-icon__text title-icon__text--state text-row child">Explore</h2>
-                                    </div>
-                                    <div class="title-icon__img container-img img-circle child">
-                                          <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                                    </div>
-                                    <div class="text-position">
-                                          <div class="container-text">
-                                                <h2 class="title-icon__text text-row child">Human</h2>
-                                          </div>
-                                          <div class="container-text">
-                                                <h2 class="title-icon__text text-row child">Ressource</h2>
-                                          </div>
-                                    </div>
-                                    <div class="title-icon__img container-img img-circle child">
-                                          <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                                    </div>
-                                    <div class="container-text">
-                                          <h2 class="title-icon__text text-row child">Consulting</h2>
-                                    </div>
-                                    <div class="title-icon__img container-img img-circle text--fade-in child">
-                                          <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                                    </div>
-                                    <div class="container-text">
-                                          <h2 class="title-icon__text text-row">Services</h2>
-                                    </div>
-                              </div>
-                              <p class="hero__para text--fade-in">
-                                    Hize is a diverse team of consultants and specialists who power the people side of your business growth<span
-                                          class="hero__span--state"
-                                    >
-                                          and guide you through the most challenging points of your bussiness journey.</span
-                                    ><span class="hero__span--state--mobile">and help navigate its toughest challenges.</span>
+            <section class="hero">
+                  <h1 class="hero__title">L'assitant IA qui rend votre site accessible et conforme facilement!</h1>
+                  <p class="hero__subtitle">
+                        Le 1er outil d'accessibilité numérique développé par une
+                        <span class="hero__highlight">entreprise adaptée</span>
+                  </p>
+
+                  <form class="hero__form" action="" method="get">
+                        <label class="form__label" for="url"></label>
+                        <input class="form__input" type="url" id="url" name="url" placeholder="Entrez une URL :" required />
+                        <button class="form__button link-audit" type="submit">Audit</button>
+                  </form>
+
+                  <div class="hero__compliance">
+                        <p class="hero__compliance-title">Vérifications de conformité : RGAA</p>
+                        <div class="hero__compliance-icon">
+                              <i class="fas fa-check-circle"></i>
+                        </div>
+                  </div>
+
+                  <div class="hero__features">
+                        <div class="feature">
+                              <i class="feature__icon fas fa-check-circle"></i>
+                              <p class="feature__text">Audit</p>
+                        </div>
+                        <div class="feature">
+                              <i class="feature__icon fas fa-check-circle"></i>
+                              <p class="feature__text">Audit</p>
+                        </div>
+                        <div class="feature">
+                              <i class="feature__icon fas fa-check-circle"></i>
+                              <p class="feature__text">Audit</p>
+                        </div>
+                        <div class="feature">
+                              <i class="feature__icon fas fa-check-circle"></i>
+                              <p class="feature__text">Audit</p>
+                        </div>
+                  </div>
+
+                  <div class="hero__feature-description">
+                        <div class="hero__feature-image"><img src="" alt="" /></div>
+                        <div class="hero__feature-content">
+                              <h2 class="hero__feature-title">Audit Automatisé</h2>
+                              <p class="hero__feature-text">
+                                    BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.
                               </p>
-                              <button type="button" class="button button--hovered button-grey button__text--white">
-                                    <span class="text-hover text--visible-md">Schedule a Free Consultation!</span><span class="text-hover text--visible-sm">Explore Hize Advantages</span>
-                              </button>
                         </div>
-                  </section>
-
-                  <section class="business">
-                        <div class="business__container business__container--logo">
-                              <div class="business__arrow container-img"><img src="assets/icon/arrow.png" alt="" /></div>
-                              <h3 class="business__title">
-                                    Hize helps business<br />
-                                    accelerate their growth<br />
-
-                                    <span class="text-grey">by aligning their people to their business strategy.</span>
-                              </h3>
-
-                              <p class="business__para">
-                                    Are your people your company’
-                                    <span class="text-bold">greatest asset</span>
-                                    or biggest barrier to growth?
+                  </div>
+            </section>
+            <section class="how">
+                  <h2 class="how__title">Comment ça marche?</h2>
+                  <p class="how__subtitle">Décrouvrer ce que BlooAI propose pour améliorer l'accessibilité de votre site web.</p>
+                  <ul class="how__list">
+                        <li class="how__item">BlooAI scanne votre site e-commerce</li>
+                        <li class="how__item">Détecte les problèmes d’accessibilité</li>
+                        <li class="how__item">Vous montre comment les corriger</li>
+                        <li class="how__item">Rapide, intelligent, prêt pour la directive 2025</li>
+                  </ul>
+                  <div class="how__carousel carousel"></div>
+            </section>
+            <section class="avantage">
+                  <h2 class="avantage__title">Conformité et avantages</h2>
+                  <div class="avantage__container">
+                        <div class="avantage__buttons">
+                              <button class="avantage__button">Avantages</button>
+                              <button class="avantage__button">Conformité</button>
+                        </div>
+                        <div class="avantage__content">
+                              <h3 class="avantage__subtitle">Les avantages et l'imporatnace de rendre son site accessible</h3>
+                              <div class="avantage__list">
+                                    <div class="avantage__item">
+                                          <i class="avantage__icon fas fa-check-circle"></i>
+                                          <p class="avantage__text">Améliorer la réputation de la marque</p>
+                                    </div>
+                                    <div class="avantage__item">
+                                          <i class="avantage__icon fas fa-check-circle"></i>
+                                          <p class="avantage__text">Elargir votre audience</p>
+                                    </div>
+                                    <div class="avantage__item">
+                                          <i class="avantage__icon fas fa-check-circle"></i>
+                                          <p class="avantage__text">Atténuer les risques juridiques</p>
+                                    </div>
+                                    <div class="avantage__item">
+                                          <i class="avantage__icon fas fa-check-circle"></i>
+                                          <p class="avantage__text">Avantage fiscale</p>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </section>
+            <section class="question">
+                  <div class="question__container">
+                        <div class="question__content">
+                              <h3 class="question__title">Qu'est ce que l'accessibilité numérique ?</h3>
+                              <p class="question__text">
+                                    L’accessibilité web, c’est le fait de rendre un site internet utilisable par tout le monde, y compris les
+                                    personnes ayant un handicap (visuel, auditif, moteur, cognitif, etc.).
                               </p>
-                              <button class="button button--hovered button-grey button__text--white">
-                                    <span class="text-hover">Our solution</span>
-                              </button>
                         </div>
-                        <div class="business__container business__cotainer--logo">
-                              <div class="card-logo">
-                                    <div class="card-logo__img container-img">
-                                          <img class="img-corner" src="https://picsum.photos/400/400?random=1" alt="" />
-                                          <div class="card-logo__logo container-img">
-                                                <img class="img-corner" src="https://picsum.photos/50/50?random=1" alt="Logo" />
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                  </section>
+                        <button class="question__button"></button>
+                  </div>
+            </section>
+            <section class="talk">
+                  <form class="talk__form" action="#" method="post">
+                        <label class="talk__label" for="nom">Nom :</label><br />
+                        <input class="talk__input" type="text" id="nom" name="nom" required /><br /><br />
 
-                  <section class="advantages">
-                        <div class="logo">
-                              <img class="logo__img logo__img--visible-lg" src="https://picsum.photos/150/150?random=1" alt="" />
-                              <h1 class="logo__title logo--title--advantages">Hize</h1>
-                        </div>
-                        <div class="title-icon title-icon--advantages title-icon--hidden-lg">
-                              <div class="container-text">
-                                    <h2 class="title-icon__text text-row text-black">Empowerment</h2>
-                              </div>
-                              <div class="title-icon__img container-img">
-                                    <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                              </div>
-                              <div class="container-text text-black">
-                                    <h2 class="title-icon__text text-row text-black">of all,</h2>
-                              </div>
-                              <div class="title-icon__img container-img">
-                                    <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                              </div>
+                        <label class="talk__label" for="email">Email :</label><br />
+                        <input class="talk__input" type="email" id="email" name="email" required /><br /><br />
 
-                              <div class="container-text">
-                                    <h2 class="title-icon__text text-row text-light-blue">Collaboration,</h2>
-                              </div>
-                              <div class="title-icon__img container-img text--fade-in">
-                                    <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                              </div>
-                              <div class="container-text">
-                                    <h2 class="title-icon__text text-row text-coffee-cream">Innovation,</h2>
-                              </div>
-                              <div class="container-text">
-                                    <h2 class="title-icon__text text-row text-black">Inclusiveness.</h2>
-                              </div>
-                        </div>
+                        <label class="talk__label" for="services">Quels services vous intéressent ?</label><br />
+                        <select class="talk__select" id="services" name="services" required>
+                              <option value="">-- Sélectionnez un service --</option>
+                              <option value="site_web">Création de site web</option>
+                              <option value="seo">Référencement (SEO)</option>
+                              <option value="design">Design graphique</option>
+                              <option value="autre">Autre</option></select
+                        ><br /><br />
 
-                        <div class="title-icon title-icon--advantages title-icon--visible-lg">
-                              <div class="title-icon__container">
-                                    <h2 class="title-icon__text text-black text-row">Growth,</h2>
-                                    <div class="container-img">
-                                          <img class="img-circle" src="https://picsum.photos/90/90?random=1" alt="" />
-                                    </div>
-                              </div>
+                        <label class="talk__label" for="budget">Budget :</label><br />
+                        <select class="talk__select" id="budget" name="budget" required>
+                              <option value="">-- Sélectionnez un budget --</option>
+                              <option value="moins_1000">Moins de 1000 €</option>
+                              <option value="1000_5000">1000 € – 5000 €</option>
+                              <option value="plus_5000">Plus de 5000 €</option></select
+                        ><br /><br />
 
-                              <div class="title-icon__container">
-                                    <div class="container__img">
-                                          <img class="img-circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
-                                    </div>
-                                    <h2 class="title-icon__text text-row text-light-blue">Talent,</h2>
-                                    <div class="container__img">
-                                          <img class="img-circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
-                                    </div>
-                                    <h2 class="title-icon__text text-row text-coffee-cream">Culture</h2>
-                              </div>
+                        <label class="talk__label" for="message">Message :</label><br />
+                        <textarea class="talk__textarea" id="message" name="message" rows="5" required></textarea><br /><br />
 
-                              <div class="title-icon__container">
-                                    <div class="container__img">
-                                          <img class="img-circle text--fade-in" src="https://picsum.photos/90/90?random=1" alt="" />
-                                    </div>
-                                    <h2 class="title-icon__text text-row text-black">Wellness</h2>
+                        <button class="talk__button" type="submit">Envoyer</button>
+                  </form>
+            </section>
+            <footer class="footer">
+                  <div class="footer__top">
+                        <img class="footer__logo" src="" alt="" />
+                        <ul class="footer__list">
+                              <li class="footer__item"><a class="footer__link" href="">L'entreprise adaptée</a></li>
+                              <li class="footer__item"><a class="footer__link" href="">Tarifs</a></li>
+                        </ul>
+                  </div>
+                  <div class="footer__middle">
+                        <div class="footer__socials">
+                              <h3 class="footer__title">Socials</h3>
+                              <div class="footer__social-links">
+                                    <a class="footer__social-link" href="">Instagram <i class="fas fa-check-circle"></i></a>
+                                    <a class="footer__social-link" href="">Instagram <i class="fas fa-check-circle"></i></a>
+                                    <a class="footer__social-link" href="">Instagram <i class="fas fa-check-circle"></i></a>
+                                    <a class="footer__social-link" href="">Instagram <i class="fas fa-check-circle"></i></a>
                               </div>
                         </div>
-
-                        <button class="button button--hovered margin-top">
-                              <span class="text-hover button__text--white">Explore Hize Advantages</span>
-                        </button>
-                  </section>
-
-                  <section class="solution">
-                        <div class="solution__container">
-                              <div class="solution__wrapper">
-                                    <h3 class="solution__title">
-                                          <span class="text-black">Organizational</span>
-                                          <span class="text-light-blue">Development</span>
-                                    </h3>
-                                    <p class="solution__para text-black">
-                                          Consulting for organizations from an organizational development expert in creating and implementing programs
-                                          and initiatives that support employee growth, development, and well-being.
-                                    </p>
-                                    <button class="button button--hovered">
-                                          <span class="text-hover button__text--white button--hovered button--flex-start">Our solution</span>
-                                    </button>
+                        <div class="footer__company">
+                              <h3 class="footer__title">Entreprise</h3>
+                              <div class="footer__company-info">
+                                    <p><span class="footer__label">Email</span>: jmrez@jkre.com</p>
+                                    <p><span class="footer__label">Email</span>: jmrez@jkre.com</p>
+                                    <p><span class="footer__label">Email</span>: jmrez@jkre.com</p>
                               </div>
                         </div>
-                        <div class="solution__container">
-                              <div class="card-logo card-logo--solution">
-                                    <div class="card-logo__img card-logo__img--solution container-img">
-                                          <img class="img-corner" src="https://picsum.photos/400/400?random=1" alt="" />
-                                          <div class="card-logo__logo container-img">
-                                                <img src="https://picsum.photos/50/50?random=1" alt="Logo" />
-                                          </div>
-                                    </div>
+                        <div class="footer__legal">
+                              <h3 class="footer__title">Legislations & Standards</h3>
+                              <div class="footer__legal-list">
+                                    <p><i class="fas fa-check-circle"></i>Global Guidelines : WCAG</p>
+                                    <p><i class="fas fa-check-circle"></i>Europe : EAA / EN301549</p>
+                                    <p><i class="fas fa-check-circle"></i>Global Guidelines : WCAG</p>
                               </div>
                         </div>
-                  </section>
-
-                  <section class="services">
-                        <div class="services__container">
-                              <h2 class="services__title">Our services</h2>
-                              <div class="buttons-container">
-                                    <button class="button button--arrow button--prev">
-                                          <i class="icon bx bx-chevron-left"></i>
-                                    </button>
-                                    <button class="button button--arrow button--next"><i class="bx bx-chevron-right"></i></button>
-                              </div>
-                        </div>
-                        <div class="carousel">
-                              <div class="carousel__container">
-                                    <div class="carousel__wrapper">
-                                          <div class="carousel__card">
-                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=2" alt="" />
-                                                <h3 class="carousel__title">
-                                                      1 <br />
-                                                      engagement
-                                                </h3>
-                                                <button class="button button--arrow button--card">
-                                                      <i class="bx bx-chevron-right"></i>
-                                                </button>
-                                          </div>
-                                          <div class="carousel__card zoom">
-                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=3" alt="" />
-                                                <h3 class="carousel__title">
-                                                      2 <br />
-                                                      engagement
-                                                </h3>
-                                                <button class="button button--arrow button--card">
-                                                      <i class="bx bx-chevron-right"></i>
-                                                </button>
-                                          </div>
-                                          <div class="carousel__card">
-                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=4" alt="" />
-                                                <h3 class="carousel__title">
-                                                      3 <br />
-                                                      engagement
-                                                </h3>
-                                                <button class="button button--arrow button--card">
-                                                      <i class="bx bx-chevron-right"></i>
-                                                </button>
-                                          </div>
-
-                                          <div class="carousel__card">
-                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=5" alt="" />
-                                                <h3 class="carousel__title">
-                                                      4 <br />
-                                                      engagement
-                                                </h3>
-                                                <button class="button button--arrow button--card">
-                                                      <i class="bx bx-chevron-right"></i>
-                                                </button>
-                                          </div>
-                                          <div class="carousel__card">
-                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=6" alt="" />
-                                                <h3 class="carousel__title">
-                                                      5<br />
-                                                      engagement
-                                                </h3>
-                                                <button class="button button--arrow button--card">
-                                                      <i class="bx bx-chevron-right"></i>
-                                                </button>
-                                          </div>
-                                          <div class="carousel__card">
-                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=7" alt="" />
-                                                <h3 class="carousel__title">
-                                                      6 <br />
-                                                      engagement
-                                                </h3>
-                                                <button class="button button--arrow button--card">
-                                                      <i class="bx bx-chevron-right"></i>
-                                                </button>
-                                          </div>
-
-                                          <div class="carousel__card">
-                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=8" alt="" />
-                                                <h3 class="carousel__title">
-                                                      7 <br />
-                                                      engagement
-                                                </h3>
-                                                <button class="button button--arrow button--card">
-                                                      <i class="bx bx-chevron-right"></i>
-                                                </button>
-                                          </div>
-                                          <div class="carousel__card">
-                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=9" alt="" />
-                                                <h3 class="carousel__title">
-                                                      8<br />
-                                                      engagement
-                                                </h3>
-                                                <button class="button button--arrow button--card">
-                                                      <i class="bx bx-chevron-right"></i>
-                                                </button>
-                                          </div>
-                                          <div class="carousel__card">
-                                                <img class="carousel__img" src="https://picsum.photos/500/600?random=10" alt="" />
-                                                <h3 class="carousel__title">
-                                                      9 <br />
-                                                      engagement
-                                                </h3>
-                                                <button class="button button--arrow button--card">
-                                                      <i class="bx bx-chevron-right"></i>
-                                                </button>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                  </section>
-
-                  <section class="hize">
-                        <div class="sticky">
-                              <div class="hize__slider">
-                                    <div class="hize__panel">
-                                          <div class="hize__sucess hize__sucess-border-right">
-                                                <div class="hize__sucess-title">
-                                                      <hr class="hize__trait" />
-                                                      <h2 class="hize__title">/Hize</h2>
-                                                </div>
-                                                <div class="hize__text">
-                                                      <h3 class="hize__title-why">
-                                                            <span class="text-light-blue">Why</span> <span class="text-coffee-cream">Hize?</span>
-                                                      </h3>
-                                                      <h4>Greater Success</h4>
-                                                      <p class="hize__para">
-                                                            We address your unique needs and challenges, ensuring that your teams are equipped with
-                                                            the skills and mindset required to achieve organizational goals. <br /><br />
-                                                            Empower your teams, enhance their skills, and foster a culture of growth and excellence.
-                                                      </p>
-                                                </div>
-                                          </div>
-
-                                          <div class="hize__sucess">
-                                                <div class="hize__sucess-ttitle">
-                                                      <hr class="hize__trait" />
-                                                      <h2 class="hize__title">Human and Organizational Development Consulting Services</h2>
-                                                </div>
-                                                <div class="hize__img container-img"><img src="https://picsum.photos/300/300?random=1" alt="" /></div>
-                                          </div>
-                                    </div>
-                                    <div class="hize__panel hize__panel--right">
-                                          <div class="hize__why-title">
-                                                <hr class="hize__trait" />
-                                                <h2 class="hize__title">/Why Hize?</h2>
-                                                <h2 class="hize__title">/Advantage</h2>
-                                          </div>
-                                          <div class="hize__why">
-                                                <div class="container__text">
-                                                      <h3>
-                                                            Empower your teams, enhance their skills, and foster a culture of growth and excellence.
-                                                            Benefits
-                                                      </h3>
-                                                      <ol>
-                                                            <li>Outperform your peers.</li>
-                                                            <li>Improve productivity and efficiency</li>
-                                                            <li>Enhance innovation and creativity</li>
-                                                            <li>Reduce turnover, and staff dissension costs</li>
-                                                            <li>Strengthen brand reputation</li>
-                                                      </ol>
-                                                </div>
-                                                <div class="card-logo">
-                                                      <div class="card-logo__img container-img">
-                                                            <img src="https://picsum.photos/400/800?random=1" alt="" />
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                  </section>
-
-                  <section class="contact">
-                        <h2 class="text-black contact__title">Contact Hize</h2>
-                        <div class="title-icon title-icon--contact ">
-                              <div class="title-icon__container no-wrap text--fade-in margin-side">
-                                    <div class="title-icon__img container-img img-circle">
-                                          <img class="img-circle" src="https://picsum.photos/50/50?random=1" alt="" />
-                                    </div>
-                                    <h2 class="title-icon__text text-row text-black">Talk to us</h2>
-                                    <div class="title-icon__img container-img img-circle element-visible">
-                                          <img class="img-circle" src="https://picsum.photos/50/50?random=1" alt="" />
-                                    </div>
-                              </div>
-
-                              <div class="title-icon__container no-wrap text--fade-in">
-                                    <h2 class="title-icon__text text-row text-light-blue">& transform</h2>
-                                    <div class="title-icon__container">
-                                          <div class="container__img">
-                                                <img class="img-circle" src="https://picsum.photos/50/50?random=1" alt="" />
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="title-icon__container no-wrap text--fade-in">
-                                    <div class="title-icon__img container-img img-circle element-hidden">
-                                          <img class="img-circle" src="https://picsum.photos/50/50?random=1" alt="" />
-                                    </div>
-                                    <h2 class="title-icon__text text-row text-coffee-cream">your journey</h2>
-                              </div>
-                        </div>
-                        <button class="button button--hovered margin-top"><span class="text-hover button__text--white">Contact Us</span></button>
-                  </section>
-
-                  <footer class="footer">
-                        <div class="footer__container">
-                              <div class="footer__group">
-                                    <figure class="logo logo--footer">
-                                          <a href="#" class="logo__link">
-                                                <img class="logo__img" src="https://picsum.photos/50/50?random=1" alt="Logo" />
-                                                <h1 class="logo__title logo__title--footer">HIZE</h1>
-                                          </a>
-                                    </figure>
-
-                                    <div class="footer__social">
-                                          <a href="#" class="footer__link"><i class="bx bxl-linkedin"></i> </a>
-                                          <a href="#" class="footer__link"><i class="bx bxl-instagram"></i></a>
-                                    </div>
-                                    <div class="legal">
-                                          <a href="#" class="legal__link"><i class="bx bxl-linkedin"></i> Legal Hub</a>
-                                          <a href="#" class="legal__link"><i class="bx bxl-linkedin"></i> Privacy Statement</a>
-                                          <a href="#" class="legal__link"><i class="bx bxl-linkedin"></i> Cookie Policy</a>
-                                          <a href="#" class="legal__link"><i class="bx bxl-linkedin"></i> Terms and Conditions</a>
-                                    </div>
-                                    <a href="" class="footer__copyright">© All Rights Reserved 2025 Web design by Bangluxor</a>
-                              </div>
-                        </div>
-
-                        <div class="footer__container">
-                              <div class="footer__group">
-                                    <h2 class="footer-title">
-                                          <span>Request more</span>
-                                          <span>information</span>
-                                    </h2>
-                                    <form class="form" action="">
-                                          <label class="form__label" for="full-name">Full Name</label>
-                                          <input class="form__input" type="text" id="full-name" />
-
-                                          <div class="form-container">
-                                                <div class="form-group">
-                                                      <label class="form__label">Your Email</label>
-                                                      <input class="form__input" type="text" />
-                                                </div>
-                                                <div class="form-group">
-                                                      <label class="form__label">Phone</label>
-                                                      <input class="form__input" type="text" />
-                                                </div>
-                                          </div>
-
-                                          <label class="form__label">Subject</label>
-                                          <input type="text" class="form__input" />
-
-                                          <label class="form__label">Your Message</label>
-                                          <input type="text" class="form__input" />
-
-                                          <div class="form-checkbox-group">
-                                                <input class="form-checkbox" type="checkbox" id="agree" />
-                                                <label for="agree" class="form__label">Accept the privacy policy</label>
-                                          </div>
-
-                                          <button type="submit" class="button form__button">
-                                                Send my request <i class="bx bx-right-arrow-alt"></i>
-                                          </button>
-                                    </form>
-                              </div>
-                        </div>
-                  </footer>
-            </main>
-
-            <script src="js/app.js"></script>
+                  </div>
+                  <div class="footer__bottom">
+                        <p>© 2023–2025 BlooAI – une solution de Place des Victoires</p>
+                        <a class="footer__link" href="/mentions-legales.html">Mentions légales</a> /
+                        <a class="footer__link" href="/accessibilite.html">Déclaration d’accessibilité</a> /
+                        <a class="footer__link" href="/cgu.html">CGU</a>
+                  </div>
+            </footer>
+            <script src="/app.js"></script>
       </body>
 </html>

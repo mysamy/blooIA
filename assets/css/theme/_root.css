@@ -1,0 +1,75 @@
+/* Webfont: Luciole-Regular */
+@font-face {
+    font-family: 'Luciole';
+    src: url('Luciole-Regular.eot');
+    /* IE9 Compat Modes */
+    src: url('Luciole-Regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('Luciole-Regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('Luciole-Regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('Luciole-Regular.svg#Luciole-Regular') format('svg');
+    /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* VARIABLES */
+:root {
+    --base: 16px;
+    --h1-size: 3.0625rem;
+    /* 49px */
+    --h2-size: 2.4375rem;
+    /* 39px */
+    --h3-size: 1.9375rem;
+    /* 31px */
+    --h4-size: 1.5625rem;
+    /* 25px */
+    --body: 1.25rem;
+    /* 20px */
+    --caption: 1rem;
+    /* 16px */
+    --family: 'Luciole', sans-serif;
+    --weight-normal: 400;
+    --weight-bold: 700;
+    --style-normal: normal;
+    --style-italic: italic;
+    /* COLORS */
+    --white: #FFFFFF;
+    --black: #000000;
+    --color-primary: #3EE4F0;
+    --color-secondary: #1A2A3A;
+    --color-grey: #EBE9E9;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #000000;
+
+    /* Couleurs des liens */
+    --color-link-default: ;
+    --color-link-hover: ;
+    --color-link-active: ;
+
+
+    /* Couleurs des bordures */
+    --color-border-default: ;
+    --color-highlight-primary: ;
+    --color-highlight-secondary: ;
+
+   
+
+    /* BORDERS */
+    --BORDERS: 1px solid var(--BORDER-COLOR);
+
+    /* STANDARD PADDING */
+    --PADDING: clamp(0.1rem, calc(0.1rem + 2vh), 2rem) clamp(1rem, calc(0.1rem + 2vw), 1.5rem);
+    --PADDING-TB: 0.25rem 0;
+    --PADDING-SIDE: 0 0.3rem;
+
+    /* STANDARD MARGIN */
+    --MARGIN: clamp(1rem, calc(1rem + 2vw), 1.5rem);
+    --MARGIN-SIDE: 0 clamp(1rem, calc(1.5rem + 2vw), 1.5rem);
+    --MARGIN-TB: clamp(1rem, calc(1rem + 2vh), 1.5rem) 0;
+
+
+}

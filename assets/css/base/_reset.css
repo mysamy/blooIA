@@ -1,0 +1,32 @@
+/* Reset des styles par défaut */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* Réinitialisation des listes */
+li {
+	list-style: none;
+ }
+ 
+
+/* Réinitialisation des styles de formulaire */
+input,
+button,
+textarea {
+
+    caret-color: var(--FONT-COLOR);
+    outline: none;
+}
+
+span {
+	display: inline;
+ }
+

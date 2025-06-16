@@ -1,0 +1,10 @@
+a:hover,
+a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+a:active {
+    color: var(--LINK-ACTIVE);
+}
+
+
+
