@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 10vh;
+	height: 130px;
 	background-color: var(--color-secondary);
 	border-radius: 30px;
 	padding: 15px 100px 15px 70px;
@@ -18,20 +18,3 @@
 	gap: 20px;
 }
 
-.hero {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding :150px 200px 0 200px;
-}
-.hero__highlight {
-	text-decoration: underline;
-}
-
-.hero__form {
-	background-color: var(--color-secondary);
-	align-items: center;
-	display: flex;
-	padding: 5px;
-	border-radius: 30px;
-}

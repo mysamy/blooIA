@@ -4,6 +4,8 @@
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <link rel="stylesheet" href="assets/css/app.css" />
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
             <title>Document</title>
       </head>
       <body>
@@ -21,51 +23,53 @@
             </header>
 
             <section class="hero">
-                  <h1 class="hero__title">L'assitant IA qui rend votre site accessible et conforme facilement!</h1>
-                  <p class="hero__subtitle">
-                        Le 1er outil d'accessibilité numérique développé par une
-                        <span class="hero__highlight">entreprise adaptée</span>
-                  </p>
-
-                  <form class="hero__form" action="" method="get">
-                        <label class="form__label" for="url"></label>
-                        <input class="form__input" type="url" id="url" name="url" placeholder="Entrez une URL :" required />
-                        <button class="form__button link-audit" type="submit">Audit</button>
-                  </form>
-
-                  <div class="hero__compliance">
-                        <p class="hero__compliance-title">Vérifications de conformité : RGAA</p>
-                        <div class="hero__compliance-icon">
-                              <i class="fas fa-check-circle"></i>
+                  <div class="hero__container">
+                        <h1 class="hero__title">L'assitant IA qui rend votre site accessible et conforme facilement!</h1>
+                        <p class="hero__subtitle">
+                              Le 1er outil d'accessibilité numérique développé par une
+                              <span class="hero__highlight">entreprise adaptée</span>
+                        </p>
+                        <form class="hero__form" action="" method="get">
+                              <label class="form__label" for="url"></label>
+                              <div class="form__container">
+                                    <i class="fa-solid fa-magnifying-glass fa-sm form__icon"></i>
+                                    <input class="form__input" type="url" id="url" name="url" placeholder="Entrez une URL :" required />
+                              </div>
+                              <button class="button form__button link-audit" type="submit">Audit</button>
+                        </form>
+                        <div class="hero__compliance">
+                              <p class="hero__compliance-title">Vérifications de conformité : RGAA</p>
+                              <i class="fas fa-check-circle icon--green"></i>
                         </div>
                   </div>
 
-                  <div class="hero__features">
-                        <div class="feature">
-                              <i class="feature__icon fas fa-check-circle"></i>
-                              <p class="feature__text">Audit</p>
+                  <div class="hero__container">
+                        <div class="hero__features">
+                              <div class="feature">
+                                    <i class="feature__icon fas fa-eye fa-2x"></i>
+                                    <p class="feature__text">Audit</p>
+                              </div>
+                              <div class="feature">
+                                    <i class="feature__icon fas fa-pencil fa-2x"></i>
+                                    <p class="feature__text">Edition</p>
+                              </div>
+                              <div class="feature">
+                                    <i class="feature__icon fas fa-brain fa-2x"></i>
+                                    <p class="feature__text">Agent IA</p>
+                              </div>
+                              <div class="feature">
+                                    <i class="feature__icon fas fa-user-doctor fa-2x"></i>
+                                    <p class="feature__text">Tests</p>
+                              </div>
                         </div>
-                        <div class="feature">
-                              <i class="feature__icon fas fa-check-circle"></i>
-                              <p class="feature__text">Audit</p>
-                        </div>
-                        <div class="feature">
-                              <i class="feature__icon fas fa-check-circle"></i>
-                              <p class="feature__text">Audit</p>
-                        </div>
-                        <div class="feature">
-                              <i class="feature__icon fas fa-check-circle"></i>
-                              <p class="feature__text">Audit</p>
-                        </div>
-                  </div>
-
-                  <div class="hero__feature-description">
-                        <div class="hero__feature-image"><img src="" alt="" /></div>
-                        <div class="hero__feature-content">
-                              <h2 class="hero__feature-title">Audit Automatisé</h2>
-                              <p class="hero__feature-text">
-                                    BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.
-                              </p>
+                        <div class="hero__feature-description">
+                              <i class="feature__icon fas fa-eye fa-3x"></i>
+                              <div class="hero__feature-content">
+                                    <h2 class="hero__feature-title">Audit Automatisé</h2>
+                                    <p class="hero__feature-text">
+                                          BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.
+                                    </p>
+                              </div>
                         </div>
                   </div>
             </section>
