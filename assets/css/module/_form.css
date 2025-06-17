@@ -1,0 +1,24 @@
+.form__button {
+	padding: 20px 35px;
+	font-size: var(--body);
+	
+}
+
+.form__input {
+	border-radius: 30px;
+	height: 100%;
+	padding: 20px 20px 20px 30px;
+	margin-right: 20px;
+	width: 400px;
+	
+}
+.form__container {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.form__icon {
+	position: absolute;
+	top : 50%;
+	left: 10px;
+}

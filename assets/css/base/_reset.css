@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 
@@ -20,11 +21,16 @@ li {
 /* Réinitialisation des styles de formulaire */
 input,
 button,
-textarea {
-
+textarea,
+option,
+select {
+    font-family: var(--family);
+	font-size: var(--body);
     caret-color: var(--FONT-COLOR);
     outline: none;
+    padding:0 20px;
 }
+
 
 span {
 	display: inline;

@@ -1,0 +1,81 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-secondary);
+	border-radius: 30px;
+	padding: 50px 200px;
+	color: var(--color-text-primary);
+	gap: 50px;
+	
+}
+.footer__item {
+	    list-style: disc;
+	color: var(--white);
+}
+.footer__top {
+	display: flex;
+	justify-content: center;
+	gap: 100px ;
+	align-items: center;
+	width: 100%;
+}
+.footer__logo {
+	height: 100px;
+	width: 250px;
+}
+.footer__middle {
+	width: 100%;
+	display: flex;
+	align-items: start;
+	justify-content: space-between;
+}
+.footer__socials{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	
+}
+.footer__social-links{
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+}
+.footer__bottom{
+	width: 100%;
+	text-align: center;
+	
+}
+.footer__title {
+	font-weight: var(--weight-normal);
+	text-align: start;
+}
+.footer__label {
+	text-decoration: underline ;
+}
+.footer__company {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 35%;
+}
+.footer__company-info {
+	display: flex;
+	flex-direction: column;
+	gap:20px;
+}
+.footer__legal {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.footer__legal-list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.footer__legal-text {
+	display: flex;
+	text-align: center;
+	gap: 20px;
+}

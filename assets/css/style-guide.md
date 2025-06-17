@@ -21,3 +21,10 @@
 
   --------------------------------------------------------------
 */
+
+
+<i class="fa-solid fa-magnifying-glass fa-xs"></i>   <!-- très petit -->
+<i class="fa-solid fa-magnifying-glass fa-sm"></i>   <!-- petit -->
+<i class="fa-solid fa-magnifying-glass fa-lg"></i>   <!-- grand -->
+<i class="fa-solid fa-magnifying-glass fa-2x"></i>   <!-- 2x plus grand -->
+<i class="fa-solid fa-magnifying-glass fa-3x"></i>   <!-- 3x plus grand -->

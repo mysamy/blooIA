@@ -19,18 +19,12 @@
 /* VARIABLES */
 :root {
     --base: 16px;
-    --h1-size: 3.0625rem;
-    /* 49px */
-    --h2-size: 2.4375rem;
-    /* 39px */
-    --h3-size: 1.9375rem;
-    /* 31px */
-    --h4-size: 1.5625rem;
-    /* 25px */
-    --body: 1.25rem;
-    /* 20px */
-    --caption: 1rem;
-    /* 16px */
+    --h1-size: 3.0625rem;/* 49px */
+    --h2-size: 2.4375rem;/* 39px */
+    --h3-size: 1.9375rem;/* 31px */
+    --h4-size: 1.5625rem;/* 25px */
+    --body: 1.25rem;/* 20px */
+    --caption: 1rem;/* 16px */
     --family: 'Luciole', sans-serif;
     --weight-normal: 400;
     --weight-bold: 700;
@@ -44,6 +38,7 @@
     --color-grey: #EBE9E9;
     --color-text-primary: #FFFFFF;
     --color-text-secondary: #000000;
+    --color-shadow: rgba(0, 0, 0, 0.463);
 
     /* Couleurs des liens */
     --color-link-default: ;
