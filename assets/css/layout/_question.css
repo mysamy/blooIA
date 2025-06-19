@@ -4,7 +4,7 @@
 	border: 1px solid  var(--black);
 	border-radius: 30px;
 	padding: 20px 25px;
-	
+	gap: 20px;
 }
 .question__title {
 	text-align: left;
@@ -14,16 +14,8 @@
 	flex-direction: column;
 	gap: 20px;
 }
-.question__button {
-	align-self: center;
-	padding : 18px 30px;
-	border-radius: 5px 25px 25px 5px;
-	border:none;
-	box-shadow: 2px 2px 8px var(--color-shadow) 
-}
-.question__text {
-    display: none;
-}
+
+
 .question1container {
 	display: flex;
 	flex-direction: column;

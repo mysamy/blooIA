@@ -43,19 +43,3 @@ h4 {
 	font-size: var(--h4-size);
 }
 
-/* LINKS */
-
-a {
-	text-decoration: none;
-	color: var(--FONT-COLOR);
-	transition: transform 0.3s ease;
-}
-
-.link-audit {
-	background-color: var(--color-primary);
-	color: var(--color-secondary);
-	font-weight: var(--weight-bold);
-	border-radius: 30px;
-	padding: 10px 30px;
-}
-

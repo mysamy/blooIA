@@ -1,23 +1,35 @@
 .feature:hover {
 	transform: scale(1.2);
-
 }
 
 .feature {
-	transition: transform 0.4s ease;
+	transition: transform 0.4s ease-in-out ;
 }
-
+.question__button:hover {
+  transform: scale(1.2);
+}
 .question__button {
-	animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
+	align-self: center;
+	padding : 10px 20px;
+	border-radius: 5px 25px 25px 5px;
+	border:none;
+	box-shadow: 2px 2px 8px var(--color-shadow);
+  outline: 3px solid transparent;
+  outline-offset: 0;
+  transition: outline-color 0.5s ease, outline-offset 0.3s ease, transform 0.5s ease;
 }
-@keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
-  }
+.question__button--click {
+    background-color: var(--color-button-active);
+    outline-color: var(--color-button-active);
+    outline-offset: 10px;
+    
+}
+
+.question__button--click .question__icon {
+  transform: rotate(180deg);
+  color: white;
+}
+
+.question__icon {
+  transition: transform 0.3s ease, color 0.3s ease;
 }

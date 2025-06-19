@@ -1,0 +1,59 @@
+.compliance__container {
+	width: 100%;
+}
+
+.compliance__content {
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+	background-color: var(--color-secondary);
+	padding: 50px 200px;
+	color: var(--color-text-primary);
+	border-radius: 0 0 30px 30px;
+	height: 700px;
+
+}
+
+.compliance__buttons {
+	display: flex;
+	font-weight: var(--weight-bold);
+}
+
+.compliance__button--pressed {
+	background-color: var(--color-secondary);
+  color:var(--color-text-primary);
+}
+
+.compliance__button--unpressed {
+	color: var(--color-text-secondary);
+	background-color: var(--white);
+
+}
+.compliance__button--advantage {
+	border-radius: 15px 0 0 0;
+}
+.compliance__button--compliance {
+	
+	border-radius: 0 15px 0 0;
+
+}
+
+.compliance__button {
+	padding: 20px 40px;
+	border: none;
+}
+
+.compliance__list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem;
+	margin: 4rem;
+}
+
+.compliance__item {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

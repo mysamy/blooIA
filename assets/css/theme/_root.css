@@ -41,10 +41,10 @@
     --color-shadow: rgba(0, 0, 0, 0.463);
 
     /* Couleurs des liens */
-    --color-link-default: ;
-    --color-link-hover: ;
-    --color-link-active: ;
-
+    --color-link-hover: #4AAEB9;
+    --color-link-active:  #3EE4F0;
+    --color-link-focus: #3EE4F0;    
+    --color-button-active: #3EE4F0;
 
     /* Couleurs des bordures */
     --color-border-default: ;

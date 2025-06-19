@@ -50,7 +50,7 @@
                               <label class="form__label" for="url"></label>
                               <div class="form__container">
                                     <i class="fa-solid fa-magnifying-glass fa-sm form__icon"></i>
-                                    <input class="form__input" type="url" id="url" name="url" placeholder="Entrez une URL :" required />
+                                    <input class="form__input" type="url" id="url" name="url" placeholder="Entrez une URL" required />
                               </div>
                               <button class="button form__button link-audit" type="submit">Audit</button>
                         </form>
@@ -59,19 +59,19 @@
                               <i class="fas fa-check-circle icon--green"></i>
                         </div>
                         <div class="hero__features">
-                              <div class="feature">
+                              <div class="feature feature--audit">
                                     <i class="feature__icon fas fa-eye fa-2x"></i>
                                     <p class="feature__text">Audit</p>
                               </div>
-                              <div class="feature">
+                              <div class="feature feature--edition">
                                     <i class="feature__icon fas fa-pencil fa-2x"></i>
                                     <p class="feature__text">Edition</p>
                               </div>
-                              <div class="feature">
+                              <div class="feature feature--agent">
                                     <i class="feature__icon fas fa-brain fa-2x"></i>
                                     <p class="feature__text">Agent IA</p>
                               </div>
-                              <div class="feature">
+                              <div class="feature feature--test">
                                     <i class="feature__icon fas fa-user-doctor fa-2x"></i>
                                     <p class="feature__text">Tests</p>
                               </div>
@@ -96,35 +96,69 @@
                         <li class="how__item">Vous montre comment les corriger</li>
                         <li class="how__item">Rapide, intelligent, prêt pour la directive 2025</li>
                   </ul>
-                  <div class="how__carousel carousel"></div>
-            </section>
-            <section class="avantage">
-                  <h2 class="avantage__title">Conformité et avantages</h2>
-                  <div class="avantage__container">
-                        <div class="avantage__buttons">
-                              <button class="avantage__button avantage__button--adv">Avantages</button>
-                              <button class="avantage__button avantage__button--conf">Conformité</button>
+
+<!-- carouusel -->
+                  <div class="how__carousel">
+                        <button><i class="fas fa-arrow-left icon--green"></i></button>
+                        <div class="carousel__wrapper">
+
+
+
                         </div>
-                        <div class="avantage__content">
-                              <h3 class="avantage__subtitle">Les avantages et l'imporatnace de rendre son site accessible</h3>
-                              <div class="avantage__list">
-                                    <div class="avantage__item">
-                                          <i class="avantage__icon fas fa-trophy fa-3x"></i>
-                                          <p class="avantage__text">Améliorer la réputation de la marque</p>
+                        <button><i class="fas fa-arrow-right icon--green"></i></button>
+
+
+
+
+                  </div>
+            </section>
+            <section class="compliance">
+                  <h2 class="compliance__title">Conformité et avantages</h2>
+                  <div class="compliance__container compliance__title--visible">
+                        <div class="compliance__buttons">
+                              <button class="compliance__button compliance__button--advantage compliance__button--pressed">Avantages</button>
+                              <button class="compliance__button compliance__button--compliance compliance__button--unpressed">Conformité</button>
+                        </div>
+                        <div class="compliance__content compliance__content--advantage">
+                              <h3 class="compliance__subtitle">Les avantages et l'imporatnace de rendre son site accessible</h3>
+                              <div class="compliance__list">
+                                    <div class="compliance__item">
+                                          <i class="compliance__icon fas fa-trophy fa-3x"></i>
+                                          <p class="compliance__text">Améliorer la réputation de la marque</p>
                                     </div>
-                                    <div class="avantage__item">
-                                          <i class="avantage__icon fas fa-users fa-3x"></i>
-                                          <p class="avantage__text">Elargir votre audience</p>
+                                    <div class="compliance__item">
+                                          <i class="compliance__icon fas fa-users fa-3x"></i>
+                                          <p class="compliance__text">Elargir votre audience</p>
                                     </div>
-                                    <div class="avantage__item">
-                                          <i class="avantage__icon fas fa-gavel fa-3x"></i>
-                                          <p class="avantage__text">Atténuer les risques juridiques</p>
+                                    <div class="compliance__item">
+                                          <i class="compliance__icon fas fa-gavel fa-3x"></i>
+                                          <p class="compliance__text">Atténuer les risques juridiques</p>
                                     </div>
-                                    <div class="avantage__item">
-                                          <i class="avantage__icon fas fa-chart-line fa-3x"></i>
-                                          <p class="avantage__text">Avantage fiscale</p>
+                                    <div class="compliance__item">
+                                          <i class="compliance__icon fas fa-chart-line fa-3x"></i>
+                                          <p class="compliance__text">Avantages fiscale</p>
                                     </div>
                               </div>
+                        </div>
+                        <div class="compliance__content compliance__content--compliance">
+                              <h3>Quelles sont les directives WCAG?</h3>
+                              <p>
+                                    Les sites web sont-ils légalement tenus de suivre les WCAG 2.2 ? Les WCAG 2.2 ne constituent pas une législation
+                                    en soi, mais elles représentent la norme de référence pour les lois sur l’accessibilité du web dans la plupart des
+                                    pays.
+                              </p>
+                              <p>
+                                    Par exemple : États-Unis : l'ADA (Americans with Disabilities Act) et la section 508 sont basées sur les WCAG 2.2.
+                                    Canada : les lois ACA (Accessible Canada Act) et AODA (Accessibility for Ontarians with Disabilities Act) suivent
+                                    les WCAG 2.2. Union européenne : les législations EAA (European Accessibility Act) et EN301549 se basent également
+                                    sur les WCAG 2.2. Ressources recommandées : Le guide de référence des WCAG en 2025.
+                              </p>
+                              <p>
+                                    Les WCAG, ou Web Content Accessibility Guidelines (Directives pour l'accessibilité du contenu Web), sont les
+                                    directives les plus importantes en matière d’accessibilité numérique. Elles ont été élaborées par le W3C (World
+                                    Wide Web Consortium), une organisation à but non lucratif fondée en 1994 au sein du Laboratoire d'informatique du
+                                    MIT.
+                              </p>
                         </div>
                   </div>
             </section>
@@ -140,7 +174,7 @@
                                     </p>
                               </div>
                               <button class="question__button">
-                                    <i class="avantage__icon fas fa-chevron-down fa-lg"></i>
+                                    <i class="question__icon fas fa-chevron-down fa-lg"></i>
                               </button>
                         </div>
                         <div class="question__container">
@@ -149,60 +183,65 @@
                                           Pourquoi est-il important que mon site soit accessible aux personnes en situation de handicap ?
                                     </h3>
                                     <p class="question__text">
-                                          L’accessibilité web, c’est le fait de rendre un site internet utilisable par tout le monde, y compris les
-                                          personnes ayant un handicap (visuel, auditif, moteur, cognitif, etc.).
+                                          Un site accessible permet à tous, y compris aux personnes en situation de handicap, de naviguer facilement
+                                          et d’accéder à l’information. Cela améliore l’expérience utilisateur, respecte la loi, et élargit votre
+                                          audience. En rendant votre site inclusif, vous montrez que vous valorisez la diversité et l’égalité.
                                     </p>
                               </div>
                               <button class="question__button">
-                                    <i class="avantage__icon fas fa-chevron-down fa-lg"></i>
+                                    <i class="question__icon fas fa-chevron-down fa-lg"></i>
                               </button>
                         </div>
                         <div class="question__container">
                               <div class="question__content">
                                     <h3 class="question__title">Mon site est-il déjà accessible ? Comment puis-je le savoir ?</h3>
                                     <p class="question__text">
-                                          L’accessibilité web, c’est le fait de rendre un site internet utilisable par tout le monde, y compris les
-                                          personnes ayant un handicap (visuel, auditif, moteur, cognitif, etc.).
+                                          Pour savoir si votre site est accessible, vous pouvez utiliser des outils automatiques comme Lighthouse, Axe
+                                          ou Wave qui analysent votre site et détectent des problèmes d’accessibilité. Mais il est aussi important de
+                                          faire des tests manuels, comme naviguer au clavier ou utiliser un lecteur d’écran, pour vérifier
+                                          l’expérience réelle des utilisateurs en situation de handicap.
                                     </p>
                               </div>
                               <button class="question__button">
-                                    <i class="avantage__icon fas fa-chevron-down fa-lg"></i>
+                                    <i class="question__icon fas fa-chevron-down fa-lg"></i>
                               </button>
                         </div>
                         <div class="question__container">
                               <div class="question__content">
                                     <h3 class="question__title">Proposez-vous un audit d’accessibilité gratuit ou un test automatique ?</h3>
                                     <p class="question__text">
-                                          L’accessibilité web, c’est le fait de rendre un site internet utilisable par tout le monde, y compris les
-                                          personnes ayant un handicap (visuel, auditif, moteur, cognitif, etc.).
+                                          Oui, nous proposons un audit d’accessibilité gratuit qui inclut une analyse automatique de votre site avec
+                                          des outils spécialisés, ainsi qu’un test manuel pour garantir une évaluation complète. N’hésitez pas à nous
+                                          contacter pour en savoir plus !
                                     </p>
                               </div>
                               <button class="question__button">
-                                    <i class="avantage__icon fas fa-chevron-down fa-lg"></i>
+                                    <i class="question__icon fas fa-chevron-down fa-lg"></i>
                               </button>
                         </div>
                         <div class="question__container">
                               <div class="question__content">
                                     <h3 class="question__title">Offrez-vous une solution automatique ou un accompagnement humain ?</h3>
                                     <p class="question__text">
-                                          L’accessibilité web, c’est le fait de rendre un site internet utilisable par tout le monde, y compris les
-                                          personnes ayant un handicap (visuel, auditif, moteur, cognitif, etc.).
+                                          Nous proposons les deux : une solution automatique pour un diagnostic rapide et un accompagnement humain
+                                          personnalisé pour vous guider dans la mise en conformité et répondre à vos besoins spécifiques.
                                     </p>
                               </div>
                               <button class="question__button">
-                                    <i class="avantage__icon fas fa-chevron-down fa-lg"></i>
+                                    <i class="question__icon fas fa-chevron-down fa-lg"></i>
                               </button>
                         </div>
                         <div class="question__container">
                               <div class="question__content">
                                     <h3 class="question__title">Quelle est la durée moyenne d’un audit ou d’une mise en conformité ?</h3>
                                     <p class="question__text">
-                                          L’accessibilité web, c’est le fait de rendre un site internet utilisable par tout le monde, y compris les
-                                          personnes ayant un handicap (visuel, auditif, moteur, cognitif, etc.).
+                                          La durée moyenne d’un audit d’accessibilité varie généralement entre 1 et 3 semaines, selon la taille et la
+                                          complexité du site. La mise en conformité peut prendre de quelques semaines à plusieurs mois, selon
+                                          l’ampleur des corrections nécessaires et les ressources disponibles.
                                     </p>
                               </div>
                               <button class="question__button">
-                                    <i class="avantage__icon fas fa-chevron-down fa-lg"></i>
+                                    <i class="question__icon fas fa-chevron-down fa-lg"></i>
                               </button>
                         </div>
                   </div>
@@ -238,7 +277,14 @@
                         </select>
 
                         <label class="talk__label" for="message">Message :</label>
-                        <textarea class="talk__textarea" id="message" name="message" rows="5" placeholder="Ecrivez nous un message" required></textarea>
+                        <textarea
+                              class="talk__textarea"
+                              id="message"
+                              name="message"
+                              rows="5"
+                              placeholder="Ecrivez nous un message"
+                              required
+                        ></textarea>
 
                         <button class="talk__button" type="submit">Envoyer</button>
                   </form>
