@@ -1,5 +1,5 @@
 const buttonQuestion = document.querySelectorAll(".question__button")
-console.log(buttonQuestion);
+
 
 buttonQuestion.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -15,7 +15,7 @@ const buttonCompliance = document.querySelector(".compliance__button--compliance
 
 const compliance = document.querySelector(".compliance__content--compliance")
 const advantage = document.querySelector(".compliance__content--advantage");
-console.log(advantage);
+
 
 function toggleSection(show, hide) {
   show.style.display = "flex";
@@ -93,5 +93,3 @@ featureEdition.addEventListener("click", () => createCard(tableauFeature[1]));
 featureAgent.addEventListener("click", () => createCard(tableauFeature[2]));
 featureTest.addEventListener("click", () => createCard(tableauFeature[3]));
 
-console.log(featureTest);
-console.log(featureAgent);
