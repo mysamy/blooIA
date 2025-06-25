@@ -19,12 +19,13 @@ class Carousel {
 			slidesVisible: 1
 		}, options)
 		let children = Array.from(element.children)
+		this.isMobile = false
 		this.currentItem = 0
-		
+
+		// Modification du Dom
 		this.root = this.createDivWithClass ('carousel')
 		this.container = this.createDivWithClass ('carousel__wrapper')
-		
-		
+		this.root.setAttribute("tabindex", '0')
 		this.root.appendChild(this.container)
 		this.element.appendChild(this.root)
 		this.items = children.map((child) => {
@@ -33,20 +34,30 @@ class Carousel {
 			this.container.appendChild(item)
 			return item
 		})
-		
 		this.setStyle()
 		this.createNavigation()
-		console.log(this.root)
+		
+
+		// Evenements
+		this.onWindowResize()
+		window.addEventListener('resize', this.onWindowResize.bind(this))
+		this.root.addEventListener("keyup", (e) => {
+			if (e.key === 'ArrowRight' || e.key === 'Right') {
+				this.next()
+			} else if (e.key === 'ArrowLeft' || e.key === 'Left') {
+				this.prev()
+			}
+		})
 	}
 	/**
 	 * Applique les bonnes dimentions aux élément de la carousel
 	 */
 	setStyle () {
-		let ratio = this.items.length / this.options.slidesVisible
+		let ratio = this.items.length / this.slidesVisible
 		console.log(ratio);
 		
 		this.container.style.width = (ratio * 100) + "%"
-		this.items.forEach(item => item.style.width = ((100 / this.options.slidesVisible) / ratio) + "%") 
+		this.items.forEach(item => item.style.width = ((100 / this.slidesVisible) / ratio) + "%") 
 	};
 	
 	
@@ -62,11 +73,11 @@ class Carousel {
 	}
 
 	next () {
-		this.gotoItem(this.currentItem + this.options.slidesToScroll)
+		this.gotoItem(this.currentItem + this.slidesToScroll)
 	}
 
 	prev ( ) {
-		this.gotoItem(this.currentItem - this.options.slidesToScroll)
+		this.gotoItem(this.currentItem - this.slidesToScroll)
 	}
 	/**
 	 * Déplace le carousel ver l'élément cible
@@ -74,19 +85,38 @@ class Carousel {
 	 *
 	 */
 	gotoItem (index) {
+		
 		if (index < 0) {
+			
 			index = this.items.length - this.options.slidesVisible
-		} else if (index >= this.items.length || this.items[this.currentItem + this.options.slidesVisible] === undefined) {
+			
+			}
+			
+			
+		 else if (index >= this.items.length || this.items[this.currentItem + this.options.slidesVisible] === undefined && index > this.currentItem ) {
 			index = 0
 		}
 		let translateX = index * -100 / this.items.length
+		
+		
 		this.container.style.transform = `translate3d(${translateX}%, 0, 0)`
 		this.currentItem = index
+		
+		
 	}
+	onWindowResize () {
+		let mobile = window.innerWidth < 800
+		if (mobile !== this.isMobile) {
+			this.isMobile = mobile
+			this.setStyle()
+		}
+	}
+
+
 	/**
 	 * 
 	 * @param {string} className
-	 * @returns {HTMLElment}
+	 * @returns {HTMLElement}
 	 */
 	createDivWithClass (className) {
 		let div = document.createElement('div')
@@ -94,6 +124,19 @@ class Carousel {
 		return div
 
 	}
+
+	/**
+	 * 
+	 * @return {number}
+	 */
+	get slidesToScroll () {
+		return this.isMobile ? 1 :  this.options.slidesToScroll
+
+	}
+	get slidesVisible () {
+		return this.isMobile ? 1 : this.options.slidesVisible
+	}
+	
 }
 
 document.addEventListener('DOMContentLoaded', function () {
