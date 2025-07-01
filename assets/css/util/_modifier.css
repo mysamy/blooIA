@@ -1,3 +1,21 @@
 .icon--green {
 	color: #146040;
 }
+
+.span--bold {
+	font-weight: var(--weight-bold);
+}
+.span--surlign {
+	text-decoration: underline;
+}
+.span--highligth {
+	color: var(--color-primary);
+}
+.span--italique {
+	font-style: italic;
+}
+
+
+.fa--black {
+	color: var(--black);
+}
