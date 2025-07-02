@@ -11,7 +11,7 @@ class Carousel {
        * @param {boolean} [options.loop=false] Doit ton boucler en fin de carousel
        * @param {boolean} [options.infinite=false] carousel infini ou pas
        * @param {boolean} [options.navigation=true] Doit ton mettre une pagination
-       *  @param {boolean} [options.pagination=false] 
+       *  @param {boolean} [options.pagination=false]
        */
       constructor(element, options = {}) {
             this.element = element;
@@ -28,15 +28,15 @@ class Carousel {
                   },
                   options
             );
-            if (this.options.loop  && this.options.infinite) {
-                  throw new Error('un carousel ne peut etre a la fois en boucle et en infini')
+            if (this.options.loop && this.options.infinite) {
+                  throw new Error("un carousel ne peut etre a la fois en boucle et en infini");
             }
             let children = Array.from(element.children);
             this.isMobile = false;
             this.currentItem = 0;
             this.moveCallbacks = [];
-            this.offset = 0
-
+            this.offset = 0;
+            
             // Modification du DOM
             this.root = this.createDivWithClass("carousel");
             this.container = this.createDivWithClass("carousel__wrapper");
@@ -48,26 +48,27 @@ class Carousel {
                   item.appendChild(child);
                   return item;
             });
-		  if (this.options.infinite) {
-                  this.offset = this.options.slidesVisible + this.options.slidesToScroll
+            if (this.options.infinite) {
+                  this.offset = this.options.slidesVisible + this.options.slidesToScroll;
                   if (this.offset > children.length) {
                         console.error("erreur pas assez d'element dans le carousel", element);
-                        
                   }
                   this.items = [
-                        ...this.items.slice(this.items.length - this.offset).map(item => item.cloneNode(true)),
+                        ...this.items.slice(this.items.length - this.offset).map((item) => item.cloneNode(true)),
                         ...this.items,
-                        ...this.items.slice(0, this.offset).map(item => item.cloneNode(true)),
-                  ]
-                  this.gotoItem(this.offset, false)
-              }
-            this.items.forEach( item => this.container.appendChild(item))
+                        ...this.items.slice(0, this.offset).map((item) => item.cloneNode(true)),
+                  ];
+                  this.gotoItem(this.offset, false);
+            }
+            this.items.forEach((item) => this.container.appendChild(item));
             this.setStyle();
             if (this.options.navigation) {
-                 this.createNavigation(); 
+                  this.createNavigation();
             }
-            
-            this.createPagination();
+
+            if(this.options.pagination === true) {
+                  this.createPagination();
+            }
 
             // Evenements
             this.moveCallbacks.forEach((cb) => cb(this.currentItem));
@@ -81,10 +82,8 @@ class Carousel {
                   }
             });
             if (this.options.infinite) {
-                              this.container.addEventListener ('transitionend', this.resetInfinite.bind(this))
-
+                  this.container.addEventListener("transitionend", this.resetInfinite.bind(this));
             }
-            
       }
       /**
        * Applique les bonnes dimentions aux élément de la carousel
@@ -94,8 +93,8 @@ class Carousel {
             console.log(ratio);
 
             this.container.style.width = ratio * 100 + "%";
-		  console.log(this.container.style.width);
-		  
+            console.log(this.container.style.width);
+
             this.items.forEach((item) => (item.style.width = 100 / this.slidesVisible / ratio + "%"));
       }
       /**
@@ -130,30 +129,32 @@ class Carousel {
        * Creer la Pagination
        */
       createPagination() {
-            let pagination = this.createDivWithClass('carousel__pagination')
-            let buttons = []
-            this.root.appendChild(pagination)
-            for (let i = 0; i < (this.items.length - 2 * this.offset); i = i + this.options.slidesToScroll) {
-                  let button = this.createDivWithClass('carousel__pagination__button')
-                  button.addEventListener('click', () => this.gotoItem(i + this.offset))
-                  pagination.appendChild(button)
-                  buttons.push(button)
+            let pagination = this.createDivWithClass("carousel__pagination");
+            let buttons = [];
+            this.root.appendChild(pagination);
+            for (let i = 0; i < this.items.length - 2 * this.offset; i = i + this.options.slidesToScroll) {
+                  let button = this.createDivWithClass("carousel__pagination__button");
+                  button.addEventListener("click", () => this.gotoItem(i + this.offset));
+                  pagination.appendChild(button);
+                  buttons.push(button);
             }
-            this.onMove(index => {
-                  let count = this.items.length - 2 * this.offset
-                 let activeButton = buttons[Math.floor((index - this.offset) % count / this.options.slidesToScroll)] 
-                 if(activeButton) {
-                  buttons.forEach(button => button.classList.remove('carousel__pagination__button--active'))
-                  activeButton.classList.add('carousel__pagination__button--active')
-                 }
-            })
+            this.onMove((index) => {
+                  let count = this.items.length - 2 * this.offset;
+                  let activeButton = buttons[Math.floor(((index - this.offset) % count) / this.options.slidesToScroll)];
+                  if (activeButton) {
+                        buttons.forEach((button) => button.classList.remove("carousel__pagination__button--active"));
+                        activeButton.classList.add("carousel__pagination__button--active");
+                  }
+            });
       }
 
       next() {
+            
             this.gotoItem(this.currentItem + this.slidesToScroll);
       }
 
       prev() {
+            
             this.gotoItem(this.currentItem - this.slidesToScroll);
       }
       /**
@@ -162,6 +163,7 @@ class Carousel {
        *@param {boolean} [animation = true]
        */
       gotoItem(index, animation = true) {
+            
             if (index < 0) {
                   if (this.options.loop) {
                         index = this.items.length - this.slidesVisible;
@@ -175,54 +177,60 @@ class Carousel {
                         return;
                   }
             }
+            this.items.forEach((item, i) => {
+                  // Zoom class (comme tu as déjà)
+                  item.classList.remove("carousel__item--zoom");
+                  // Opacité en fonction de la visibilité
+                  
+                  if (i >= index && i < index + this.slidesVisible) {
+                        item.style.opacity = "1";
+                        item.style.pointerEvents = "auto";
+                  } else {
+                        item.style.opacity = "0";
+                        item.style.pointerEvents = "none";
+                  }
+            });
+
+            this.middleIndex = index + Math.floor(this.slidesVisible / 2);
+            this.middleItem = this.items[this.middleIndex];
+            if (this.middleItem) {
+                  this.middleItem.classList.add("carousel__item--zoom");
+            }
+
             let translateX = (index * -100) / this.items.length;
             if (animation === false) {
-                  this.container.style.transition = 'none'
+                  this.container.style.transition = "none";
+                  this.middleItem.style.transition = "none";
+                  this.items.forEach((item) => {
+                        item.style.transition = "none";
+                  });
             }
             this.container.style.transform = `translate3d(${translateX}%, 0, 0)`;
-            this.container.offsetHeight // force repaint
+            this.container.offsetHeight; // force repaint
             if (animation === false) {
-                  this.container.style.transition = ''
-            }
-            this.currentItem = index
-            this.moveCallbacks.forEach(cb => cb(index))
-
-
-             this.items.forEach((item, i) => {
-        // Zoom class (comme tu as déjà)
-        item.classList.remove("carousel__item--zoom");
-        // Opacité en fonction de la visibilité
-        if (i >= index && i < index + this.slidesVisible) {
-            item.style.opacity = "1";
-            item.style.pointerEvents = "auto"; // pour interaction possible
-        } else {
-            item.style.opacity = "0";
-            item.style.pointerEvents = "none"; // désactive interactions hors zone visible
-        }
-    });
-    		const middleIndex = index + Math.floor(this.slidesVisible / 2);
-            const middleItem = this.items[middleIndex];
-            if (middleItem) {
-                  middleItem.classList.add("carousel__item--zoom");
+                  this.items.forEach((item) => {
+                        item.style.transition = "";
+                  });
+                  this.container.style.transition = "";
+                  this.middleItem.style.transition = "";
             }
             this.currentItem = index;
             this.moveCallbacks.forEach((cb) => cb(index));
       }
-	 /**
-        * Déplace le container pour donner l'impression d'un slide infini
-        */
-       resetInfinite () {
-            
+      /**
+       * Déplace le container pour donner l'impression d'un slide infini
+       */
+      resetInfinite() {
             if (this.currentItem <= this.options.slidesToScroll) {
-                  this.gotoItem(this.currentItem + this.items.length - 2 * this.offset, false)
+                  this.gotoItem(this.currentItem + this.items.length - 2 * this.offset, false);
             } else if (this.currentItem >= this.items.length - this.offset) {
-                  this.gotoItem(this.currentItem - (this.items.length - 2 * this.offset), false)
+                  this.gotoItem(this.currentItem - (this.items.length - 2 * this.offset), false);
             }
-       }
+      }
       /**
        * Rajoute un écouteur qui écoute le déplacement du carousel
-       * @param {moveCallbacks} cb 
-       */ 
+       * @param {moveCallbacks} cb
+       */
       onMove(cb) {
             this.moveCallbacks.push(cb);
       }
@@ -256,16 +264,16 @@ class Carousel {
             return this.isMobile ? 1 : this.options.slidesVisible;
       }
 }
-let onReady = function() {
+let onReady = function () {
       new Carousel(document.querySelector(".how__carousel"), {
             slidesVisible: 3,
             slidesToScroll: 1,
-            pagination: true,
             infinite: true,
+            pagination: false,
       });
-}
+};
 
-if (document.readyState !== 'loading'){
-      onReady()
+if (document.readyState !== "loading") {
+      onReady();
 }
-document.addEventListener('DOMContentLoaded', onReady)
+document.addEventListener("DOMContentLoaded", onReady);

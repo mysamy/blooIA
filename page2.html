@@ -1,0 +1,178 @@
+<html lang="en">
+      <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="assets/css/app.css" />
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+            <title>Document</title>
+            <script src="/carousel.js" async></script>
+      </head>
+      <script>
+            // Sauvegarde la position du scroll juste avant de quitter la page
+            window.addEventListener("beforeunload", () => {
+                  sessionStorage.setItem("scrollY", window.scrollY);
+            });
+
+            // Attend que tout soit chargé (images incluses)
+            window.addEventListener("load", () => {
+                  const y = sessionStorage.getItem("scrollY");
+                  if (y !== null) {
+                        // Attend un peu pour être sûr que tous les éléments sont rendus
+                        setTimeout(() => {
+                              window.scrollTo(0, parseInt(y));
+                        }, 200); // augmente à 500ms si besoin
+                  }
+            });
+      </script>
+      <body>
+            <header class="header">
+                  <div class="header__logo">
+                        <a href="index.html"><img src="assets/image/LOGOBLOODAI.png" alt="" /></a>
+                  </div>
+                  <nav>
+                        <ul class="nav__list">
+                              <li class="nav__item"><a class="nav__link" href="">Fonctionnalités</a></li>
+                              <li class="nav__item"><a class="nav__link" href="">Contacts</a></li>
+                              <li class="nav__item"><a class="nav__link" href="">Conformité</a></li>
+                              <li class="nav__item"><a class="nav__link" href="">Tarifs</a></li>
+                              <li class="nav__item"><a class="nav__link link-audit" href="">Audit</a></li>
+                        </ul>
+                  </nav>
+            </header>
+            <section class="price">
+                  <h2>Prix</h2>
+                  <div class="price__cards">
+                        <div class="card-price">
+                              <div class="card-price__notice">Gratuit</div>
+                              <h3 class="card-price__title">
+                                    FREE <br />
+                                    0€
+                              </h3>
+                              <ul class="card__list">
+                                    <li class="card__item">Audit de votre site</li>
+                                    <li class="card__item">Rapport PDF</li>
+                                    <li class="card__item">1 audit par mois</li>
+                              </ul>
+                              <button class="card-price__button">Commencer</button>
+                        </div>
+                        <div class="card-price">
+                              <h3 class="card-price__title">Déclaration de conformité</h3>
+                              <p class="card-price__cost">à partir de 499€</p>
+                              <ul class="card__list">
+                                    <li class="card__item">1 déclaration d’accessibilité</li>
+                                    <li class="card__item">1 schéma pluriannuel de mise en accessibilité</li>
+                                    <button class="card-price__button">Choisir ce plan</button>
+                              </ul>
+                        </div>
+                        <div class="card-price">
+                              <h3 class="card-price__title">Test d'utilisateur</h3>
+                              <p class="card-price__cost">Sur devis</p>
+                              <span class="span--underline-white">Solutions sur-mesure & Accompagnement</span>
+                              <ul class="card__list">
+                                    <li>Audit multi-sites</li>
+                                    <li>SLA & support 24/7</li>
+                                    <li>Formations incluses & plus sur demande</li>
+                              </ul>
+                              <button class="card-price__button">Contactez-nous</button>
+                        </div>
+                        <div class="card-price card-price--inactive">
+                              <div class="card-price__notice">Prochainement</div>
+                              <h3 class="card-price__title">Agent IA</h3>
+                              <p class="card-price__cost">99€/mois</p>
+                              <ul class="card__list">
+                                    <li>Un chatbot spécialisé dans la mise en accessibilité</li>
+                                    <li>Utilisation des données de l'audit pour un accompagnement personnalisé</li>
+                              </ul>
+                              <button class="card-price__button card-price__button--inactive">S'abonner</button>
+                        </div>
+                  </div>
+            </section>
+            <section class="position">
+                  <h2>Positionnement face aux concurrents actuels</h2>
+                  <div class="grid">
+                        <div class="grid__card grid__card--title">Critère</div>
+                        <div class="grid__card grid__card--title"><img class="" src="/assets/image/LOGOBLOODAI.png" alt="" /></div>
+                        <div class="grid__card grid__card--title">Outils d’audit classiques (WAVE, Axe, etc).</div>
+                        <div class="grid__card grid__card--title">Cabinet Accessibilité</div>
+                        <div class="grid__card grid__card--title">CMS ou plugins accessibilité</div>
+                        <div class="grid__card grid__card--row">Audit automatisé</div>
+                        <div class="grid__card grid__card--content">IA + Pédagogie</div>
+                        <div class="grid__card grid__card--content">Brut et technique</div>
+                        <div class="grid__card grid__card--content">Manuel uniquement</div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--row">Déclaration + schéma officiel</div>
+                        <div class="grid__card grid__card--content">Généré automatiquement</div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--content">devis</div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--row">Accompagnement IA Personnalisé</div>
+                        <div class="grid__card grid__card--content">Assistant conversationnel intégré</div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--row">Tests avec utilisateurs handicapés</div>
+                        <div class="grid__card grid__card--content">Option réelle via partenari</div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--content">Couteux</div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--row">Intégration CMS & API dev</div>
+                        <div class="grid__card grid__card--content">Prévus (Shopify, WP, Presta)</div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
+                        <div class="grid__card grid__card--row">Prix & rapidité</div>
+                        <div class="grid__card grid__card--content">Ultra compétitif et immédiat</div>
+                        <div class="grid__card grid__card--content">Gratuit mais incomplet</div>
+                        <div class="grid__card grid__card--content">Lent et cher</div>
+                        <div class="grid__card grid__card--content">Variable</div>
+                  </div>
+            </section>
+            <footer class="footer">
+                  <div class="footer__top">
+                        <div class="footer__logo"><img src="assets/image/LOGOBLOODAI.png" alt="" /></div>
+                        <ul class="footer__list">
+                              <li class="footer__item"><a class="footer__link" href="">L'entreprise adaptée</a></li>
+                              <li class="footer__item"><a class="footer__link" href="">Tarifs</a></li>
+                        </ul>
+                  </div>
+                  <div class="footer__middle">
+                        <div class="footer__socials">
+                              <h3 class="footer__title">Socials</h3>
+                              <div class="footer__social-links">
+                                    <a class="footer__social-link" href="">Instagram <i class="fas fa-instagram"></i></a>
+                                    <a class="footer__social-link" href="">Youtube <i class="fas fa-check-circle"></i></a>
+                                    <a class="footer__social-link" href="">Twitter <i class="fas fa-check-circle"></i></a>
+                                    <a class="footer__social-link" href="">Likedin <i class="fas fa-youtube"></i></a>
+                              </div>
+                        </div>
+                        <div class="footer__company">
+                              <h3 class="footer__title">Entreprise</h3>
+                              <div class="footer__company-info">
+                                    <p><span class="footer__label">Email</span> : jmrez@jkre.com</p>
+                                    <p><span class="footer__label">Téléphone</span> : 0000000000</p>
+                                    <p><span class="footer__label">Adresse</span> : 11 Pl. des Victoires, 92600 Asnières-sur-Seine</p>
+                              </div>
+                        </div>
+                        <div class="footer__legal">
+                              <h3 class="footer__title">Legislations & Standards</h3>
+                              <div class="footer__legal-list">
+                                    <p class="footer__legal-text"><i class="fas fa-globe fa-2x"></i>Global Guidelines : WCAG</p>
+                                    <p class="footer__legal-text"><i class="fas fa-check-circle fa-2x"></i>Europe : EAA / EN301549</p>
+                                    <p class="footer__legal-text"><i class="fas fa-check-circle fa-2x"></i>Global Guidelines : WCAG</p>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="footer__bottom">
+                        <p>
+                              © 2023–2025 BlooAI – une solution de Place des Victoires<a class="footer__link" href="/mentions-legales.html"
+                                    >Mentions légales</a
+                              >
+                              / <a class="footer__link" href="/accessibilite.html">Déclaration d’accessibilité</a> /
+                              <a class="footer__link" href="/cgu.html">CGU</a>
+                        </p>
+                  </div>
+            </footer>
+            <script src="/app.js"></script>
+      </body>
+</html>
