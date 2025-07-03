@@ -3,7 +3,8 @@
 	flex-direction: column;
 	gap: 20px;
 	align-items: center;
-	width: 800px;
+	width: 100%;
+	justify-content: center;
 }
 .hero__highlight {
 	text-decoration: underline;
@@ -27,6 +28,8 @@
 	align-items: center;
 	width: 100%;
 	justify-content: space-between;
+	    flex-wrap: wrap;
+	   
 }
 .hero__feature-description {
 	background-color: var(--color-secondary);
@@ -43,3 +46,29 @@
 	display: flex;
 	flex-direction: column;
 }
+.hero__subtitle {
+	padding: 0 50px;
+	text-align: center;
+}
+@media (max-width: 425px) {
+	.hero__title {
+		font-size: var(--h3-size);
+	}
+	.hero__features {
+		margin-bottom: 0;
+		flex-wrap: wrap;
+		gap: 15px;
+		justify-content: center;
+	}
+	.hero__feature-description {
+		width: 100%;
+		flex-direction: column;
+		padding: 10px;
+		height: 100%;
+		gap: 0;
+	}
+	.feature__icon {
+		height: 10%;
+	}
+}
+

@@ -8,7 +8,7 @@
             <title>Document</title>
             <script src="/carousel.js" async></script>
       </head>
-      <script>
+      <!-- <script>
             // Sauvegarde la position du scroll juste avant de quitter la page
             window.addEventListener("beforeunload", () => {
                   sessionStorage.setItem("scrollY", window.scrollY);
@@ -24,7 +24,7 @@
                         }, 200); // augmente à 500ms si besoin
                   }
             });
-      </script>
+      </script> -->
       <body>
             <header class="header">
                   <div class="header__logo">
@@ -32,10 +32,11 @@
                   </div>
                   <nav>
                         <ul class="nav__list">
-                              <li class="nav__item"><a class="nav__link" href="">Fonctionnalités</a></li>
-                              <li class="nav__item"><a class="nav__link" href="">Contacts</a></li>
-                              <li class="nav__item"><a class="nav__link" href="">Conformité</a></li>
-                              <li class="nav__item"><a class="nav__link" href="">Tarifs</a></li>
+                              <li class="nav__item"><a class="nav__link" href="index.html">Accueil</a></li>
+                              <li class="nav__item"><a class="nav__link" href="index.html#how">Fonctionnalités</a></li>
+                              <li class="nav__item"><a class="nav__link" href="index.html#compliance">Conformité</a></li>
+                              <li class="nav__item"><a class="nav__link" href="index.html#talk">Contacts</a></li>
+                              <li class="nav__item"><a class="nav__link" href="tarifs.html">Tarifs</a></li>
                               <li class="nav__item"><a class="nav__link link-audit" href="">Audit</a></li>
                         </ul>
                   </nav>

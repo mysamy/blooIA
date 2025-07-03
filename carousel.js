@@ -240,6 +240,7 @@ class Carousel {
             if (mobile !== this.isMobile) {
                   this.isMobile = mobile;
                   this.setStyle();
+                  this.middleItem.classList.remove("carousel__item--zoom")
                   this.moveCallbacks.forEach((cb) => cb(this.currentItem));
             }
       }

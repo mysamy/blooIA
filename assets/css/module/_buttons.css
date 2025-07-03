@@ -1,0 +1,7 @@
+@media (min-width: 375px) {
+	.talk__button {
+		width: 100%;
+		margin-top: 0;
+		padding: 0;
+	}
+}

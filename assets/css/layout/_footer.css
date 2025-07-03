@@ -4,7 +4,7 @@
 	align-items: center;
 	background-color: var(--color-secondary);
 	border-radius: 30px;
-	padding: 50px 200px;
+	padding: 50px 10%;
 	color: var(--color-text-primary);
 	gap: 50px;
 }
@@ -77,4 +77,33 @@
 	display: flex;
 	text-align: center;
 	gap: 20px;
+}
+@media (max-width: 769px) {
+	.footer {
+		border-radius: 0;
+		padding: 20px 20px;
+		font-size: var(--caption);
+		
+	}
+	.footer__middle {
+		flex-wrap: wrap;
+		justify-content: center;
+		column-gap: 50px;
+	}
+	.footer__social-links{
+		gap: 5px;
+	}
+	.footer__company-info {
+		gap:5px;
+	}
+	.footer__legal-list {
+		gap: 5px;
+	}
+}
+@media (max-width: 425px) {
+	.footer__middle {flex-direction: row;
+	column-gap: 0;}
+	.footer__top {gap: 20px;}
+	.footer__socials {width: 45%;}
+	.footer__company {width: 45%;}
 }

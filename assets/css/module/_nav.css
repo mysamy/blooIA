@@ -1,0 +1,17 @@
+.nav__list {
+	display: flex;
+	gap: 20px;
+}
+.nav-burger {
+	display: none;
+}
+@media (max-width: 769px) {
+	.nav {
+		display: none;
+	}
+	.nav-burger
+	{
+		display: flex;
+	}
+
+}

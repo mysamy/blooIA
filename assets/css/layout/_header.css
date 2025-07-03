@@ -13,8 +13,14 @@
 	height: 65px;
 	width: 160px;
 }
-.nav__list {
-	display: flex;
-	gap: 20px;
-}
 
+@media (max-width: 769px) {
+	.header {
+		border-radius: 0;
+	}
+}
+@media (max-width: 425px) {
+	.header {
+		padding: 15px 10px ;
+	}
+}

@@ -9,7 +9,7 @@
             <title>Document</title>
             <script src="/carousel.js" async></script>
       </head>
-      <script>
+      <!-- <script>
             // Sauvegarde la position du scroll juste avant de quitter la page
             window.addEventListener("beforeunload", () => {
                   sessionStorage.setItem("scrollY", window.scrollY);
@@ -25,22 +25,24 @@
                         }, 200); // augmente à 500ms si besoin
                   }
             });
-      </script>
+      </script> -->
       <body>
             <header class="header">
                   <div class="header__logo"><a href="index.html"><img src="assets/image/LOGOBLOODAI.png" alt="" /></a></div>
-                  <nav>
+                  <nav class="nav">
                         <ul class="nav__list">
-                              <li class="nav__item"><a class="nav__link" href="">Fonctionnalités</a></li>
-                              <li class="nav__item"><a class="nav__link" href="">Contacts</a></li>
-                              <li class="nav__item"><a class="nav__link" href="">Conformité</a></li>
-                              <li class="nav__item"><a class="nav__link" href="">Tarifs</a></li>
+                              <li class="nav__item"><a class="nav__link" href="index.html">Accueil</a></li>
+                              <li class="nav__item"><a class="nav__link" href="#how">Fonctionnalités</a></li>
+                              <li class="nav__item"><a class="nav__link" href="#compliance">Conformité</a></li>
+                              <li class="nav__item"><a class="nav__link" href="#talk">Contacts</a></li>
+                              <li class="nav__item"><a class="nav__link" href="tarifs.html">Tarifs</a></li>
                               <li class="nav__item"><a class="nav__link link-audit" href="">Audit</a></li>
                         </ul>
                   </nav>
+                  <button class="nav-burger">☰ Menu</button>
             </header>
 
-            <section class="hero">
+            <section class="hero" id="hero">
                   <h1 class="hero__title">L'assitant IA qui rend votre site accessible et conforme facilement!</h1>
                   <div class="hero__container">
                         <p class="hero__subtitle">
@@ -78,7 +80,7 @@
                               </div>
                         </div>
                         <div class="hero__feature-description">
-                              <i class="feature__icon fas fa-eye fa-9x"></i>
+                              <i class="feature__icon fas fa-eye fa-9x fa-responsive"></i>
                               <div class="hero__feature-content">
                                     <h2 class="hero__feature-title">Audit Automatisé</h2>
                                     <p class="hero__feature-text">
@@ -88,7 +90,7 @@
                         </div>
                   </div>
             </section>
-            <section class="how">
+            <section class="how" id="how">
                   <h2 class="how__title">Comment ça marche?</h2>
                   <!-- carouusel -->
                   <div class="how__carousel">
@@ -142,7 +144,7 @@
                                           <div class="number__position">4</div>
                                     </div>
                               </div>
-                              <div class="item__img">
+                              <div class="item__img item__img--4">
                                     <img src="assets/image/étape4img.png" alt="">
                               </div>
                               <p class="item__description item__description--4">
@@ -180,7 +182,7 @@
                         </div>
                   </div>
             </section>
-            <section class="compliance">
+            <section class="compliance" id="compliance">
                   <h2 class="compliance__title">Conformité et avantages</h2>
                   <div class="compliance__container compliance__title--visible">
                         <div class="compliance__buttons">
@@ -230,7 +232,7 @@
                         </div>
                   </div>
             </section>
-            <section class="question">
+            <section class="question" id="question">
                   <h2>Question fréquement posé</h2>
                   <div class="question1container">
                         <div class="question__container">
@@ -314,7 +316,7 @@
                         </div>
                   </div>
             </section>
-            <section class="talk">
+            <section class="talk" id="talk">
                   <h2>Parlez-nous !</h2>
                   <p>
                         N’hésitez pas à nous écrire ! Votre avis compte beaucoup pour nous et nous aide à améliorer le site. Envoyez-nous un message,

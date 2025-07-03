@@ -25,3 +25,12 @@
 .fa--black {
 	color: var(--black);
 }
+
+@media (max-width: 376px) {
+	.fa-9x::before {
+		font-size: 3rem;
+	}
+	.fa-responsive-mb {
+		font-size: 10px;
+	}
+}

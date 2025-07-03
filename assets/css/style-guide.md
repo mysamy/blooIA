@@ -28,3 +28,12 @@
 <i class="fa-solid fa-magnifying-glass fa-lg"></i>   <!-- grand -->
 <i class="fa-solid fa-magnifying-glass fa-2x"></i>   <!-- 2x plus grand -->
 <i class="fa-solid fa-magnifying-glass fa-3x"></i>   <!-- 3x plus grand -->
+
+
+@media (max-width: 769px) {
+	
+	}
+
+@media (max-width: 376px) {
+	
+}

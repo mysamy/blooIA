@@ -21,3 +21,15 @@
 	flex-direction: column;
 	gap: 45px;
 }
+@media (min-width: 769px) {
+	
+	.question {
+		padding: 0 20px ;
+	}
+}
+@media (max-width: 425px) {
+	.question {padding : 0 10px;}
+	h3 {
+		font-size: var(--h4);
+	}
+}

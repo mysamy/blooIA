@@ -10,8 +10,7 @@
 	padding: 50px 200px;
 	color: var(--color-text-primary);
 	border-radius: 0 0 30px 30px;
-	height: 700px;
-
+	
 }
 
 .compliance__buttons {
@@ -46,8 +45,9 @@
 .compliance__list {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 3rem;
+	gap: 40px;
 	margin: 4rem;
+	padding: 0 200px;
 }
 
 .compliance__item {
@@ -56,4 +56,46 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+@media (max-width: 1100px) {
+	
+	.compliance__content {
+		padding: 20px 100px;
+	}
+}
+
+@media (max-width: 769px) {
+	
+	.compliance__container {
+		margin: 10px;
+		width : auto;
+	}
+	.compliance__content {
+		padding: 20px 50px;
+	}
+}
+@media (max-width: 425px) {
+	
+	.hero__compliance-title {
+		font-size: var(--caption);
+	}
+	.compliance__container {
+		width: 100%;
+		margin: 0;
+		
+	}
+	.compliance__list {
+		flex-direction: column;
+		gap :5px;
+		margin: 0;
+	}
+	.compliance__content {
+		padding:20px 5px;
+		height: 100%;
+		border-radius: 0;
+	}
+	.compliance__button {
+		width: 100%;
+	}
 }

@@ -2,7 +2,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	padding: 0 200px;
+	
 	gap :10px;
 	
 	
@@ -36,4 +36,11 @@
 	height: 165px;
 	border:none;
 	padding: 20px;
+}
+
+@media (max-width: 769px) {
+	
+	.talk {
+		padding:20px;
+	}
 }
