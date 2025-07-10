@@ -141,18 +141,21 @@ function updatePlaceholder() {
 
 // nav bouton burger déroulant
 
-const openMenu = document.querySelector(".button-burger");
-const closeMenu = document.querySelector(".button-burger--close");
+const buttonMenu = document.querySelector(".button-burger");
 const menuDialog = document.querySelector(".menu-dialog");
+const iconButton = document.querySelector(".button-burger__icon")
 
-openMenu.addEventListener("click", () => {
-  menuDialog.show(); 
-  menuDialog.classList.add("is-visible");
-  menuDialog.classList.remove("is-hidden");
-});
-
-closeMenu.addEventListener("click", () => {
-  menuDialog.close();
-  menuDialog.classList.remove("is-visible");
-  menuDialog.classList.add("is-hidden");
+buttonMenu.addEventListener("click", () => {
+  if (menuDialog.open) {
+    menuDialog.close(); 
+    menuDialog.classList.remove("flex_visible")
+    iconButton.classList.add("fa-angle-down")
+    iconButton.classList.remove("fa-angle-up")
+  } else {
+    menuDialog.show();
+    menuDialog.classList.add("flex_visible")
+    iconButton.classList.add("fa-angle-up")
+    iconButton.classList.remove("fa-angle-down")
+  }
+  
 });

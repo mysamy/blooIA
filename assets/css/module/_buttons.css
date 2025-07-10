@@ -1,15 +1,11 @@
-.button-burger, .button-burger--close {
+.button-burger{
 	display: none;
 	justify-self: flex-start;
 	align-items: center;
-	gap : 10px;
 	background-color: var(--color-secondary);
 	border: none;
 	color: var(--color-text-primary);
-	margin-top: 10px;
-	transform: translateY(-20px);
 }
-
 @media (max-width: 450px) {
 	.talk__button {
 		width: 100%;
@@ -17,14 +13,8 @@
 		padding: 0;
 	}
 }
-
-
 @media (max-width: 769px) {
-
-	.button-burger {
-		
+	.button-burger {	
 		display: flex;
 	}
-
-
 }

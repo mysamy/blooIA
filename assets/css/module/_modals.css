@@ -17,9 +17,9 @@
 }
 
 .menu-dialog {
-	position: absolute;
+	display: flex;
+	position:absolute;
 	top: 100%;
-	left: 0;
 	min-height: 70vh;
 	width: 100vw;
 	background: var(--color-secondary);
