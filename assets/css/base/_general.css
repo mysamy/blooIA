@@ -49,7 +49,11 @@ h4 {
 		padding: 0;
 	}	
 }
-@media (max-width: 376px) {
+@media (max-width: 425px) {
+	
+	section {
+		margin:0;
+	}
 	h2 {
 		font-size: var(--h3-size);
 	}

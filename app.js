@@ -137,3 +137,22 @@ function updatePlaceholder() {
     input.placeholder = 'Entrez une URL';
   }
 }
+
+
+// nav bouton burger déroulant
+
+const openMenu = document.querySelector(".button-burger");
+const closeMenu = document.querySelector(".button-burger--close");
+const menuDialog = document.querySelector(".menu-dialog");
+
+openMenu.addEventListener("click", () => {
+  menuDialog.show(); 
+  menuDialog.classList.add("is-visible");
+  menuDialog.classList.remove("is-hidden");
+});
+
+closeMenu.addEventListener("click", () => {
+  menuDialog.close();
+  menuDialog.classList.remove("is-visible");
+  menuDialog.classList.add("is-hidden");
+});

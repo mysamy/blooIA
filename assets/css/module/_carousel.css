@@ -6,17 +6,14 @@
 	position: relative;
 	overflow: hidden;
 }
-
 .carousel {
+	height: 600px;
 	width: 70%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
 }
-
 .carousel__wrapper {
-	
 	display: flex;
 	transition: transform 0.3s ease-in-out;
 	align-items: center;
@@ -31,7 +28,6 @@
 	transition: transform 0.3s ease, opacity 0.5s ease;
 	padding: 0;
 }
-
 .carousel__next,
 .carousel__prev {
 	position: absolute;

@@ -34,11 +34,7 @@ color: var(--color-text-primary);
 	align-items: center;
 	overflow: hidden;
 }
-
-
-
-.item--1 {
-	
+.item--1 {	
 	justify-content: center;
 	gap: 10px;
 	flex-direction: column;

@@ -101,6 +101,7 @@ class Carousel {
        * Creer la navigation
        */
       createNavigation() {
+            
             let nextButton = this.createDivWithClass("carousel__next");
             let prevButton = this.createDivWithClass("carousel__prev");
 
@@ -178,10 +179,7 @@ class Carousel {
                   }
             }
             this.items.forEach((item, i) => {
-                  // Zoom class (comme tu as déjà)
                   item.classList.remove("carousel__item--zoom");
-                  // Opacité en fonction de la visibilité
-                  
                   if (i >= index && i < index + this.slidesVisible) {
                         item.style.opacity = "1";
                         item.style.pointerEvents = "auto";

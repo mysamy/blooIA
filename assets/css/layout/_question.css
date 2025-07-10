@@ -1,3 +1,11 @@
+
+.question {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	padding: 0 200px;
+
+}
 .question__container {
 	display: flex;
 	justify-content: space-between;
@@ -16,15 +24,19 @@
 }
 
 
-.question1container {
+.question__box {
 	display: flex;
 	flex-direction: column;
 	gap: 45px;
+	padding: 0 200px;
 }
-@media (min-width: 769px) {
+@media (max-width: 769px) {
 	
 	.question {
 		padding: 0 20px ;
+	}
+	.question__box {
+		padding: 0;
 	}
 }
 @media (max-width: 425px) {
