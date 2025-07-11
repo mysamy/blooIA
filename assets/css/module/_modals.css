@@ -16,18 +16,15 @@
 	height: 10%;
 }
 
-.menu-dialog {
-	display: flex;
-	position:absolute;
+.modal-nav {
+	z-index: 3;
+	position: absolute;
 	top: 100%;
-	min-height: 70vh;
+	height: 50vh;
 	width: 100vw;
 	background: var(--color-secondary);
-	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	max-width: 200%;
-	max-height: 200%;
-	font-size: 0.5em;
-	gap: 2em;
-
+	color: var(--color-text-primary);
+	border: none;
 }
