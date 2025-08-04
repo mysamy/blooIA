@@ -7,7 +7,7 @@
 .form__input {
 	border-radius: 30px;
 	height: 100%;
-	padding: 20px 20px 20px 30px;
+	padding: 20px 20px 20px 50px;
 	margin-right: 20px;
 	width: 400px;
 	
@@ -19,6 +19,11 @@
 }
 .form__icon {
 	position: absolute;
-	top : 50%;
+	top : 30%;
 	left: 10px;
+}
+@media (max-width: 425px) {
+	.form__input {
+			width: 100%;
+		}
 }

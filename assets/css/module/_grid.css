@@ -1,0 +1,38 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(7, 120px); 
+  gap: 5px; 
+  width: 100%; 
+  
+}
+
+.grid__card{
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-text-primary);
+  padding: 10px;
+}
+.grid__cross {
+  height: 50px;
+  width: 50px;
+}
+.grid__card--content {
+  background-color: var(--color-secondary-darker);
+}
+.grid__card--title {
+  background-color: var(--color-secondary-ligther);
+  border-radius: 15px 15px 0 0;
+  font-size: var(--h4-size);
+
+}
+.grid__card--row {
+  background-color: var(--color-secondary-ligth);
+  border-radius: 15px 0 0 15px;
+}
+.grid__logo{
+  height: 65px;
+}

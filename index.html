@@ -8,7 +8,7 @@
 
             <title>Document</title>
       </head>
-      <script>
+      <!-- <script>
             // Sauvegarde la position du scroll juste avant de quitter la page
             window.addEventListener("beforeunload", () => {
                   sessionStorage.setItem("scrollY", window.scrollY);
@@ -24,22 +24,38 @@
                         }, 200); // augmente à 500ms si besoin
                   }
             });
-      </script>
+      </script> -->
       <body>
             <header class="header">
-                  <div class="header__logo"><img src="assets/image/LOGOBLOODAI.png" alt="" /></div>
-                  <nav>
+                  <div class="header__logo">
+                        <a href="index.html"><img src="assets/image/LOGOBLOODAI.png" alt="" /></a>
+                  </div>
+                  <nav class="nav">
                         <ul class="nav__list">
-                              <li class="nav__item"><a class="nav__link" href="">Fonctionnalités</a></li>
-                              <li class="nav__item"><a class="nav__link" href="">Contacts</a></li>
-                              <li class="nav__item"><a class="nav__link" href="">Conformité</a></li>
-                              <li class="nav__item"><a class="nav__link" href="">Tarifs</a></li>
+                              <li class="nav__item"><a class="nav__link" href="index.html">Accueil</a></li>
+                              <li class="nav__item"><a class="nav__link" href="#how">Fonctionnalités</a></li>
+                              <li class="nav__item"><a class="nav__link" href="#compliance">Conformité</a></li>
+                              <li class="nav__item"><a class="nav__link" href="#talk">Contacts</a></li>
+                              <li class="nav__item"><a class="nav__link" href="tarifs.html">Tarifs</a></li>
                               <li class="nav__item"><a class="nav__link link-audit" href="">Audit</a></li>
                         </ul>
                   </nav>
+                  <button class="button-burger">Menu <i class="button-burger__icon fas fa-angle-down"></i></button>
+                  <dialog class="modal-nav">
+                        <nav class="nav-mobile">
+                              <ul class="nav-mobile__list">
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link" href="index.html">Accueil</a></li>
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link" href="#how">Fonctionnalités</a></li>
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link" href="#compliance">Conformité</a></li>
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link" href="#talk">Contacts</a></li>
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link" href="tarifs.html">Tarifs</a></li>
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link link-audit" href="">Audit</a></li>
+                              </ul>
+                        </nav>
+                  </dialog>
             </header>
 
-            <section class="hero">
+            <section class="hero" id="hero">
                   <h1 class="hero__title">L'assitant IA qui rend votre site accessible et conforme facilement!</h1>
                   <div class="hero__container">
                         <p class="hero__subtitle">
@@ -49,7 +65,7 @@
                         <form class="hero__form" action="" method="get">
                               <label class="form__label" for="url"></label>
                               <div class="form__container">
-                                    <i class="fa-solid fa-magnifying-glass fa-sm form__icon"></i>
+                                    <i class="fa-solid fa-magnifying-glass fa-2x form__icon"></i>
                                     <input class="form__input" type="url" id="url" name="url" placeholder="Entrez une URL" required />
                               </div>
                               <button class="button form__button link-audit" type="submit">Audit</button>
@@ -77,7 +93,7 @@
                               </div>
                         </div>
                         <div class="hero__feature-description">
-                              <i class="feature__icon fas fa-eye fa-9x"></i>
+                              <i class="feature__icon fas fa-eye fa-9x fa-responsive"></i>
                               <div class="hero__feature-content">
                                     <h2 class="hero__feature-title">Audit Automatisé</h2>
                                     <p class="hero__feature-text">
@@ -87,30 +103,99 @@
                         </div>
                   </div>
             </section>
-            <section class="how">
+            <section class="how" id="how">
                   <h2 class="how__title">Comment ça marche?</h2>
-                  <p class="how__subtitle">Décrouvrer ce que BlooAI propose pour améliorer l'accessibilité de votre site web.</p>
-                  <ul class="how__list">
-                        <li class="how__item">BlooAI scanne votre site e-commerce</li>
-                        <li class="how__item">Détecte les problèmes d’accessibilité</li>
-                        <li class="how__item">Vous montre comment les corriger</li>
-                        <li class="how__item">Rapide, intelligent, prêt pour la directive 2025</li>
-                  </ul>
+                  <!-- carouusel -->
+                  <div class="how__carousel">
+                        <div class="item item--1">
+                              <div class="number">
+                                    <div class="number__circle">
+                                          <div class="number__position">1</div>
+                                    </div>
+                              </div>
+                              <div class="item__img item__img">
+                                    <img src="assets/image/étape1img.png" alt="" />
+                              </div>
+                              <p class="item__description item__description--1">
+                                    Auditez <span class="span--bold">gratuitement</span> une page de votre site et obtenez vos résultats de
+                                    <span class="span--underline span--bold">conformité RGAA.</span>
+                              </p>
+                        </div>
+                        <div class="item item--2">
+                              <div class="number">
+                                    <div class="number__circle">
+                                          <div class="number__position">2</div>
+                                    </div>
+                              </div>
+                              <div class="item__img item__img--2">
+                                    <img src="assets/image/étape2img.png" alt="" />
+                              </div>
+                              <p class="item__description item__description--2">
+                                    <span class="span--underline span--bold"> Inscrivez-vous </span> <br />
+                                    et testez la plateforme !
+                              </p>
+                        </div>
 
-<!-- carouusel -->
-                        <div class="how__carousel">
-                              <!-- <button><i class="fas fa-arrow-left icon--green"></i></button> -->
-                                    <div class="item">1</div>
-                                    <div class="item">2</div>
-                                  <div class="item">3</div>
-                                    <div class="item">4</div>
-                                    <div class="item">5</div>
-                              <!-- <button><i class="fas fa-arrow-right icon--green"></i></button> -->
-                          </div>
-                        
-                  
+                        <div class="item item--3">
+                              <div class="number">
+                                    <div class="number__circle">
+                                          <div class="number__position">3</div>
+                                    </div>
+                              </div>
+                              <p class="item__description item__description--3">
+                                    Lancez un audit complet de <span class="span--underline span--bold">votre site</span>, obtenez vos déclarations et
+                                    schéma pluriannuel <span class="span--bold span--underline">d'accessibilité.</span>
+                              </p>
+                              <div class="item__img item__img--3">
+                                    <img src="assets/image/étape3img.png" alt="" />
+                              </div>
+                        </div>
+                        <div class="item item--4">
+                              <div class="number">
+                                    <div class="number__circle">
+                                          <div class="number__position">4</div>
+                                    </div>
+                              </div>
+                              <div class="item__img item__img--4">
+                                    <img src="assets/image/étape4img.png" alt="" />
+                              </div>
+                              <p class="item__description item__description--4">
+                                    Suivez les conseils de notre agent AI pour rendre votre site
+                                    <span class="span--bold span--underline">accessible.</span>
+                              </p>
+                        </div>
+                        <div class="item item--5">
+                              <div class="number">
+                                    <div class="number__circle">
+                                          <div class="number__position">5</div>
+                                    </div>
+                              </div>
+                              <p class="item__description item__description--5">
+                                    Commandez des tests utilisateurs <span class="span--underline span--bold">sur-mesure !</span>
+                              </p>
+                              <div class="item__img item__img--5">
+                                    <img src="assets/image/étape5img.png" alt="" />
+                              </div>
+                        </div>
+                        <div class="item item--6">
+                              <div class="number">
+                                    <div class="number__circle">
+                                          <div class="number__position">6</div>
+                                    </div>
+                              </div>
+                              <div class="item__img">
+                                    <img src="assets/image/étape6img.png" alt="" />
+                              </div>
+                              <div class="item__container">
+                                    <p class="item__description item__description--6">
+                                          Contactez notre service commercial pour toute <span class="span--bold span--underline">question</span> !
+                                    </p>
+                                    <button class="button button--contactez">Contactez</button>
+                              </div>
+                        </div>
+                  </div>
             </section>
-            <section class="compliance">
+            <section class="compliance" id="compliance">
                   <h2 class="compliance__title">Conformité et avantages</h2>
                   <div class="compliance__container compliance__title--visible">
                         <div class="compliance__buttons">
@@ -160,9 +245,37 @@
                         </div>
                   </div>
             </section>
-            <section class="question">
+
+            <section class="review">
+                  <h2 class="review__title">Avis</h2>
+                  <div class="review__cards">
+                        <div class="review__card">
+                              <h3 class="review__title">Jean Martin</h3>
+                              <div class="review__description">
+                                    Ton site est une vraie bouffée d’air frais ! Les articles sont bien écrits, la mise en page est agréable à lire,
+                                    et j’apprécie la cohérence visuelle entre les différentes rubriques.
+                              </div>
+                        </div>
+                        <div class="review__card">
+                              <h3 class="review__title">Sophie Bernard</h3>
+                              <div class="review__description">
+                                    J’ai adoré l’expérience sur ce site : tout est simple, rapide et agréable à utiliser. Les produits sont bien
+                                    présentés, le parcours d’achat est fluide, et le service client est au top.
+                              </div>
+                        </div>
+                        <div class="review__card">
+                              <h3 class="review__title">Alexandre Marchand</h3>
+                              <div class="review__description">
+                                    J’ai été impressionné dès la première visite. Le design est épuré, moderne, et surtout très fluide. La navigation
+                                    est intuitive, les informations sont claires et bien organisées. On sent que chaque détail a été pensé avec soin.
+                              </div>
+                        </div>
+                  </div>
+            </section>
+
+            <section class="question" id="question">
                   <h2>Question fréquement posé</h2>
-                  <div class="question1container">
+                  <div class="question__box">
                         <div class="question__container">
                               <div class="question__content">
                                     <h3 class="question__title">Qu'est ce que l'accessibilité numérique ?</h3>
@@ -244,7 +357,8 @@
                         </div>
                   </div>
             </section>
-            <section class="talk">
+
+            <section class="talk" id="talk">
                   <h2>Parlez-nous !</h2>
                   <p>
                         N’hésitez pas à nous écrire ! Votre avis compte beaucoup pour nous et nous aide à améliorer le site. Envoyez-nous un message,
@@ -334,5 +448,6 @@
             </footer>
             <script src="/app.js"></script>
             <script src="/carousel.js"></script>
+            <script src="/responsive.js"></script>
       </body>
 </html>

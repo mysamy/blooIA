@@ -1,0 +1,11 @@
+.price {
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+}
+.price__cards {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	gap: 10px;
+}

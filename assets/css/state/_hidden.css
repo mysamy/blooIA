@@ -6,3 +6,10 @@
 	display: none;
 	height: auto;
 }
+
+.is-hidden {
+	display: none;
+}
+.is-visible {
+	display: flex;
+}

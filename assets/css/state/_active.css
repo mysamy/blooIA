@@ -17,7 +17,7 @@ a {
 	border-radius: 30px;
 	padding: 10px 30px;
 }
-.link-audit:hover {
+.link-audit:hover,.nav-mobile__link :hover{
 	color: var(--color-button-active);
     text-decoration: none;
     background-color: var(--black);
