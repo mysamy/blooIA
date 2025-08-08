@@ -36,7 +36,7 @@ class Carousel {
             this.currentItem = 0;
             this.moveCallbacks = [];
             this.offset = 0;
-            
+
             // Modification du DOM
             this.root = this.createDivWithClass("carousel");
             this.container = this.createDivWithClass("carousel__wrapper");
@@ -61,19 +61,21 @@ class Carousel {
                   this.gotoItem(this.offset, false);
             }
             this.items.forEach((item) => this.container.appendChild(item));
-            this.onWindowResize();
+
             this.setStyle();
+            this.onWindowResize();
+            this.zoom();
             if (this.options.navigation) {
                   this.createNavigation();
             }
 
-            if(this.options.pagination === true) {
+            if (this.options.pagination === true) {
                   this.createPagination();
             }
 
             // Evenements
             this.moveCallbacks.forEach((cb) => cb(this.currentItem));
-            
+
             window.addEventListener("resize", this.onWindowResize.bind(this));
             this.root.addEventListener("keyup", (e) => {
                   if (e.key === "ArrowRight" || e.key === "Right") {
@@ -98,7 +100,6 @@ class Carousel {
        * Creer la navigation
        */
       createNavigation() {
-            
             let nextButton = this.createDivWithClass("carousel__next");
             let prevButton = this.createDivWithClass("carousel__prev");
 
@@ -147,12 +148,10 @@ class Carousel {
       }
 
       next() {
-            
             this.gotoItem(this.currentItem + this.slidesToScroll);
       }
 
       prev() {
-            
             this.gotoItem(this.currentItem - this.slidesToScroll);
       }
       /**
@@ -161,7 +160,7 @@ class Carousel {
        *@param {boolean} [animation = true]
        */
       gotoItem(index, animation = true) {
-            
+         
             if (index < 0) {
                   if (this.options.loop) {
                         index = this.items.length - this.slidesVisible;
@@ -186,16 +185,10 @@ class Carousel {
                   }
             });
 
-            this.middleIndex = index + Math.floor(this.slidesVisible / 2);
-            this.middleItem = this.items[this.middleIndex];
-            if (this.middleItem) {
-                  this.middleItem.classList.add("carousel__item--zoom");
-            }
-
             let translateX = (index * -100) / this.items.length;
             if (animation === false) {
                   this.container.style.transition = "none";
-                  this.middleItem.style.transition = "none";
+
                   this.items.forEach((item) => {
                         item.style.transition = "none";
                   });
@@ -207,10 +200,27 @@ class Carousel {
                         item.style.transition = "";
                   });
                   this.container.style.transition = "";
-                  this.middleItem.style.transition = "";
+                  
             }
             this.currentItem = index;
             this.moveCallbacks.forEach((cb) => cb(index));
+      }
+      /**
+       *
+       * Zoom lélement du milieu 
+       */
+      zoom() {
+            debugger
+          if (this.slidesVisible >= 3) {
+            this.middleIndex = this.currentItem + Math.floor(this.slidesVisible / 2);
+            this.middleItem = this.items[this.middleIndex];
+            if (this.middleItem) {
+                  this.middleItem.classList.add("carousel__item--zoom");
+            }
+          }
+            else {
+                  return;}
+          
       }
       /**
        * Déplace le container pour donner l'impression d'un slide infini
@@ -235,7 +245,7 @@ class Carousel {
             if (mobile !== this.isMobile) {
                   this.isMobile = mobile;
                   this.setStyle();
-                  this.middleItem.classList.remove("carousel__item--zoom")
+                  
                   this.moveCallbacks.forEach((cb) => cb(this.currentItem));
             }
       }

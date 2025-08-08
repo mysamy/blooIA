@@ -49,25 +49,19 @@
     --color-link-focus: #3EE4F0;    
     --color-button-active: #3EE4F0;
 
-    /* Couleurs des bordures */
-    --color-border-default: ;
-    --color-highlight-primary: ;
-    --color-highlight-secondary: ;
-
    
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
 
     /* STANDARD PADDING */
-    --PADDING: clamp(0.1rem, calc(0.1rem + 2vh), 2rem) clamp(1rem, calc(0.1rem + 2vw), 1.5rem);
-    --PADDING-TB: 0.25rem 0;
-    --PADDING-SIDE: 0 0.3rem;
+    
+    --PADDING-TOP: clamp(1rem, 5vh, 5rem);
+    --PADDING-SIDE: clamp(1rem, 15vw, 50rem);
+    --PADDING-SIDE2: clamp(1rem, 5vw, 50rem);
 
     /* STANDARD MARGIN */
-    --MARGIN: clamp(1rem, calc(1rem + 2vw), 1.5rem);
-    --MARGIN-SIDE: 0 clamp(1rem, calc(1.5rem + 2vw), 1.5rem);
-    --MARGIN-TB: clamp(1rem, calc(1rem + 2vh), 1.5rem) 0;
+   
 
 
 }
