@@ -48,7 +48,13 @@
 	}
 }
 @media (max-width: 425px) {
-	.question {padding : 0 10px;}
+	.question {
+		padding : 0 10px;
+		gap: 0;
+	}
+	.question__box {
+		gap: 20px;
+	}
 	h3 {
 		font-size: var(--h4);
 	}

@@ -101,6 +101,9 @@
 	}
 }
 @media (max-width: 425px) {
+	.footer  {
+		padding: 10px;
+	}
 	.footer__middle {flex-direction: row;
 	column-gap: 0;}
 	.footer__top {gap: 20px;}

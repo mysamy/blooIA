@@ -104,16 +104,20 @@
 	}
 }
 @media (max-width: 875px) {
-	.item {
-		width: 500px
+	.carousel__prev {
+		left: 20px;
+	}
+	.carousel__next {
+		right: 20px;
 	}
 }
 @media (max-width: 769px) {
-	.carousel__prev {
-		left: 50px;
+	.carousel {
+		padding: 20px;
 	}
-	.carousel__next {
-		right: 50px;
+	.item {
+		width:80%;
+		height:400px;
 	}
 }
 @media (max-width: 425px) {

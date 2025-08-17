@@ -36,6 +36,7 @@ class Carousel {
             this.currentItem = 0;
             this.moveCallbacks = [];
             this.offset = 0;
+            this.isAnimating = false;
 
             // Modification du DOM
             this.root = this.createDivWithClass("carousel");
@@ -48,6 +49,7 @@ class Carousel {
                   item.appendChild(child);
                   return item;
             });
+
             if (this.options.infinite) {
                   this.offset = this.options.slidesVisible + this.options.slidesToScroll;
                   if (this.offset > children.length) {
@@ -75,7 +77,6 @@ class Carousel {
 
             // Evenements
             this.moveCallbacks.forEach((cb) => cb(this.currentItem));
-
             window.addEventListener("resize", this.onWindowResize.bind(this));
             this.root.addEventListener("keyup", (e) => {
                   if (e.key === "ArrowRight" || e.key === "Right") {
@@ -95,6 +96,7 @@ class Carousel {
             let ratio = this.items.length / this.slidesVisible;
             this.container.style.width = ratio * 100 + "%";
             this.items.forEach((item) => (item.style.width = 100 / this.slidesVisible / ratio + "%"));
+            this.zoom();
       }
       /**
        * Creer la navigation
@@ -148,11 +150,21 @@ class Carousel {
       }
 
       next() {
+            if (this.isAnimating) return;
+            this.isAnimating = true;
             this.gotoItem(this.currentItem + this.slidesToScroll);
+            setTimeout(() => {
+                  this.isAnimating = false;
+            }, 500);
       }
 
       prev() {
+            if (this.isAnimating) return;
+            this.isAnimating = true;
             this.gotoItem(this.currentItem - this.slidesToScroll);
+            setTimeout(() => {
+                  this.isAnimating = false;
+            }, 500);
       }
       /**
        * Déplace le carousel ver l'élément cible
@@ -160,7 +172,6 @@ class Carousel {
        *@param {boolean} [animation = true]
        */
       gotoItem(index, animation = true) {
-         
             if (index < 0) {
                   if (this.options.loop) {
                         index = this.items.length - this.slidesVisible;
@@ -174,15 +185,16 @@ class Carousel {
                         return;
                   }
             }
-            this.items.forEach((item, i) => {
-                  item.classList.remove("carousel__item--zoom");
-                  if (i >= index && i < index + this.slidesVisible) {
-                        item.style.opacity = "1";
-                        item.style.pointerEvents = "auto";
-                  } else {
-                        item.style.opacity = "0";
-                        item.style.pointerEvents = "none";
-                  }
+            this.onMove((index) => {
+                  this.items.forEach((item, i) => {
+                        if (i >= index && i < index + this.slidesVisible) {
+                              item.style.opacity = "1";
+                              item.style.pointerEvents = "auto";
+                        } else {
+                              item.style.opacity = "0";
+                              item.style.pointerEvents = "none";
+                        }
+                  });
             });
 
             let translateX = (index * -100) / this.items.length;
@@ -194,33 +206,33 @@ class Carousel {
                   });
             }
             this.container.style.transform = `translate3d(${translateX}%, 0, 0)`;
+            this.currentItem = index;
+            this.zoom();
             this.container.offsetHeight; // force repaint
             if (animation === false) {
                   this.items.forEach((item) => {
                         item.style.transition = "";
                   });
                   this.container.style.transition = "";
-                  
             }
-            this.currentItem = index;
+
             this.moveCallbacks.forEach((cb) => cb(index));
       }
       /**
        *
-       * Zoom lélement du milieu 
+       * Zoom lélement du milieu
        */
       zoom() {
-            debugger
-          if (this.slidesVisible >= 3) {
-            this.middleIndex = this.currentItem + Math.floor(this.slidesVisible / 2);
-            this.middleItem = this.items[this.middleIndex];
-            if (this.middleItem) {
-                  this.middleItem.classList.add("carousel__item--zoom");
+            this.items.forEach((item) => item.classList.remove("carousel__item--zoom"));
+            if (this.slidesVisible >= 3) {
+                  this.middleIndex = this.currentItem + Math.floor(this.slidesVisible / 2);
+                  this.middleItem = this.items[this.middleIndex];
+                  if (this.middleItem) {
+                        this.middleItem.classList.add("carousel__item--zoom");
+                  }
+            } else {
+                  return;
             }
-          }
-            else {
-                  return;}
-          
       }
       /**
        * Déplace le container pour donner l'impression d'un slide infini
@@ -232,6 +244,7 @@ class Carousel {
                   this.gotoItem(this.currentItem - (this.items.length - 2 * this.offset), false);
             }
       }
+
       /**
        * Rajoute un écouteur qui écoute le déplacement du carousel
        * @param {moveCallbacks} cb
@@ -246,8 +259,11 @@ class Carousel {
                   this.isMobile = mobile;
                   this.setStyle();
                   
-                  this.moveCallbacks.forEach((cb) => cb(this.currentItem));
+            } else if (!mobile) {
+                  this.isMobile = false;
+                  this.setStyle();
             }
+             this.moveCallbacks.forEach((cb) => cb(this.currentItem));
       }
       /**
        *

@@ -24,16 +24,11 @@ function handleResponsiveChange() {
   }
 }
 
-
-handleResponsiveChange();
-
-
-
 // nav bouton burger déroulant
 
 const buttonMenu = document.querySelector(".button-burger");
 const menuDialog = document.querySelector(".modal-nav");
-responsiveModal();
+
 const mediaQuery769 = window.matchMedia("(max-width: 769px)");
 
 function responsiveModal() {
@@ -47,7 +42,6 @@ function responsiveModal() {
 	}
 	
 }
-
 
 buttonMenu.addEventListener("click", () => {
 	const iconButton = document.querySelector(".button-burger__icon");
@@ -64,6 +58,11 @@ buttonMenu.addEventListener("click", () => {
             iconButton.classList.remove("fa-angle-down");
       }
 });
+
+handleResponsiveChange();
+updatePlaceholder();
+responsiveModal();
 mediaQuery769.addEventListener("change", responsiveModal);
 mediaQuery450.addEventListener("change", handleResponsiveChange);
+mediaQuery450.addEventListener("change", updatePlaceholder);
 mediaQuery900.addEventListener("change", handleResponsiveChange);

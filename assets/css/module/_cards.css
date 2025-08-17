@@ -95,7 +95,12 @@ color: var(--color-text-primary);
 	background-color: var(--color-primary);
 	border-color: var(--color-shadow);
 }
-
+@media (max-width: 1500px){
+	.item {
+		width: 500px;
+		height: 300px;
+	}
+}
 @media (max-width: 1100px) {
 	.item__description--5 {
 		width: 80%;
