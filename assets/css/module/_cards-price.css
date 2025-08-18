@@ -1,7 +1,6 @@
-
 .card-price {
 	height: 500px;
-	width: 22%;
+	width: 350px;
 	background-color: var(--color-secondary);
 	border-radius: 15px;
 	position: relative;
@@ -51,13 +50,25 @@
 			transparent 10px);
 }
 
-.position {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 100px;
-}
-
 .card-price__button--inactive {
 	background-color: var(--color-grey);
+}
+@media (max-width: 1500px) {
+	.card-price{
+		width: 260px;
+	}
+}
+@media (max-width: 1100px) {
+	.table {
+		font-size:var(--caption) ;
+	}
+	.card-price{
+		width: 300px;
+	}
+}
+@media (max-width: 768px) {
+	.card-price{
+		width: 90%;
+	}
+	
 }

@@ -30,16 +30,29 @@
                   <div class="header__logo">
                         <a href="index.html"><img src="assets/image/LOGOBLOODAI.png" alt="" /></a>
                   </div>
-                  <nav>
+                  <nav class="nav">
                         <ul class="nav__list">
                               <li class="nav__item"><a class="nav__link" href="index.html">Accueil</a></li>
-                              <li class="nav__item"><a class="nav__link" href="index.html#how">Fonctionnalités</a></li>
-                              <li class="nav__item"><a class="nav__link" href="index.html#compliance">Conformité</a></li>
-                              <li class="nav__item"><a class="nav__link" href="index.html#talk">Contacts</a></li>
+                              <li class="nav__item"><a class="nav__link" href="#how">Fonctionnalités</a></li>
+                              <li class="nav__item"><a class="nav__link" href="#compliance">Conformité</a></li>
+                              <li class="nav__item"><a class="nav__link" href="#talk">Contacts</a></li>
                               <li class="nav__item"><a class="nav__link" href="tarifs.html">Tarifs</a></li>
                               <li class="nav__item"><a class="nav__link link-audit" href="">Audit</a></li>
                         </ul>
                   </nav>
+                  <button class="button-burger">Menu <i class="button-burger__icon fas fa-angle-down"></i></button>
+                  <dialog class="modal-nav">
+                        <nav class="nav-mobile">
+                              <ul class="nav-mobile__list">
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link" href="index.html">Accueil</a></li>
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link" href="#how">Fonctionnalités</a></li>
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link" href="#compliance">Conformité</a></li>
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link" href="#talk">Contacts</a></li>
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link" href="tarifs.html">Tarifs</a></li>
+                                    <li class="nav-mobile__item"><a class="nav-mobile__link link-audit" href="">Audit</a></li>
+                              </ul>
+                        </nav>
+                  </dialog>
             </header>
             <section class="price">
                   <h2>Prix</h2>
@@ -91,44 +104,91 @@
             </section>
             <section class="position">
                   <h2>Positionnement face aux concurrents actuels</h2>
-                  <div class="grid">
-                        <div class="grid__card grid__card--title">Critère</div>
-                        <div class="grid__card grid__card--title grid__card--logo"><div class="grid__logo"><img class="" src="/assets/image/LOGOBLOODAI.png" alt="" /></div></div>
-                        <div class="grid__card grid__card--title">Outils d’audit classiques (WAVE, Axe, etc).</div>
-                        <div class="grid__card grid__card--title">Cabinet Accessibilité</div>
-                        <div class="grid__card grid__card--title">CMS ou plugins accessibilité</div>
-                        <div class="grid__card grid__card--row">Audit automatisé</div>
-                        <div class="grid__card grid__card--content">IA + Pédagogie</div>
-                        <div class="grid__card grid__card--content">Brut et technique</div>
-                        <div class="grid__card grid__card--content">Manuel uniquement</div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--row">Déclaration + schéma officiel</div>
-                        <div class="grid__card grid__card--content">Généré automatiquement</div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--content">devis</div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--row">Accompagnement IA Personnalisé</div>
-                        <div class="grid__card grid__card--content">Assistant conversationnel intégré</div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--row">Tests avec utilisateurs handicapés</div>
-                        <div class="grid__card grid__card--content">Option réelle via partenari</div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--content">Couteux</div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--row">Intégration CMS & API dev</div>
-                        <div class="grid__card grid__card--content">Prévus (Shopify, WP, Presta)</div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--content"><img class="grid__cross" src="assets/image/croix.png" alt="" /></div>
-                        <div class="grid__card grid__card--row">Prix & rapidité</div>
-                        <div class="grid__card grid__card--content">Ultra compétitif et immédiat</div>
-                        <div class="grid__card grid__card--content">Gratuit mais incomplet</div>
-                        <div class="grid__card grid__card--content">Lent et cher</div>
-                        <div class="grid__card grid__card--content">Variable</div>
+
+                  <!-- TABLEAU -->
+                  <div class="table-container">
+                        <table class="table">
+                              <thead class="table__head">
+                                    <tr class="table__row table__row--header">
+                                          <th class="table__cell table__cell--title" scope="col">Critère</th>
+                                          <th class="table__cell table__cell--title table__cell--logo" scope="col">
+                                                <div class="table__logo"><img src="/assets/image/LOGOBLOODAI.png" alt="Logo BloodAI" /></div>
+                                          </th>
+                                          <th class="table__cell table__cell--title" scope="col">Outils d’audit classiques (Wave,Axe,etc)</th>
+                                          <th class="table__cell table__cell--title" scope="col">Cabinet Accessibilité</th>
+                                          <th class="table__cell table__cell--title" scope="col">CMS / Plugins accessibilité</th>
+                                    </tr>
+                              </thead>
+                              <tbody class="table__body">
+                                    <tr class="table__row">
+                                          <th class="table__cell table__cell--row-header" scope="row">Audit automatisé</th>
+                                          <td class="table__cell table__cell--content">IA + Pédagogie</td>
+                                          <td class="table__cell table__cell--content">Brut et technique</td>
+                                          <td class="table__cell table__cell--content">Manuel uniquement</td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                          <th class="table__cell table__cell--row-header" scope="row">Déclaration + schéma officiel</th>
+                                          <td class="table__cell table__cell--content">Généré automatiquement</td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                          <td class="table__cell table__cell--content">Devis</td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                          <th class="table__cell table__cell--row-header" scope="row">Accompagnement IA personnalisé</th>
+                                          <td class="table__cell table__cell--content">Assistant conversationnel intégré</td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                          <th class="table__cell table__cell--row-header" scope="row">Tests avec utilisateurs handicapés</th>
+                                          <td class="table__cell table__cell--content">Option réelle via partenariat</td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                          <td class="table__cell table__cell--content">Coûteux</td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                          <th class="table__cell table__cell--row-header" scope="row">Intégration CMS & API dev</th>
+                                          <td class="table__cell table__cell--content">Prévus (Shopify, WP, Presta)</td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                          <td class="table__cell table__cell--content">
+                                                <img class="table__cross" src="assets/image/croix.png" alt="Non disponible" class="table__icon" />
+                                          </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                          <th class="table__cell table__cell--row-header" scope="row">Prix & rapidité</th>
+                                          <td class="table__cell table__cell--content">Ultra compétitif et immédiat</td>
+                                          <td class="table__cell table__cell--content">Gratuit mais incomplet</td>
+                                          <td class="table__cell table__cell--content">Lent et cher</td>
+                                          <td class="table__cell table__cell--content">Variable</td>
+                                    </tr>
+                              </tbody>
+                        </table>
                   </div>
             </section>
+
             <footer class="footer">
                   <div class="footer__top">
                         <div class="footer__logo"><img src="assets/image/LOGOBLOODAI.png" alt="" /></div>
@@ -175,5 +235,7 @@
                   </div>
             </footer>
             <script src="/responsive.js"></script>
+            <script src="/app.js"></script>    
+            <script src="/carousel.js"></script>
       </body>
 </html>
