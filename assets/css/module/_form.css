@@ -22,6 +22,7 @@
 	top : 30%;
 	left: 10px;
 }
+
 @media (max-width: 765px) {
 	.form__input {
 			width: 100%;

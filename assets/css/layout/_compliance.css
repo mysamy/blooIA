@@ -3,6 +3,8 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 50px;
+	
+	/* padding: var(--PADDING-SIDE); */
 }
 .compliance__container {
 	width: 100%;
@@ -11,6 +13,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 100px;
+	height: 100%;
 	background-color: var(--color-secondary);
 	padding: 50px 200px;
 	color: var(--color-text-primary);
@@ -27,9 +30,9 @@
 .compliance__list {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 40px;
+	gap: 80px;
 	margin: 4rem;
-	padding: 0 200px;
+	
 }
 .compliance__item {
 	text-align: center;

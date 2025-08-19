@@ -28,7 +28,6 @@ function handleResponsiveChange() {
 
 const buttonMenu = document.querySelector(".button-burger");
 const menuDialog = document.querySelector(".modal-nav");
-
 const mediaQuery769 = window.matchMedia("(max-width: 769px)");
 
 function responsiveModal() {
@@ -51,11 +50,15 @@ buttonMenu.addEventListener("click", () => {
             menuDialog.classList.remove("is-visible");
             iconButton.classList.add("fa-angle-down");
             iconButton.classList.remove("fa-angle-up");
+            buttonMenu.setAttribute("aria-expanded", "false");
+            menuDialog.setAttribute("aria-modal","false")
       } else {
             menuDialog.show();
             menuDialog.classList.add("is-visible");
             iconButton.classList.add("fa-angle-up");
             iconButton.classList.remove("fa-angle-down");
+            buttonMenu.setAttribute("aria-expanded", "true");
+            menuDialog.setAttribute("aria-modal","true")
       }
 });
 
@@ -66,3 +69,32 @@ mediaQuery769.addEventListener("change", responsiveModal);
 mediaQuery450.addEventListener("change", handleResponsiveChange);
 mediaQuery450.addEventListener("change", updatePlaceholder);
 mediaQuery900.addEventListener("change", handleResponsiveChange);
+
+
+
+
+const focusableSelectors = ['a, button']
+const focusableElements = menuDialog.querySelectorAll(focusableSelectors);
+const firstFocusable = focusableElements[0];
+const lastFocusable = focusableElements[focusableElements.length - 1];
+console.log(focusableElements);
+console.log(focusableSelectors);
+
+menuDialog.addEventListener("keydown", (e) => {
+    if (e.key === "Tab") {
+        if (e.shiftKey) { // Shift + Tab
+            if (document.activeElement === firstFocusable) {
+                e.preventDefault();
+                lastFocusable.focus();
+            }
+        } else { // Tab
+            if (document.activeElement === lastFocusable) {
+                e.preventDefault();
+                firstFocusable.focus();
+            }
+        }
+    }
+    if (e.key === "Escape") {
+        closeMenu(); // fonction pour fermer le menu
+    }
+});

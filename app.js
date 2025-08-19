@@ -1,3 +1,4 @@
+
 const buttonQuestion = document.querySelectorAll(".question__button");
 
 buttonQuestion.forEach((btn) => {
@@ -47,21 +48,25 @@ const tableauFeature = [
             icon: "fa-eye",
             title: "Audit",
             description: "BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.",
+            
       },
       {
             icon: "fa-pencil",
             title: "Edition",
             description: "BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.",
+           
       },
       {
             icon: "fa-brain",
             title: "Agent IA",
             description: "BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.",
+            
       },
       {
             icon: "fa-user-doctor",
             title: "Tests",
             description: "BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.",
+            
       },
 ];
 const cardFeature = document.querySelector(".hero__feature-description");
@@ -71,6 +76,7 @@ function createCard(feature) {
       const containerFeature = document.createElement("div");
       const icon = document.createElement("i");
       icon.classList.add("feature__icon", "fas", "fa-9x", "fa-responsive", feature.icon);
+      icon.setAttribute("aria-hidden","true");
       cardFeature.appendChild(icon);
 
       const title = document.createElement("h3");

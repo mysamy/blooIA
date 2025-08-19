@@ -33,3 +33,7 @@
 .question__icon {
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
+@media (prefers-reduced-motion) {
+
+}
