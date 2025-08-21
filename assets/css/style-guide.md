@@ -50,3 +50,5 @@
 
 
 <!-- autofocus -->
+<!-- 1 slide refresh -->
+<!-- focus sur carousel rend la invisible -->

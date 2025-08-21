@@ -10,23 +10,25 @@
       </head>
       <body>
             <header class="header">
-                  <a class="visually-hidden skip-link" href="#hero" >Aller au contenu principal</a>
+                  <a class="u-text-hidden skip-link" href="#hero">Aller au contenu principal</a>
                   <div class="header__logo">
                         <a href="index.html"><img src="assets/image/LOGOBLOODAI.png" alt="Accueil – logo de bloo AI" /></a>
                   </div>
                   <nav class="nav" aria-label="Navigation principale">
                         <ul class="nav__list">
-                              <li class="nav__item"><a class="nav__link" href="index.html">Accueil</a></li>
-                              <li class="nav__item"><a class="nav__link" href="#how">Fonctionnalités</a></li>
-                              <li class="nav__item"><a class="nav__link" href="#compliance">Conformité</a></li>
-                              <li class="nav__item"><a class="nav__link" href="#talk">Contacts</a></li>
-                              <li class="nav__item"><a class="nav__link" href="tarifs.html">Tarifs</a></li>
-                              <li class="nav__item"><a class="nav__link link-audit" href="">Audit</a></li>
+                              <li ><a href="index.html">Accueil</a></li>
+                              <li ><a href="#how">Fonctionnalités</a></li>
+                              <li ><a href="#compliance">Conformité</a></li>
+                              <li ><a href="#talk">Contacts</a></li>
+                              <li ><a href="tarifs.html">Tarifs</a></li>
+                              <li ><a class="link-audit" href="  ">Audit</a></li>
                         </ul>
                   </nav>
-                  <button class="button-burger" aria-expanded="false" aria-controls="modal-nav" aria-label="Ouvrir le menu de navigation">Menu <i class="button-burger__icon fas fa-angle-down"></i></button>
+                  <button class=-burger" aria-expanded="false" aria-controls="modal-nav" aria-label="Ouvrir le menu de navigation">
+                        Menu <i class="fas fa-angle-down"></i>
+                  </button>
                   <dialog id="modal-nav" class="modal-nav" role="dialog" aria-modal="true" aria-labelledby="modal-nav-title">
-                        <h2 id="modal-nav-title" class="visually-hidden">Menu de navigation</h2>
+                        <h2 id="modal-nav-title" class="u-text-hidden">Menu de navigation</h2>
                         <nav class="nav-mobile">
                               <ul class="nav-mobile__list">
                                     <li class="nav-mobile__item"><a class="nav-mobile__link" href="index.html">Accueil</a></li>
@@ -45,19 +47,27 @@
                         <div class="hero__container">
                               <p class="hero__subtitle">
                                     Le 1er outil d'accessibilité numérique développé par une
-                                    <span class="hero__highlight">entreprise adaptée</span>
+                                    <span class="u-highlight">entreprise adaptée</span>
                               </p>
                               <form class="hero__form" action="" method="get">
-                                    <label class="form__label visually-hidden" for="url">Entrez l’adresse du site à auditer :</label>
+                                    <label class=" u-text-hidden" for="url">Entrez l’adresse du site à auditer :</label>
                                     <div class="form__container">
                                           <i class="fa-solid fa-magnifying-glass fa-2x form__icon"></i>
-                                          <input class="form__input" type="url" id="url" name="url" placeholder="Entrez une URL" required aria-required="true"/>
+                                          <input
+                                                class="form__input"
+                                                type="url"
+                                                id="url"
+                                                name="url"
+                                                placeholder="Entrez une URL"
+                                                required
+                                                aria-required="true"
+                                          />
                                     </div>
-                                    <button class="button form__button link-audit" type="submit">Audit</button>
+                                    <button class="form__button link-audit" type="submit">Audit</button>
                               </form>
                               <div class="hero__compliance">
                                     <p class="hero__compliance-title">Vérifications de conformité : RGAA</p>
-                                    <i class="fas fa-check-circle icon--green" aria-label="validé"></i>
+                                    <i class="fas fa-check-circle u-green" aria-label="validé"></i>
                               </div>
                               <div class="hero__features">
                                     <div class="feature feature--audit">
@@ -99,11 +109,14 @@
                                           </div>
                                     </div>
                                     <div class="item__img item__img">
-                                          <img src="assets/image/étape1img.png" alt="Illustration 1 : entrez l'adresse de votre site pour un premier résultat" />
+                                          <img
+                                                src="assets/image/étape1img.png"
+                                                alt="Illustration 1 : entrez l'adresse de votre site pour un premier résultat"
+                                          />
                                     </div>
                                     <p class="item__description item__description--1">
-                                          Auditez <span class="span--bold">gratuitement</span> une page de votre site et obtenez vos résultats de
-                                          <span class="span--underline span--bold">conformité RGAA.</span>
+                                          Auditez <span class="u-bold">gratuitement</span> une page de votre site et obtenez vos résultats de
+                                          <span class="u-underline u-bold">conformité RGAA.</span>
                                     </p>
                               </div>
                               <div class="item item--2">
@@ -113,10 +126,13 @@
                                           </div>
                                     </div>
                                     <div class="item__img item__img--2">
-                                          <img src="assets/image/étape2img.png" alt="Illustration 2 : entrez votre nom d'utilisateur, votre adresse email et mot de passe pour vous inscrire." />
+                                          <img
+                                                src="assets/image/étape2img.png"
+                                                alt="Illustration 2 : entrez votre nom d'utilisateur, votre adresse email et mot de passe pour vous inscrire."
+                                          />
                                     </div>
                                     <p class="item__description item__description--2">
-                                          <span class="span--underline span--bold"> Inscrivez-vous </span> <br />
+                                          <span class="u-underline u-bold"> Inscrivez-vous </span> <br />
                                           et testez la plateforme !
                                     </p>
                               </div>
@@ -128,11 +144,14 @@
                                           </div>
                                     </div>
                                     <p class="item__description item__description--3">
-                                          Lancez un audit complet de <span class="span--underline span--bold">votre site</span>, obtenez vos
-                                          déclarations et schéma pluriannuel <span class="span--bold span--underline">d'accessibilité.</span>
+                                          Lancez un audit complet de <span class="u-underline u-bold">votre site</span>, obtenez vos déclarations et
+                                          schéma pluriannuel <span class="u-bold u-underline">d'accessibilité.</span>
                                     </p>
                                     <div class="item__img item__img--3">
-                                          <img src="assets/image/étape3img.png" alt="Illustration 3 : obtenez votre décalration d'accessibilité sous PDF" />
+                                          <img
+                                                src="assets/image/étape3img.png"
+                                                alt="Illustration 3 : obtenez votre décalration d'accessibilité sous PDF"
+                                          />
                                     </div>
                               </div>
                               <div class="item item--4">
@@ -142,11 +161,14 @@
                                           </div>
                                     </div>
                                     <div class="item__img item__img--4">
-                                          <img src="assets/image/étape4img.png" alt="Illustration 4 : guide et consigne précise donné par un agent IA" />
+                                          <img
+                                                src="assets/image/étape4img.png"
+                                                alt="Illustration 4 : guide et consigne précise donné par un agent IA"
+                                          />
                                     </div>
                                     <p class="item__description item__description--4">
                                           Suivez les conseils de notre agent AI pour rendre votre site
-                                          <span class="span--bold span--underline">accessible.</span>
+                                          <span class="u-bold u-underline">accessible.</span>
                                     </p>
                               </div>
                               <div class="item item--5">
@@ -156,7 +178,7 @@
                                           </div>
                                     </div>
                                     <p class="item__description item__description--5">
-                                          Commandez des tests utilisateurs <span class="span--underline span--bold">sur-mesure !</span>
+                                          Commandez des tests utilisateurs <span class="u-underline u-bold">sur-mesure !</span>
                                     </p>
                                     <div class="item__img item__img--5">
                                           <img src="assets/image/étape5img.png" alt="" />
@@ -174,9 +196,9 @@
                                     <div class="item__container">
                                           <p class="item__description item__description--6">
                                                 Contactez notre service commercial pour toute
-                                                <span class="span--bold span--underline">question</span> !
+                                                <span class="u-bold u-underline">question</span> !
                                           </p>
-                                          <button class="button button--contactez">Contactez</button>
+                                          <button class="button--contactez">Contactez</button>
                                     </div>
                               </div>
                         </div>
@@ -191,23 +213,23 @@
                                     </button>
                               </div>
                               <div class="compliance__content compliance__content--advantage">
-                                    <h3 class="compliance__subtitle">Les avantages et l'imporatnace de rendre son site accessible</h3>
+                                    <h3 class="compliance__subtitle">Les avantages et l'importance de rendre son site accessible</h3>
                                     <div class="compliance__list">
                                           <div class="compliance__item">
                                                 <i class="compliance__icon fas fa-trophy fa-3x"></i>
-                                                <p class="compliance__text">Améliorer la réputation de la marque</p>
+                                                <p>Améliorer la réputation de la marque</p>
                                           </div>
                                           <div class="compliance__item">
                                                 <i class="compliance__icon fas fa-users fa-3x"></i>
-                                                <p class="compliance__text">Elargir votre audience</p>
+                                                <p>Elargir votre audience</p>
                                           </div>
                                           <div class="compliance__item">
                                                 <i class="compliance__icon fas fa-gavel fa-3x"></i>
-                                                <p class="compliance__text">Atténuer les risques juridiques</p>
+                                                <p>Atténuer les risques juridiques</p>
                                           </div>
                                           <div class="compliance__item">
                                                 <i class="compliance__icon fas fa-chart-line fa-3x"></i>
-                                                <p class="compliance__text">Avantages fiscale</p>
+                                                <p>Avantages fiscale</p>
                                           </div>
                                     </div>
                               </div>
@@ -236,25 +258,25 @@
                   </section>
 
                   <section class="review">
-                        <h2 class="review__title">Avis utilisateurs</h2>
+                        <h2>Avis utilisateurs</h2>
                         <div class="review__cards">
                               <div class="review__card">
-                                    <h3 class="review__title">Jean Martin</h3>
-                                    <div class="review__description">
+                                    <h3>Jean Martin</h3>
+                                    <div>
                                           Ton site est une vraie bouffée d’air frais ! Les articles sont bien écrits, la mise en page est agréable à
                                           lire, et j’apprécie la cohérence visuelle entre les différentes rubriques.
                                     </div>
                               </div>
                               <div class="review__card">
-                                    <h3 class="review__title">Sophie Bernard</h3>
-                                    <div class="review__description">
+                                    <h3>Sophie Bernard</h3>
+                                    <div>
                                           J’ai adoré l’expérience sur ce site : tout est simple, rapide et agréable à utiliser. Les produits sont bien
                                           présentés, le parcours d’achat est fluide, et le service client est au top.
                                     </div>
                               </div>
                               <div class="review__card">
-                                    <h3 class="review__title">Alexandre Marchand</h3>
-                                    <div class="review__description">
+                                    <h3>Alexandre Marchand</h3>
+                                    <div>
                                           J’ai été impressionné dès la première visite. Le design est épuré, moderne, et surtout très fluide. La
                                           navigation est intuitive, les informations sont claires et bien organisées. On sent que chaque détail a été
                                           pensé avec soin.
@@ -296,16 +318,24 @@
                               </div>
                               <div class="question__container">
                                     <div class="question__content">
-                                          <h3 class="question__title">Mon site est-il déjà accessible ? Comment puis-je le savoir ?</h3>
-                                          <p class="question__text">
+                                          <h3 id="question1-title" class="question__title">
+                                                Mon site est-il déjà accessible ? Comment puis-je le savoir ?
+                                          </h3>
+                                          <p id="question1-text" class="question__text">
                                                 Pour savoir si votre site est accessible, vous pouvez utiliser des outils automatiques comme
                                                 Lighthouse, Axe ou Wave qui analysent votre site et détectent des problèmes d’accessibilité. Mais il
                                                 est aussi important de faire des tests manuels, comme naviguer au clavier ou utiliser un lecteur
                                                 d’écran, pour vérifier l’expérience réelle des utilisateurs en situation de handicap.
                                           </p>
                                     </div>
-                                    <button class="question__button">
-                                          <i class="question__icon fas fa-chevron-down fa-lg"></i>
+                                    <button
+                                          class="question__button"
+                                          aria-expanded="false"
+                                          aria-controls="question1-text"
+                                          aria-labelledby="question1-title"
+                                    >
+                                          <i class="question__icon fas fa-chevron-down fa-lg" aria-hidden="true"></i>
+                                          <span class="u-text-hidden">Afficher la réponse</span>
                                     </button>
                               </div>
                               <div class="question__container">
@@ -396,19 +426,19 @@
             <footer class="footer">
                   <div class="footer__top">
                         <div class="footer__logo"><img src="assets/image/LOGOBLOODAI.png" alt="logo bloo AI" /></div>
-                        <ul class="footer__list">
-                              <li class="footer__item"><a class="footer__link" href="">L'entreprise adaptée</a></li>
-                              <li class="footer__item"><a class="footer__link" href="">Tarifs</a></li>
+                        <ul>
+                              <li class="footer__item"><a href="">L'entreprise adaptée</a></li>
+                              <li class="footer__item"><a href="">Tarifs</a></li>
                         </ul>
                   </div>
                   <div class="footer__middle">
                         <div class="footer__socials">
                               <h3 class="footer__title">Socials</h3>
                               <div class="footer__social-links">
-                                    <a class="footer__social-link" href="">Instagram <i class="fas fa-instagram"></i></a>
-                                    <a class="footer__social-link" href="">Youtube <i class="fas fa-check-circle"></i></a>
-                                    <a class="footer__social-link" href="">Twitter <i class="fas fa-check-circle"></i></a>
-                                    <a class="footer__social-link" href="">Likedin <i class="fas fa-youtube"></i></a>
+                                    <a href="">Instagram <i class="fas fa-instagram"></i></a>
+                                    <a href="">Youtube <i class="fas fa-check-circle"></i></a>
+                                    <a href="">Twitter <i class="fas fa-check-circle"></i></a>
+                                    <a href="">Likedin <i class="fas fa-youtube"></i></a>
                               </div>
                         </div>
                         <div class="footer__company">
@@ -430,11 +460,11 @@
                   </div>
                   <div class="footer__bottom">
                         <p>
-                              © 2023–2025 BlooAI – une solution de Place des Victoires<a class="footer__link" href="/mentions-legales.html"
+                              © 2023–2025 BlooAI – une solution de Place des Victoires<a href="/mentions-legales.html"
                                     >Mentions légales</a
                               >
-                              / <a class="footer__link" href="/accessibilite.html">Déclaration d’accessibilité</a> /
-                              <a class="footer__link" href="/cgu.html">CGU</a>
+                              / <a href="/accessibilite.html">Déclaration d’accessibilité</a> /
+                              <a href="/cgu.html">CGU</a>
                         </p>
                   </div>
             </footer>

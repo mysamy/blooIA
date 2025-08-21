@@ -1,17 +1,11 @@
 /* Reset des styles par défaut */
-
 *,
 *::after,
 *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-
-
-
-
 /* Réinitialisation des listes */
 li {
 	list-style: none;
@@ -30,8 +24,6 @@ select {
     outline: none;
     padding:0 20px;
 }
-
-
 span {
 	display: inline;
  }

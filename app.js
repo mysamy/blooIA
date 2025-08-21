@@ -17,8 +17,8 @@ const compliance = document.querySelector(".compliance__content--compliance");
 const advantage = document.querySelector(".compliance__content--advantage");
 
 function toggleSection(show, hide) {
-      show.style.display = "flex";
-      hide.style.display = "none";
+  show.classList.add("active");
+  hide.classList.remove("active");
 }
 
 buttonCompliance.addEventListener("click", () => {

@@ -17,10 +17,6 @@
 	
 }
 
-.hero__highlight {
-	text-decoration: underline;
-}
-
 .hero__form {
 	background-color: var(--color-secondary);
 	align-items: center;
