@@ -11,4 +11,5 @@
 	align-items: center;
 	color: var(--color-text-primary);
 	border: none;
+	min-height: 350px;
 }

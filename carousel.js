@@ -172,6 +172,7 @@ class Carousel {
        *@param {boolean} [animation = true]
        */
       gotoItem(index, animation = true) {
+            debugger
             if (index < 0) {
                   if (this.options.loop) {
                         index = this.items.length - this.slidesVisible;
@@ -200,7 +201,6 @@ class Carousel {
             let translateX = (index * -100) / this.items.length;
             if (animation === false) {
                   this.container.style.transition = "none";
-
                   this.items.forEach((item) => {
                         item.style.transition = "none";
                   });
@@ -208,7 +208,7 @@ class Carousel {
             this.container.style.transform = `translate3d(${translateX}%, 0, 0)`;
             this.currentItem = index;
             this.zoom();
-            this.container.offsetHeight; // force repaint
+            this.container.offsetHeight; // Force le navigateur à recalculer le layout (reflow) pour que les transitions/animations se déclenchent correctement
             if (animation === false) {
                   this.items.forEach((item) => {
                         item.style.transition = "";

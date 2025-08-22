@@ -9,7 +9,6 @@ function updatePlaceholder() {
 }
 const mediaQuery450 = window.matchMedia("(max-width: 450px)");
 const mediaQuery900 = window.matchMedia("(max-width: 900px)");
-
 function handleResponsiveChange() {
       const div = document.querySelector(".fa-responsive");
       if(!div) return;
@@ -39,7 +38,6 @@ function responsiveModal() {
             iconButton.classList.add("fa-angle-down");
             iconButton.classList.remove("fa-angle-up");
 	}
-	
 }
 
 buttonMenu.addEventListener("click", () => {

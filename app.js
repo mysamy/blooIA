@@ -1,4 +1,3 @@
-
 const buttonQuestion = document.querySelectorAll(".question__button");
 
 buttonQuestion.forEach((btn) => {
@@ -17,8 +16,8 @@ const compliance = document.querySelector(".compliance__content--compliance");
 const advantage = document.querySelector(".compliance__content--advantage");
 
 function toggleSection(show, hide) {
-  show.classList.add("active");
-  hide.classList.remove("active");
+      show.classList.add("active");
+      hide.classList.remove("active");
 }
 
 buttonCompliance.addEventListener("click", () => {
@@ -48,54 +47,86 @@ const tableauFeature = [
             icon: "fa-eye",
             title: "Audit",
             description: "BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.",
-            
       },
       {
             icon: "fa-pencil",
             title: "Edition",
             description: "BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.",
-           
       },
       {
             icon: "fa-brain",
             title: "Agent IA",
             description: "BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.",
-            
       },
       {
             icon: "fa-user-doctor",
             title: "Tests",
             description: "BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.",
-            
       },
 ];
+// const cardFeature = document.querySelector(".hero__feature-description");
+// function createCard(feature) {
+//       cardFeature.classList.add("hide")
+//       cardFeature.innerHTML = "";
+//       cardFeature.classList.remove("hide")
+//       cardFeature.classList.add("hero__feature-description", "show");
+//       const containerFeature = document.createElement("div");
+//       const icon = document.createElement("i");
+//       icon.classList.add("fas", "fa-9x", "fa-responsive", feature.icon);
+//       icon.setAttribute("aria-hidden", "true");
+//       cardFeature.appendChild(icon);
+
+//       const title = document.createElement("h3");
+//       title.textContent = feature.title;
+
+//       containerFeature.appendChild(title);
+//       containerFeature.classList.add("hero__feature-content");
+
+//       const desc = document.createElement("p");
+//       desc.textContent = feature.description;
+//       containerFeature.appendChild(desc);
+//       cardFeature.append(icon, containerFeature);
+
+//       handleResponsiveChange();
+
+//       }
 const cardFeature = document.querySelector(".hero__feature-description");
 function createCard(feature) {
+  cardFeature.classList.add("hide");
+  requestAnimationFrame(() => {
+    cardFeature.addEventListener("transitionend", function handler() {
+      cardFeature.removeEventListener("transitionend", handler);
+
       cardFeature.innerHTML = "";
-      cardFeature.classList.add("hero__feature-description");
+      cardFeature.classList.remove("hide");
+      cardFeature.classList.add("hero__feature-description", "show");
+
       const containerFeature = document.createElement("div");
       const icon = document.createElement("i");
-      icon.classList.add("feature__icon", "fas", "fa-9x", "fa-responsive", feature.icon);
-      icon.setAttribute("aria-hidden","true");
+      icon.classList.add("fas", "fa-9x", "fa-responsive", feature.icon);
+      icon.setAttribute("aria-hidden", "true");
       cardFeature.appendChild(icon);
 
       const title = document.createElement("h3");
       title.textContent = feature.title;
-
       containerFeature.appendChild(title);
       containerFeature.classList.add("hero__feature-content");
 
       const desc = document.createElement("p");
       desc.textContent = feature.description;
       containerFeature.appendChild(desc);
+
       cardFeature.append(icon, containerFeature);
 
       handleResponsiveChange();
+    });
+  });
 }
+
+
 featureAudit.addEventListener("click", () => createCard(tableauFeature[0]));
 featureEdition.addEventListener("click", () => createCard(tableauFeature[1]));
 featureAgent.addEventListener("click", () => createCard(tableauFeature[2]));
 featureTest.addEventListener("click", () => createCard(tableauFeature[3]));
 
 // Responsive input URL
-
