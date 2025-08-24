@@ -1,4 +1,3 @@
-
 function updatePlaceholder() {
       const input = document.getElementById("url");
       if (window.innerWidth <= 450) {
@@ -11,16 +10,16 @@ const mediaQuery450 = window.matchMedia("(max-width: 450px)");
 const mediaQuery900 = window.matchMedia("(max-width: 900px)");
 function handleResponsiveChange() {
       const div = document.querySelector(".fa-responsive");
-      if(!div) return;
-       div.classList.remove("fa-9x", "fa-5x", "fa-3x");
+      if (!div) return;
+      div.classList.remove("fa-9x", "fa-5x", "fa-3x");
 
-  if (window.innerWidth <= 450) {
-    div.classList.add("fa-3x");
-  } else if (window.innerWidth <= 900) {
-    div.classList.add("fa-5x");
-  } else {
-    div.classList.add("fa-9x");
-  }
+      if (window.innerWidth <= 450) {
+            div.classList.add("fa-3x");
+      } else if (window.innerWidth <= 900) {
+            div.classList.add("fa-5x");
+      } else {
+            div.classList.add("fa-9x");
+      }
 }
 
 // nav bouton burger déroulant
@@ -30,33 +29,33 @@ const menuDialog = document.querySelector(".modal-nav");
 const mediaQuery769 = window.matchMedia("(max-width: 769px)");
 
 function responsiveModal() {
-	const iconButton = document.querySelector(".button-burger__icon");
-	if(!menuDialog) return;
-	if(window.innerWidth >= 769 && menuDialog.open){		
-		menuDialog.close()
-		menuDialog.classList.remove("is-visible")
+      const iconButton = document.querySelector(".button-burger__icon");
+      if (!menuDialog) return;
+      if (window.innerWidth >= 769 && menuDialog.open) {
+            menuDialog.close();
+            menuDialog.classList.remove("u-visible");
             iconButton.classList.add("fa-angle-down");
             iconButton.classList.remove("fa-angle-up");
-	}
+      }
 }
 
 buttonMenu.addEventListener("click", () => {
-	const iconButton = document.querySelector(".button-burger__icon");
-	
+      const iconButton = document.querySelector(".button-burger__icon");
+
       if (menuDialog.open) {
             menuDialog.close();
-            menuDialog.classList.remove("is-visible");
+            menuDialog.classList.remove("u-visible");
             iconButton.classList.add("fa-angle-down");
             iconButton.classList.remove("fa-angle-up");
             buttonMenu.setAttribute("aria-expanded", "false");
-            menuDialog.setAttribute("aria-modal","false")
+            menuDialog.setAttribute("aria-modal", "false");
       } else {
             menuDialog.show();
-            menuDialog.classList.add("is-visible");
+            menuDialog.classList.add("u-visible");
             iconButton.classList.add("fa-angle-up");
             iconButton.classList.remove("fa-angle-down");
             buttonMenu.setAttribute("aria-expanded", "true");
-            menuDialog.setAttribute("aria-modal","true")
+            menuDialog.setAttribute("aria-modal", "true");
       }
 });
 
@@ -68,31 +67,28 @@ mediaQuery450.addEventListener("change", handleResponsiveChange);
 mediaQuery450.addEventListener("change", updatePlaceholder);
 mediaQuery900.addEventListener("change", handleResponsiveChange);
 
-
-
-
-const focusableSelectors = ['a, button']
+const focusableSelectors = ["a, button"];
 const focusableElements = menuDialog.querySelectorAll(focusableSelectors);
 const firstFocusable = focusableElements[0];
 const lastFocusable = focusableElements[focusableElements.length - 1];
-console.log(focusableElements);
-console.log(focusableSelectors);
 
 menuDialog.addEventListener("keydown", (e) => {
-    if (e.key === "Tab") {
-        if (e.shiftKey) { // Shift + Tab
-            if (document.activeElement === firstFocusable) {
-                e.preventDefault();
-                lastFocusable.focus();
+      if (e.key === "Tab") {
+            if (e.shiftKey) {
+                  // Shift + Tab
+                  if (document.activeElement === firstFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                  }
+            } else {
+                  // Tab
+                  if (document.activeElement === lastFocusable) {
+                        e.preventDefault();
+                        firstFocusable.focus();
+                  }
             }
-        } else { // Tab
-            if (document.activeElement === lastFocusable) {
-                e.preventDefault();
-                firstFocusable.focus();
-            }
-        }
-    }
-    if (e.key === "Escape") {
-        closeMenu(); // fonction pour fermer le menu
-    }
+      }
+      if (e.key === "Escape") {
+            closeMenu(); // fonction pour fermer le menu
+      }
 });

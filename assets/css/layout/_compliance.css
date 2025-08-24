@@ -6,6 +6,7 @@
 }
 .compliance__container {
 	width: 100%;
+	
 }
 .compliance__content {
 	display: flex;
@@ -16,6 +17,8 @@
 	padding: 50px 200px;
 	color: var(--color-text-primary);
 	border-radius: 0 0 30px 30px;
+	transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
+	
 	
 }
 .compliance__buttons {

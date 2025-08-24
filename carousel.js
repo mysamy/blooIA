@@ -76,6 +76,17 @@ class Carousel {
             }
 
             // Evenements
+            this.onMove((index) => {
+                  this.items.forEach((item, i) => {
+                        if (i >= index && i < index + this.slidesVisible) {
+                              item.style.opacity = "1";
+                              item.style.pointerEvents = "auto";
+                        } else {
+                              item.style.opacity = "0";
+                              item.style.pointerEvents = "none";
+                        }
+                  });
+            });
             this.moveCallbacks.forEach((cb) => cb(this.currentItem));
             window.addEventListener("resize", this.onWindowResize.bind(this));
             this.root.addEventListener("keyup", (e) => {
@@ -172,7 +183,7 @@ class Carousel {
        *@param {boolean} [animation = true]
        */
       gotoItem(index, animation = true) {
-            debugger
+           
             if (index < 0) {
                   if (this.options.loop) {
                         index = this.items.length - this.slidesVisible;
@@ -186,27 +197,19 @@ class Carousel {
                         return;
                   }
             }
-            this.onMove((index) => {
-                  this.items.forEach((item, i) => {
-                        if (i >= index && i < index + this.slidesVisible) {
-                              item.style.opacity = "1";
-                              item.style.pointerEvents = "auto";
-                        } else {
-                              item.style.opacity = "0";
-                              item.style.pointerEvents = "none";
-                        }
-                  });
-            });
+            
 
-            let translateX = (index * -100) / this.items.length;
+            
             if (animation === false) {
                   this.container.style.transition = "none";
                   this.items.forEach((item) => {
                         item.style.transition = "none";
                   });
             }
+            let translateX = (index * -100) / this.items.length;
             this.container.style.transform = `translate3d(${translateX}%, 0, 0)`;
             this.currentItem = index;
+            this.moveCallbacks.forEach((cb) => cb(index));
             this.zoom();
             this.container.offsetHeight; // Force le navigateur à recalculer le layout (reflow) pour que les transitions/animations se déclenchent correctement
             if (animation === false) {
@@ -216,7 +219,7 @@ class Carousel {
                   this.container.style.transition = "";
             }
 
-            this.moveCallbacks.forEach((cb) => cb(index));
+            
       }
       /**
        *

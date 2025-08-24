@@ -13,6 +13,9 @@
 .compliance__button--compliance {
 	border-radius: 0 15px 0 0;
 }
+.compliance__content--compliance{
+	
+}
 @media (max-width: 425px){
 	.fa-9x::before {
 		font-size: 3rem;

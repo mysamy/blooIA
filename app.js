@@ -11,31 +11,35 @@ buttonQuestion.forEach((btn) => {
 
 const buttonAdvantage = document.querySelector(".compliance__button--advantage");
 const buttonCompliance = document.querySelector(".compliance__button--compliance");
-
 const compliance = document.querySelector(".compliance__content--compliance");
 const advantage = document.querySelector(".compliance__content--advantage");
 
 function toggleSection(show, hide) {
-      show.classList.add("active");
-      hide.classList.remove("active");
+      hide.classList.remove("u-active");
+      hide.classList.add("u-inactive");
+    
+      show.classList.remove("u-inactive");
+      show.classList.add("u-active");
 }
-
-buttonCompliance.addEventListener("click", () => {
-      toggleSection(compliance, advantage);
-      buttonCompliance.classList.add("compliance__button--pressed");
-      buttonCompliance.classList.remove("compliance__button--unpressed");
-      buttonAdvantage.classList.remove("compliance__button--pressed");
-      buttonAdvantage.classList.add("compliance__button--unpressed");
-});
-
 buttonAdvantage.addEventListener("click", () => {
       toggleSection(advantage, compliance);
-      buttonAdvantage.classList.add("compliance__button--pressed");
-      buttonAdvantage.classList.remove("compliance__button--unpressed");
-      buttonCompliance.classList.remove("compliance__button--pressed");
-      buttonCompliance.classList.add("compliance__button--unpressed");
+});
+buttonCompliance.addEventListener("click", () => {
+      toggleSection(compliance, advantage);
+});
+buttonCompliance.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggleSection(compliance, advantage);
+      }
 });
 
+buttonAdvantage.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggleSection(advantage, compliance);
+      }
+});
 // hero
 const featureAudit = document.querySelector(".feature--audit");
 const featureEdition = document.querySelector(".feature--edition");
@@ -64,65 +68,38 @@ const tableauFeature = [
             description: "BlooAI effectue un audit automatique de votre site pour détecter les erreurs majeures d'accessibilité.",
       },
 ];
-// const cardFeature = document.querySelector(".hero__feature-description");
-// function createCard(feature) {
-//       cardFeature.classList.add("hide")
-//       cardFeature.innerHTML = "";
-//       cardFeature.classList.remove("hide")
-//       cardFeature.classList.add("hero__feature-description", "show");
-//       const containerFeature = document.createElement("div");
-//       const icon = document.createElement("i");
-//       icon.classList.add("fas", "fa-9x", "fa-responsive", feature.icon);
-//       icon.setAttribute("aria-hidden", "true");
-//       cardFeature.appendChild(icon);
-
-//       const title = document.createElement("h3");
-//       title.textContent = feature.title;
-
-//       containerFeature.appendChild(title);
-//       containerFeature.classList.add("hero__feature-content");
-
-//       const desc = document.createElement("p");
-//       desc.textContent = feature.description;
-//       containerFeature.appendChild(desc);
-//       cardFeature.append(icon, containerFeature);
-
-//       handleResponsiveChange();
-
-//       }
 const cardFeature = document.querySelector(".hero__feature-description");
 function createCard(feature) {
-  cardFeature.classList.add("hide");
-  requestAnimationFrame(() => {
-    cardFeature.addEventListener("transitionend", function handler() {
-      cardFeature.removeEventListener("transitionend", handler);
+      cardFeature.classList.add("hide");
+      requestAnimationFrame(() => {
+            cardFeature.addEventListener("transitionend", function handler() {
+                  cardFeature.removeEventListener("transitionend", handler);
 
-      cardFeature.innerHTML = "";
-      cardFeature.classList.remove("hide");
-      cardFeature.classList.add("hero__feature-description", "show");
+                  cardFeature.innerHTML = "";
+                  cardFeature.classList.remove("hide");
+                  cardFeature.classList.add("hero__feature-description", "show");
 
-      const containerFeature = document.createElement("div");
-      const icon = document.createElement("i");
-      icon.classList.add("fas", "fa-9x", "fa-responsive", feature.icon);
-      icon.setAttribute("aria-hidden", "true");
-      cardFeature.appendChild(icon);
+                  const containerFeature = document.createElement("div");
+                  const icon = document.createElement("i");
+                  icon.classList.add("fas", "fa-9x", "fa-responsive", feature.icon);
+                  icon.setAttribute("aria-hidden", "true");
+                  cardFeature.appendChild(icon);
 
-      const title = document.createElement("h3");
-      title.textContent = feature.title;
-      containerFeature.appendChild(title);
-      containerFeature.classList.add("hero__feature-content");
+                  const title = document.createElement("h3");
+                  title.textContent = feature.title;
+                  containerFeature.appendChild(title);
+                  containerFeature.classList.add("hero__feature-content");
 
-      const desc = document.createElement("p");
-      desc.textContent = feature.description;
-      containerFeature.appendChild(desc);
+                  const desc = document.createElement("p");
+                  desc.textContent = feature.description;
+                  containerFeature.appendChild(desc);
 
-      cardFeature.append(icon, containerFeature);
+                  cardFeature.append(icon, containerFeature);
 
-      handleResponsiveChange();
-    });
-  });
+                  handleResponsiveChange();
+            });
+      });
 }
-
 
 featureAudit.addEventListener("click", () => createCard(tableauFeature[0]));
 featureEdition.addEventListener("click", () => createCard(tableauFeature[1]));
@@ -130,3 +107,29 @@ featureAgent.addEventListener("click", () => createCard(tableauFeature[2]));
 featureTest.addEventListener("click", () => createCard(tableauFeature[3]));
 
 // Responsive input URL
+featureAudit.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            createCard(tableauFeature[0]);
+      }
+});
+featureEdition.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            createCard(tableauFeature[1]);
+      }
+});
+
+featureAgent.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            createCard(tableauFeature[2]);
+      }
+});
+
+featureTest.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            createCard(tableauFeature[3]);
+      }
+});

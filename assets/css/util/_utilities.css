@@ -26,3 +26,15 @@
 .u-highlight {
   text-decoration: underline;
 }
+.u-active {
+  opacity: 1;
+}
+.u-inactive {
+  opacity: 0;
+}
+.u-visible {
+	display: flex;
+}
+.u-invisible {
+  display: none;
+}
